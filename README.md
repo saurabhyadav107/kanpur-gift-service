@@ -154,8 +154,8 @@ See `SEO_OPTIMIZATION.md` for detailed SEO strategy.
 
 ## 📞 Contact Information
 
-- **Phone**: +91 96213 26466
-- **WhatsApp**: Available 24/7
+- **Phone**: +91 8523045235
+- **WhatsApp**: +91 8523045235 (Available 24/7)
 - **Service Areas**: Civil Lines, Swaroop Nagar, Govind Nagar, Kidwai Nagar, Kakadeo, Rawatpur
 
 ## 🎯 Business Features
