@@ -1,10 +1,20 @@
+# ════════════════════════════════════════════
+# robots.txt — KanpurEliteCompanions.in
+# ════════════════════════════════════════════
+
 User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /private
+Disallow: /api/
+Disallow: /*.json$
 
-# Sitemaps
-Sitemap: https://kanpurelitedolls.com/sitemap.xml
+# Allow Google to crawl images & CSS
+User-agent: Googlebot-Image
+Allow: /images/
 
-# Crawl delay
+# Sitemap location
+Sitemap: https://www.kanpurelitecompanions.in/sitemap.xml
+
+# Crawl delay (be polite to servers)
 Crawl-delay: 1
