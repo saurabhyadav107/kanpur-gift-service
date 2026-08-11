@@ -1,5 +1,5 @@
 # ════════════════════════════════════════════
-# robots.txt — KanpurEliteCompanions.in
+# robots.txt — KanpurEliteService.com
 # ════════════════════════════════════════════
 
 User-agent: *
@@ -14,7 +14,7 @@ User-agent: Googlebot-Image
 Allow: /images/
 
 # Sitemap location
-Sitemap: https://www.kanpurelitecompanions.in/sitemap.xml
+Sitemap: https://www.kanpureliteservice.com/sitemap.xml
 
 # Crawl delay (be polite to servers)
 Crawl-delay: 1

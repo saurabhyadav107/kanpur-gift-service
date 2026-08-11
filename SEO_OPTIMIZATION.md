@@ -1,6 +1,6 @@
-# SEO Optimization Guide — KanpurEliteCompanions.in
+# SEO Optimization Guide — KanpurEliteService.com
 
-**Live Domain**: `https://www.kanpurelitecompanions.in/`  
+**Live Domain**: `https://www.kanpureliteservice.com/`  
 **Last Updated**: August 10, 2026  
 **Helpline**: +91 8523045235  
 
@@ -13,7 +13,7 @@
 | Phone | `+91 8523045235` |
 | WhatsApp URL | `https://wa.me/918523045235` |
 | Phone Link | `tel:+918523045235` |
-| Domain | `https://www.kanpurelitecompanions.in/` |
+| Domain | `https://www.kanpureliteservice.com/` |
 
 ---
 
@@ -21,7 +21,7 @@
 
 ### Title Tag ✅
 ```
-Kanpur Elite Companions – #1 Escort Service in Kanpur | KanpurEliteCompanions.in | Call 8523045235
+Kanpur Elite Companions – #1 Escort Service in Kanpur | KanpurEliteService.com | Call 8523045235
 ```
 - Contains primary keyword ("escort service kanpur")
 - Contains brand name ("Kanpur Elite Companions")
@@ -31,7 +31,7 @@ Kanpur Elite Companions – #1 Escort Service in Kanpur | KanpurEliteCompanions.
 
 ### Meta Description ✅
 ```
-KanpurEliteCompanions.in – Kanpur's most trusted premium escort & companion service.
+KanpurEliteService.com – Kanpur's most trusted premium escort & companion service.
 Verified call girls with 100% privacy, 24/7 discreet home & hotel delivery in Civil Lines,
 Swaroop Nagar, Govind Nagar, Kakadeo & all Kanpur areas. Book now: +91 8523045235.
 ```
@@ -42,7 +42,7 @@ Swaroop Nagar, Govind Nagar, Kakadeo & all Kanpur areas. Book now: +91 852304523
 
 ### Expanded Keywords ✅
 22 targeted keywords covering:
-- Brand: `kanpur elite companions`, `kanpurelitecompanions.in`
+- Brand: `kanpur elite companions`, `kanpureliteservice.com`
 - Service: `escort service kanpur`, `call girl kanpur`, `kanpur call girls`
 - Location variants: `civil lines`, `swaroop nagar`, `govind nagar`, `kakadeo`
 - Intent variants: `24/7 escort`, `hotel escort`, `home delivery escort`, `verified escort`
@@ -60,9 +60,9 @@ Swaroop Nagar, Govind Nagar, Kakadeo & all Kanpur areas. Book now: +91 852304523
 ## 2. Canonical & Domain ✅
 
 ```html
-<link rel="canonical" href="https://www.kanpurelitecompanions.in/" />
+<link rel="canonical" href="https://www.kanpureliteservice.com/" />
 ```
-Always points to `www.kanpurelitecompanions.in` to avoid duplicate content.
+Always points to `www.kanpureliteservice.com` to avoid duplicate content.
 
 ---
 
@@ -70,14 +70,14 @@ Always points to `www.kanpurelitecompanions.in` to avoid duplicate content.
 
 ### 3.1 WebSite Schema (Sitelinks Searchbox)
 - Enables Google Sitelinks Searchbox in search results
-- `alternateName`: `["KanpurEliteCompanions.in", "Kanpur Escort Service"]`
+- `alternateName`: `["KanpurEliteService.com", "Kanpur Escort Service"]`
 
 ### 3.2 Organization Schema
 - `contactPoint` with 24/7 hours, language support (English + Hindi)
 - `sameAs`: WhatsApp link
 
 ### 3.3 LocalBusiness Schema (most important for local SEO)
-- `alternateName` = `"KanpurEliteCompanions.in"`
+- `alternateName` = `"KanpurEliteService.com"`
 - `priceRange` = `"₹₹₹"` (INR)
 - `aggregateRating`: 4.9/5 from 3542 reviews
 - 12 `areaServed` locations with `@type: Place`
@@ -145,7 +145,7 @@ Always points to `www.kanpurelitecompanions.in` to avoid duplicate content.
 - `Allow: /` for all crawlers
 - `Disallow: /admin`, `/private`, `/api/`
 - `User-agent: Googlebot-Image` allow `/images/`
-- Sitemap pointer to `kanpurelitecompanions.in/sitemap.xml`
+- Sitemap pointer to `kanpureliteservice.com/sitemap.xml`
 
 ---
 
@@ -160,20 +160,20 @@ Always points to `www.kanpurelitecompanions.in` to avoid duplicate content.
 
 ## 9. Post-Deploy Checklist
 
-After hosting on `KanpurEliteCompanions.in`, do these steps:
+After hosting on `KanpurEliteService.com`, do these steps:
 
 1. **Google Search Console**
-   - Add property `https://www.kanpurelitecompanions.in/`
+   - Add property `https://www.kanpureliteservice.com/`
    - Verify ownership via HTML file or DNS TXT record
-   - Submit sitemap: `https://www.kanpurelitecompanions.in/sitemap.xml`
+   - Submit sitemap: `https://www.kanpureliteservice.com/sitemap.xml`
 
 2. **Google Business Profile**
    - Create or claim a Google Business Profile
-   - Set website URL to `https://www.kanpurelitecompanions.in/`
+   - Set website URL to `https://www.kanpureliteservice.com/`
    - Add phone `+91 8523045235`
 
 3. **Bing Webmaster Tools**
-   - Add `https://www.kanpurelitecompanions.in/`
+   - Add `https://www.kanpureliteservice.com/`
    - Submit sitemap
 
 4. **HTTPS / SSL**
@@ -198,7 +198,7 @@ After hosting on `KanpurEliteCompanions.in`, do these steps:
 | 2 | `call girl kanpur` | Transactional |
 | 3 | `kanpur elite companions` | Branded |
 | 4 | `kanpur call girls` | Transactional |
-| 5 | `kanpurelitecompanions.in` | Branded |
+| 5 | `kanpureliteservice.com` | Branded |
 | 6 | `civil lines escort kanpur` | Local |
 | 7 | `kanpur vip escort` | Transactional |
 | 8 | `kanpur companion service` | Transactional |

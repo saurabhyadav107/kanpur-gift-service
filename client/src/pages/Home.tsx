@@ -208,7 +208,7 @@ const faqs = [
   },
   {
     q: "Are the profiles on the website 100% real and verified?",
-    a: "Yes! All companion profiles displayed on KanpurEliteCompanions.in are 100% genuine, personally verified, and updated regularly to guarantee complete customer satisfaction.",
+    a: "Yes! All companion profiles displayed on KanpurEliteService.com are 100% genuine, personally verified, and updated regularly to guarantee complete customer satisfaction.",
   },
   {
     q: "What areas in Kanpur do you cover for home and hotel delivery?",
@@ -291,7 +291,7 @@ export default function Home() {
                   KANPUR <span className="gradient-text-pink">ELITE</span>
                 </span>
                 <span className="block text-[9px] uppercase tracking-widest" style={{ color: "#9e7a82" }}>
-                  Premium Companions • KanpurEliteCompanions.in
+                  Premium Companions • KanpurEliteService.com
                 </span>
               </div>
             </a>
@@ -490,7 +490,7 @@ export default function Home() {
               Kanpur Escort Service — Premium Companion Delivery
             </h2>
             <p className="text-sm sm:text-base leading-relaxed" style={{ color: "#9e7a82" }}>
-              Welcome to <strong style={{ color: "#e91e73" }}>KanpurEliteCompanions.in</strong> — Kanpur's most trusted premium
+              Welcome to <strong style={{ color: "#e91e73" }}>KanpurEliteService.com</strong> — Kanpur's most trusted premium
               escort and companion service. Browse our wide range of verified, high-class companion profiles including VIP escorts,
               college models, independent companions, and luxury escort services available for home delivery and hotel visits
               across Civil Lines, Swaroop Nagar, Govind Nagar, Kidwai Nagar, Kakadeo, Mall Road, and all major Kanpur localities.
@@ -1127,7 +1127,7 @@ export default function Home() {
                 KANPUR <span className="gradient-text-pink">ELITE COMPANIONS</span>
               </div>
               <p className="text-xs mb-3" style={{ color: "#9e7a82" }}>
-                KanpurEliteCompanions.in — Premium Escort &amp; Companion Service
+                KanpurEliteService.com — Premium Escort &amp; Companion Service
               </p>
               <p className="text-xs" style={{ color: "#9e7a82" }}>
                 Helpline: <a href={`tel:${phoneNumber}`} style={{ color: "#e91e73" }}>+91 8523045235</a>
@@ -1161,7 +1161,7 @@ export default function Home() {
             style={{ borderTop: "1px solid #3d1018", color: "#9e7a82" }}
           >
             <span id="terms">
-              © {new Date().getFullYear()} KanpurEliteCompanions.in — All Rights Reserved.
+              © {new Date().getFullYear()} KanpurEliteService.com — All Rights Reserved.
               This website contains adult content and is intended for users aged 18 and above only.
               All services are for companionship purposes.{" "}
               <a href="#terms" style={{ color: "#e91e73" }}>Terms &amp; Conditions</a>
