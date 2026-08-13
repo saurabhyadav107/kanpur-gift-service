@@ -13,8 +13,9 @@ Disallow: /*.json$
 User-agent: Googlebot-Image
 Allow: /images/
 
-# Sitemap location
+# Sitemap & LLMs location
 Sitemap: https://joya.kanpureliteservice.com/sitemap.xml
 
 # Crawl delay (be polite to servers)
 Crawl-delay: 1
+
