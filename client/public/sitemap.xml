@@ -4,66 +4,116 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
-
-  <!-- ── Home Page (highest priority) ── -->
+  <!-- Home Page -->
   <url>
-    <loc>https://www.kanpurelitecompanions.in/</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://joya.kanpureliteservice.com/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.kanpurelitecompanions.in/images/banner-2.avif</image:loc>
-      <image:title>Kanpur Elite Companions – Premium Escort Service Kanpur</image:title>
-      <image:caption>Best escort and companion service in Kanpur – KanpurEliteCompanions.in</image:caption>
+      <image:loc>https://joya.kanpureliteservice.com/images/banner-2.avif</image:loc>
+      <image:title>Call Girl Kanpur — Joya Elite Service</image:title>
+      <image:caption>Best call girls and escorts in Kanpur</image:caption>
     </image:image>
   </url>
 
-  <!-- ── Profiles Section ── -->
+  <!-- Service Category Landing Pages -->
   <url>
-    <loc>https://www.kanpurelitecompanions.in/#profiles</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.95</priority>
+    <loc>https://joya.kanpureliteservice.com/services/vip-escorts</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
-
-  <!-- ── Service Areas Section ── -->
   <url>
-    <loc>https://www.kanpurelitecompanions.in/#areas</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://joya.kanpureliteservice.com/services/college-models</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://joya.kanpureliteservice.com/services/independent</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://joya.kanpureliteservice.com/services/luxury-escorts</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
-  <!-- ── Reviews Section ── -->
+  <!-- Kanpur Area Landing Pages -->
   <url>
-    <loc>https://www.kanpurelitecompanions.in/#reviews</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://joya.kanpureliteservice.com/areas/civil-lines</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
-
-  <!-- ── FAQ Section ── -->
   <url>
-    <loc>https://www.kanpurelitecompanions.in/#faq</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://joya.kanpureliteservice.com/areas/swaroop-nagar</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
-
-  <!-- ── Contact Section ── -->
   <url>
-    <loc>https://www.kanpurelitecompanions.in/#contact</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://joya.kanpureliteservice.com/areas/govind-nagar</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://joya.kanpureliteservice.com/areas/kidwai-nagar</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://joya.kanpureliteservice.com/areas/kakadeo</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://joya.kanpureliteservice.com/areas/rawatpur</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
-
-  <!-- ── Terms Section ── -->
   <url>
-    <loc>https://www.kanpurelitecompanions.in/#terms</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <loc>https://joya.kanpureliteservice.com/areas/indiranagar</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
   </url>
-
+  <url>
+    <loc>https://joya.kanpureliteservice.com/areas/mall-road</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://joya.kanpureliteservice.com/areas/shyam-nagar</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://joya.kanpureliteservice.com/areas/saket-nagar</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://joya.kanpureliteservice.com/areas/kanpur-cantt</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://joya.kanpureliteservice.com/areas/barra</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
 </urlset>

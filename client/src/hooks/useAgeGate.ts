@@ -5,7 +5,16 @@ const DECLINED_KEY = "ageGateDeclined";
 
 export type AgeGateStatus = "pending" | "accepted" | "declined";
 
+function isSearchEngineBot(): boolean {
+  if (typeof navigator === "undefined") return true;
+  const ua = navigator.userAgent || "";
+  return /Googlebot|bingbot|Baiduspider|DuckDuckBot|yandexbot|facebookexternalhit|twitterbot|Lighthouse|Storebot-Google|Google-PageSpeed/i.test(ua);
+}
+
 function getInitialStatus(): AgeGateStatus {
+  if (isSearchEngineBot()) {
+    return "accepted";
+  }
   try {
     if (localStorage.getItem(STORAGE_KEY) === "true") return "accepted";
     if (localStorage.getItem(DECLINED_KEY) === "true") return "declined";

@@ -234,13 +234,14 @@ function getCategoryTagClass(cat: Profile["category"]) {
   }
 }
 
+import { SEOHead } from "@/components/SEOHead";
+
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [areaSearch, setAreaSearch] = useState<string>("");
   const [selectedProfile, setSelectedProfile] = useState<Profile | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-
   const categories = ["All", "VIP", "College Model", "Independent", "Luxury Escort"];
 
   const filteredProfiles = profiles.filter((p) => {
@@ -256,8 +257,13 @@ export default function Home() {
     a.name.toLowerCase().includes(areaSearch.toLowerCase())
   );
 
+  const homeTitle = "Call Girl Kanpur | Kanpur Call Girl Number & Verified Pics | Joya Elite";
+  const homeDesc = "Book call girl in Kanpur. Verified call girl pic, phone number +91 8523045235, mobile details, independent bhabhi companions, & 24/7 home/hotel appointment delivery.";
+  const homeKeywords = "Call girl kanpur, Kanpur call girl number, Kanpur call girl pic, Kanpur call girl no, Kanpur call girl contact number, Kanpur call girl image, Kanpur call girl phone number, Call girl cell phone number in kanpur, Call girl mobile number in kanpur, Call girl no in kanpur, Kanpur call girl mobile no, Kanpur call girl mobile number, Kanpur ki call girl, Best sexy call girls in kanpur, Bhabhi call girl kanpur, Book call girl in kanpur, Call girl appointment kanpur, Call girl area in kanpur, Call girl at kanpur";
+
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#0e0407", color: "#f5e6ea" }}>
+      <SEOHead title={homeTitle} description={homeDesc} canonicalUrl="https://joya.kanpureliteservice.com/" keywords={homeKeywords} />
 
       {/* ═══════════════════════════════════════
           FLOATING SIDEBAR (kokaqueen style)
