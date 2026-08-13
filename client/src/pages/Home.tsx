@@ -296,7 +296,7 @@ export default function Home() {
                 <span className="block text-lg font-bold text-white leading-tight" style={{ fontFamily: "Oswald, sans-serif", letterSpacing: "0.05em" }}>
                   KANPUR <span className="gradient-text-pink">ELITE</span>
                 </span>
-                <span className="block text-[9px] uppercase tracking-widest" style={{ color: "#9e7a82" }}>
+                <span className="block text-[9px] uppercase tracking-widest" style={{ color: "#d4aab3" }}>
                   Premium Companions • KanpurEliteService.com
                 </span>
               </div>
@@ -426,19 +426,19 @@ export default function Home() {
               >
                 <div>
                   <div className="text-2xl font-bold text-white" style={{ fontFamily: "Oswald, sans-serif" }}>3500+</div>
-                  <div className="text-xs" style={{ color: "#9e7a82" }}>Happy Clients</div>
+                  <div className="text-xs" style={{ color: "#d4aab3" }}>Happy Clients</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold gradient-text-pink" style={{ fontFamily: "Oswald, sans-serif" }}>100%</div>
-                  <div className="text-xs" style={{ color: "#9e7a82" }}>Privacy</div>
+                  <div className="text-xs" style={{ color: "#d4aab3" }}>Privacy</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold" style={{ fontFamily: "Oswald, sans-serif", color: "#6ee7b7" }}>45m–1h</div>
-                  <div className="text-xs" style={{ color: "#9e7a82" }}>Fast Delivery</div>
+                  <div className="text-xs" style={{ color: "#d4aab3" }}>Fast Delivery</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold" style={{ fontFamily: "Oswald, sans-serif", color: "#fcd34d" }}>4.9★</div>
-                  <div className="text-xs" style={{ color: "#9e7a82" }}>Rating</div>
+                  <div className="text-xs" style={{ color: "#d4aab3" }}>Rating</div>
                 </div>
               </div>
             </div>
@@ -446,7 +446,7 @@ export default function Home() {
 
           {/* Scroll hint */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-50">
-            <span className="text-[10px] uppercase tracking-widest" style={{ color: "#9e7a82", fontFamily: "Poppins" }}>Scroll</span>
+            <span className="text-[10px] uppercase tracking-widest" style={{ color: "#d4aab3", fontFamily: "Poppins" }}>Scroll</span>
             <ChevronDown className="h-4 w-4 animate-bounce" style={{ color: "#e91e73" }} />
           </div>
         </section>
@@ -469,7 +469,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-white" style={{ fontFamily: "Oswald, sans-serif", letterSpacing: "0.05em" }}>{label}</div>
-                    <div className="text-xs" style={{ color: "#9e7a82" }}>{sub}</div>
+                    <div className="text-xs" style={{ color: "#d4aab3" }}>{sub}</div>
                   </div>
                 </div>
               ))}
@@ -495,7 +495,7 @@ export default function Home() {
             >
               Kanpur Escort Service — Premium Companion Delivery
             </h2>
-            <p className="text-sm sm:text-base leading-relaxed" style={{ color: "#9e7a82" }}>
+            <p className="text-sm sm:text-base leading-relaxed" style={{ color: "#d4aab3" }}>
               Welcome to <strong style={{ color: "#e91e73" }}>KanpurEliteService.com</strong> — Kanpur's most trusted premium
               escort and companion service. Browse our wide range of verified, high-class companion profiles including VIP escorts,
               college models, independent companions, and luxury escort services available for home delivery and hotel visits
@@ -528,7 +528,7 @@ export default function Home() {
                 Featured <span className="gradient-text-pink">Companion Profiles</span>
               </h2>
               <div className="divider-pink" />
-              <p className="text-sm" style={{ color: "#9e7a82", maxWidth: "560px" }}>
+              <p className="text-sm" style={{ color: "#d4aab3", maxWidth: "560px" }}>
                 Top-rated companions in Kanpur. Click any profile to view full bio or book instantly via Call (+91 8523045235).
               </p>
             </div>
@@ -551,7 +551,7 @@ export default function Home() {
               </div>
 
               <div className="relative w-full sm:w-64">
-                <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2" style={{ color: "#9e7a82" }} />
+                <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2" style={{ color: "#d4aab3" }} />
                 <input
                   type="text"
                   placeholder="Search name, tag, area..."
@@ -564,11 +564,11 @@ export default function Home() {
                     color: "#f5e6ea",
                   }}
                 />
-                <span className="absolute left-9 top-1/2 -translate-y-1/2 text-xs pointer-events-none" style={{ color: "#9e7a82", display: searchQuery ? "none" : "block" }}>
+                <span className="absolute left-9 top-1/2 -translate-y-1/2 text-xs pointer-events-none" style={{ color: "#d4aab3", display: searchQuery ? "none" : "block" }}>
                   Search name, tag, area...
                 </span>
                 {searchQuery && (
-                  <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2" style={{ color: "#9e7a82" }}>
+                  <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2" style={{ color: "#d4aab3" }}>
                     <X className="h-3.5 w-3.5" />
                   </button>
                 )}
@@ -578,7 +578,7 @@ export default function Home() {
             {/* Listings */}
             {filteredProfiles.length === 0 ? (
               <div className="text-center py-14 rounded" style={{ background: "#140509", border: "1px solid #3d1018" }}>
-                <p className="mb-3" style={{ color: "#9e7a82" }}>No profiles match your search.</p>
+                <p className="mb-3" style={{ color: "#d4aab3" }}>No profiles match your search.</p>
                 <button
                   onClick={() => { setSelectedCategory("All"); setSearchQuery(""); }}
                   className="text-sm font-semibold" style={{ color: "#e91e73" }}
@@ -640,7 +640,7 @@ export default function Home() {
                               {profile.name},{" "}
                               <span style={{ color: "#e91e73" }}>{profile.age}</span>
                             </h3>
-                            <div className="flex items-center gap-1 mt-0.5 text-xs" style={{ color: "#9e7a82" }}>
+                            <div className="flex items-center gap-1 mt-0.5 text-xs" style={{ color: "#d4aab3" }}>
                               <MapPin className="h-3 w-3" style={{ color: "#e91e73" }} />
                               {profile.location}, Kanpur
                             </div>
@@ -661,7 +661,7 @@ export default function Home() {
                         {/* Bio */}
                         <p
                           className="text-xs sm:text-sm leading-relaxed mb-3 line-clamp-3"
-                          style={{ color: "#9e7a82" }}
+                          style={{ color: "#d4aab3" }}
                         >
                           {profile.bio}
                         </p>
@@ -677,10 +677,10 @@ export default function Home() {
                               {tag}
                             </span>
                           ))}
-                          <span className="text-[10px] font-medium px-2 py-0.5 rounded" style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#9e7a82" }}>
+                          <span className="text-[10px] font-medium px-2 py-0.5 rounded" style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#d4aab3" }}>
                             Height: {profile.height}
                           </span>
-                          <span className="text-[10px] font-medium px-2 py-0.5 rounded" style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#9e7a82" }}>
+                          <span className="text-[10px] font-medium px-2 py-0.5 rounded" style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#d4aab3" }}>
                             ★ {profile.reviewsCount} Reviews
                           </span>
                         </div>
@@ -744,7 +744,7 @@ export default function Home() {
               <button
                 onClick={() => setSelectedProfile(null)}
                 className="absolute top-3 right-3 z-20 flex h-8 w-8 items-center justify-center rounded"
-                style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#9e7a82" }}
+                style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#d4aab3" }}
                 aria-label="Close profile"
               >
                 <X className="h-4 w-4" />
@@ -773,7 +773,7 @@ export default function Home() {
                   >
                     {selectedProfile.name}, <span style={{ color: "#e91e73" }}>{selectedProfile.age}</span>
                   </h3>
-                  <div className="flex items-center gap-2 text-xs mb-4" style={{ color: "#9e7a82" }}>
+                  <div className="flex items-center gap-2 text-xs mb-4" style={{ color: "#d4aab3" }}>
                     <MapPin className="h-3.5 w-3.5" style={{ color: "#e91e73" }} />
                     {selectedProfile.location}, Kanpur
                   </div>
@@ -788,13 +788,13 @@ export default function Home() {
                       { label: "Rating", value: `★ ${selectedProfile.rating} (${selectedProfile.reviewsCount})` },
                     ].map(({ label, value }) => (
                       <div key={label} className="p-2 rounded text-center" style={{ background: "#2d0d12", border: "1px solid #3d1018" }}>
-                        <div className="text-[10px] uppercase tracking-wider mb-1" style={{ color: "#9e7a82", fontFamily: "Poppins" }}>{label}</div>
+                        <div className="text-[10px] uppercase tracking-wider mb-1" style={{ color: "#d4aab3", fontFamily: "Poppins" }}>{label}</div>
                         <div className="text-xs font-semibold text-white">{value}</div>
                       </div>
                     ))}
                   </div>
 
-                  <h4 className="text-xs uppercase tracking-wider mb-2" style={{ color: "#9e7a82", fontFamily: "Poppins", fontWeight: 700 }}>
+                  <h4 className="text-xs uppercase tracking-wider mb-2" style={{ color: "#d4aab3", fontFamily: "Poppins", fontWeight: 700 }}>
                     About {selectedProfile.name}
                   </h4>
                   <p className="text-sm leading-relaxed" style={{ color: "#c2929a" }}>{selectedProfile.bio}</p>
@@ -843,7 +843,7 @@ export default function Home() {
                 Express Delivery <span className="gradient-text-pink">Kanpur Areas</span>
               </h2>
               <div className="divider-pink" />
-              <p className="text-sm" style={{ color: "#9e7a82", maxWidth: "520px" }}>
+              <p className="text-sm" style={{ color: "#d4aab3", maxWidth: "520px" }}>
                 45 min – 1 hour guaranteed home &amp; hotel doorstep delivery across all major Kanpur zones.
               </p>
             </div>
@@ -862,7 +862,7 @@ export default function Home() {
                 />
                 <span
                   className="absolute left-10 top-1/2 -translate-y-1/2 text-sm pointer-events-none"
-                  style={{ color: "#9e7a82", display: areaSearch ? "none" : "block" }}
+                  style={{ color: "#d4aab3", display: areaSearch ? "none" : "block" }}
                 >
                   Search your area in Kanpur...
                 </span>
@@ -966,7 +966,7 @@ export default function Home() {
                   >
                     {title}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#9e7a82" }}>{body}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: "#d4aab3" }}>{body}</p>
                 </div>
               ))}
             </div>
@@ -1013,9 +1013,9 @@ export default function Home() {
                   <div className="mt-5 pt-4 flex items-center justify-between" style={{ borderTop: "1px solid #3d1018" }}>
                     <div>
                       <h4 className="font-bold text-white text-sm" style={{ fontFamily: "Oswald, sans-serif", letterSpacing: "0.04em" }}>{rev.name}</h4>
-                      <p className="text-xs" style={{ color: "#9e7a82" }}>{rev.location}</p>
+                      <p className="text-xs" style={{ color: "#d4aab3" }}>{rev.location}</p>
                     </div>
-                    <span className="text-[11px]" style={{ color: "#9e7a82" }}>{rev.date}</span>
+                    <span className="text-[11px]" style={{ color: "#d4aab3" }}>{rev.date}</span>
                   </div>
                 </div>
               ))}
@@ -1066,7 +1066,7 @@ export default function Home() {
                     />
                   </button>
                   {openFaq === idx && (
-                    <div className="px-4 pb-4 text-sm leading-relaxed" style={{ color: "#9e7a82", borderTop: "1px solid #3d1018", paddingTop: "0.75rem" }}>
+                    <div className="px-4 pb-4 text-sm leading-relaxed" style={{ color: "#d4aab3", borderTop: "1px solid #3d1018", paddingTop: "0.75rem" }}>
                       {faq.a}
                     </div>
                   )}
@@ -1104,7 +1104,7 @@ export default function Home() {
               Ready to Book Your{" "}
               <span className="gradient-text-pink">Companion?</span>
             </h2>
-            <p className="text-base mb-8 font-light" style={{ color: "#9e7a82" }}>
+            <p className="text-base mb-8 font-light" style={{ color: "#d4aab3" }}>
               Contact our confidential booking helpline now. Instant response guaranteed within 1 minute.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -1132,18 +1132,18 @@ export default function Home() {
               <div className="text-xl font-bold text-white mb-2" style={{ fontFamily: "Oswald, sans-serif", letterSpacing: "0.08em" }}>
                 KANPUR <span className="gradient-text-pink">ELITE COMPANIONS</span>
               </div>
-              <p className="text-xs mb-3" style={{ color: "#9e7a82" }}>
+              <p className="text-xs mb-3" style={{ color: "#d4aab3" }}>
                 KanpurEliteService.com — Premium Escort &amp; Companion Service
               </p>
-              <p className="text-xs" style={{ color: "#9e7a82" }}>
+              <p className="text-xs" style={{ color: "#d4aab3" }}>
                 Helpline: <a href={`tel:${phoneNumber}`} style={{ color: "#e91e73" }}>+91 8523045235</a>
               </p>
             </div>
 
             {/* Quick links */}
             <div>
-              <h4 className="text-xs uppercase tracking-widest mb-3 font-bold" style={{ color: "#9e7a82", fontFamily: "Oswald, sans-serif" }}>Quick Links</h4>
-              <div className="flex flex-col gap-2 text-xs" style={{ color: "#9e7a82" }}>
+              <h4 className="text-xs uppercase tracking-widest mb-3 font-bold" style={{ color: "#d4aab3", fontFamily: "Oswald, sans-serif" }}>Quick Links</h4>
+              <div className="flex flex-col gap-2 text-xs" style={{ color: "#d4aab3" }}>
                 {["#profiles", "#areas", "#reviews", "#faq"].map((href) => (
                   <a key={href} href={href} className="hover:text-pink-400 transition-colors capitalize">
                     {href.replace("#", "")}
@@ -1154,8 +1154,8 @@ export default function Home() {
 
             {/* Service areas */}
             <div>
-              <h4 className="text-xs uppercase tracking-widest mb-3 font-bold" style={{ color: "#9e7a82", fontFamily: "Oswald, sans-serif" }}>Service Areas</h4>
-              <div className="text-xs leading-relaxed" style={{ color: "#9e7a82", maxWidth: "200px" }}>
+              <h4 className="text-xs uppercase tracking-widest mb-3 font-bold" style={{ color: "#d4aab3", fontFamily: "Oswald, sans-serif" }}>Service Areas</h4>
+              <div className="text-xs leading-relaxed" style={{ color: "#d4aab3", maxWidth: "200px" }}>
                 Civil Lines • Swaroop Nagar • Govind Nagar • Kidwai Nagar • Kakadeo • Mall Road • Rawatpur • Indiranagar
               </div>
             </div>
@@ -1164,7 +1164,7 @@ export default function Home() {
           {/* Bottom bar */}
           <div
             className="mt-8 pt-6 text-center text-xs"
-            style={{ borderTop: "1px solid #3d1018", color: "#9e7a82" }}
+            style={{ borderTop: "1px solid #3d1018", color: "#d4aab3" }}
           >
             <span id="terms">
               © {new Date().getFullYear()} KanpurEliteService.com — All Rights Reserved.

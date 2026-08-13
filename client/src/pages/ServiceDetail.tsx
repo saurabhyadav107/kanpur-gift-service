@@ -90,7 +90,7 @@ export default function ServiceDetail() {
         </div>
       </header>
 
-      <nav className="mx-auto max-w-5xl px-4 py-3 text-xs w-full" style={{ color: "#9e7a82" }}>
+      <nav className="mx-auto max-w-5xl px-4 py-3 text-xs w-full" style={{ color: "#d4aab3" }}>
         <a href="/" className="hover:text-pink-400">Home</a> &gt; <a href="/#profiles" className="hover:text-pink-400">Services</a> &gt; <span className="text-white">{service.name}</span>
       </nav>
 
@@ -119,17 +119,17 @@ export default function ServiceDetail() {
             <h2 className="text-xl font-bold text-white uppercase mb-4" style={{ fontFamily: "Oswald, sans-serif" }}>
               About {service.name} in Kanpur
             </h2>
-            <p className="text-sm leading-relaxed mb-4" style={{ color: "#9e7a82" }}>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: "#d4aab3" }}>
               {service.content}
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "#9e7a82" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "#d4aab3" }}>
               Our agency provides instant access to verified call girl contact numbers, mobile details, genuine image previews, and 24/7 home or hotel companion appointment delivery in Civil Lines, Swaroop Nagar, Govind Nagar, Kakadeo, and all major Kanpur areas.
             </p>
           </div>
         </div>
       </main>
 
-      <footer className="py-6 text-center text-xs" style={{ background: "#0a0306", borderTop: "1px solid #3d1018", color: "#9e7a82" }}>
+      <footer className="py-6 text-center text-xs" style={{ background: "#0a0306", borderTop: "1px solid #3d1018", color: "#d4aab3" }}>
         © {new Date().getFullYear()} Joya Elite Service — {service.name} Kanpur. All rights reserved.
       </footer>
     </div>

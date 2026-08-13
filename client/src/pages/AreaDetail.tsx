@@ -157,7 +157,7 @@ export default function AreaDetail() {
       </header>
 
       {/* Breadcrumbs */}
-      <nav className="mx-auto max-w-5xl px-4 py-3 text-xs w-full" style={{ color: "#9e7a82" }}>
+      <nav className="mx-auto max-w-5xl px-4 py-3 text-xs w-full" style={{ color: "#d4aab3" }}>
         <a href="/" className="hover:text-pink-400">Home</a> &gt; <a href="/#areas" className="hover:text-pink-400">Kanpur Areas</a> &gt; <span className="text-white">{area.name}</span>
       </nav>
 
@@ -193,7 +193,7 @@ export default function AreaDetail() {
               <h2 className="text-xl font-bold text-white uppercase mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>
                 Book Call Girl in {area.name} Kanpur — Verified Mobile No &amp; Pics
               </h2>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "#9e7a82" }}>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: "#d4aab3" }}>
                 At Joya Elite Service, we make booking a companion or call girl in {area.name} Kanpur simple, safe, and 100% confidential. Whether you are staying at a local hotel or your private residence in {area.name}, our verified models arrive promptly within 45 minutes of booking confirmation.
               </p>
               <h3 className="text-base font-bold text-white uppercase mb-2" style={{ fontFamily: "Oswald, sans-serif" }}>
@@ -226,7 +226,7 @@ export default function AreaDetail() {
                   </span>
                 ))}
               </div>
-              <p className="text-sm" style={{ color: "#9e7a82" }}>
+              <p className="text-sm" style={{ color: "#d4aab3" }}>
                 Our call girl mobile numbers and companion appointment dispatch line (+91 8523045235) covers all hotels, guest houses, and private residential areas around {area.name} Kanpur.
               </p>
             </div>
@@ -239,7 +239,7 @@ export default function AreaDetail() {
               <h3 className="text-lg font-bold text-white uppercase mb-1" style={{ fontFamily: "Oswald, sans-serif" }}>
                 Fast 45-Min Delivery
               </h3>
-              <p className="text-xs mb-4" style={{ color: "#9e7a82" }}>
+              <p className="text-xs mb-4" style={{ color: "#d4aab3" }}>
                 Active dispatch in {area.name} Kanpur. Call or WhatsApp now.
               </p>
               <a href={`tel:${phoneNumber}`} className="btn-primary w-full py-3 text-xs mb-2">
@@ -252,7 +252,7 @@ export default function AreaDetail() {
 
             <div className="p-5 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
               <h4 className="text-xs uppercase font-bold text-white mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>Other Kanpur Service Areas</h4>
-              <div className="flex flex-col gap-1.5 text-xs" style={{ color: "#9e7a82" }}>
+              <div className="flex flex-col gap-1.5 text-xs" style={{ color: "#d4aab3" }}>
                 <a href="/areas/civil-lines" className="hover:text-pink-400">Civil Lines Escorts &amp; Call Girls</a>
                 <a href="/areas/swaroop-nagar" className="hover:text-pink-400">Swaroop Nagar Escorts &amp; Call Girls</a>
                 <a href="/areas/govind-nagar" className="hover:text-pink-400">Govind Nagar Escorts &amp; Call Girls</a>
@@ -265,7 +265,7 @@ export default function AreaDetail() {
       </main>
 
       {/* Footer */}
-      <footer className="py-6 text-center text-xs" style={{ background: "#0a0306", borderTop: "1px solid #3d1018", color: "#9e7a82" }}>
+      <footer className="py-6 text-center text-xs" style={{ background: "#0a0306", borderTop: "1px solid #3d1018", color: "#d4aab3" }}>
         © {new Date().getFullYear()} Joya Elite Service — Call Girl Service in {area.name} Kanpur. All rights reserved.
       </footer>
     </div>
