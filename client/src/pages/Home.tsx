@@ -163,18 +163,18 @@ const profiles: Profile[] = [
 ];
 
 const serviceAreas = [
-  { name: "Civil Lines", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
-  { name: "Swaroop Nagar", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
-  { name: "Govind Nagar", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
-  { name: "Kidwai Nagar", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
-  { name: "Kakadeo", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
-  { name: "Rawatpur", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
-  { name: "Indiranagar", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
-  { name: "Mall Road", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
-  { name: "Shyam Nagar", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
-  { name: "Saket Nagar", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
-  { name: "Kanpur Cantt", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
-  { name: "Barra", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
+  { name: "Civil Lines", slug: "civil-lines", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
+  { name: "Swaroop Nagar", slug: "swaroop-nagar", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
+  { name: "Govind Nagar", slug: "govind-nagar", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
+  { name: "Kidwai Nagar", slug: "kidwai-nagar", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
+  { name: "Kakadeo", slug: "kakadeo", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
+  { name: "Rawatpur", slug: "rawatpur", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
+  { name: "Indiranagar", slug: "indiranagar", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
+  { name: "Mall Road", slug: "mall-road", status: "Active • 45 Min – 1 Hr Delivery", popular: true },
+  { name: "Shyam Nagar", slug: "shyam-nagar", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
+  { name: "Saket Nagar", slug: "saket-nagar", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
+  { name: "Kanpur Cantt", slug: "kanpur-cantt", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
+  { name: "Barra", slug: "barra", status: "Active • 45 Min – 1 Hr Delivery", popular: false },
 ];
 
 const reviews = [
@@ -872,10 +872,15 @@ export default function Home() {
             {/* Area grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
               {filteredAreas.map((area) => (
-                <div key={area.name} className="area-card flex items-center justify-between">
+                <a
+                  key={area.slug}
+                  href={`/areas/${area.slug}`}
+                  className="area-card flex items-center justify-between group transition-all hover:border-pink-500"
+                  title={`View ${area.name} Kanpur Call Girl & Escort Service Page`}
+                >
                   <div>
                     <h3
-                      className="font-bold text-white text-sm"
+                      className="font-bold text-white text-sm group-hover:text-pink-400 transition-colors"
                       style={{ fontFamily: "Oswald, sans-serif", letterSpacing: "0.05em", textTransform: "uppercase" }}
                     >
                       {area.name}
@@ -889,17 +894,13 @@ export default function Home() {
                       <Zap className="h-3 w-3" /> {area.status}
                     </span>
                   </div>
-                  <a
-                    href={`tel:${phoneNumber}`}
-                    className="flex h-8 w-8 items-center justify-center rounded"
+                  <div
+                    className="flex h-8 w-8 items-center justify-center rounded transition-all group-hover:bg-pink-600 group-hover:text-white"
                     style={{ background: "rgba(233,30,115,0.1)", color: "#e91e73", border: "1px solid rgba(233,30,115,0.25)" }}
-                    title={`Book delivery to ${area.name}`}
-                    onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#e91e73"; (e.currentTarget as HTMLAnchorElement).style.color = "#fff"; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = "rgba(233,30,115,0.1)"; (e.currentTarget as HTMLAnchorElement).style.color = "#e91e73"; }}
                   >
-                    <Phone className="h-3.5 w-3.5" />
-                  </a>
-                </div>
+                    <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                </a>
               ))}
             </div>
           </div>
@@ -1077,6 +1078,103 @@ export default function Home() {
         </section>
 
         {/* ═══════════════════════════════════════
+            SKOKRA-STYLE RICH KEYWORD DIRECTORY GUIDE
+        ═══════════════════════════════════════ */}
+        <section style={{ background: "#140509", borderBottom: "1px solid #3d1018" }} className="py-16">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
+            <div className="mb-10 text-center">
+              <span className="section-label">✦ Directory Guide</span>
+              <h2
+                style={{
+                  fontFamily: "Oswald, sans-serif",
+                  fontSize: "clamp(1.6rem, 4vw, 2.4rem)",
+                  fontWeight: 700,
+                  color: "#fff",
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Kanpur Escorts &amp; <span className="gradient-text-pink">Call Girl Directory</span>
+              </h2>
+              <div className="divider-pink mx-auto" />
+              <p className="text-sm max-w-2xl mx-auto" style={{ color: "#d4aab3" }}>
+                Kanpur's #1 verified companion directory. Explore independent call girls, college models, VIP escorts, and 24/7 doorstep delivery across Kanpur.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+              <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
+                <h3 className="text-lg font-bold text-white uppercase mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>
+                  Verified Kanpur Call Girl Number &amp; Photo Booking
+                </h3>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "#d4aab3" }}>
+                  At <strong style={{ color: "#e91e73" }}>KanpurEliteService.com</strong>, every companion profile is 100% verified with authentic photos, age details, height, and genuine reviews. Contact our 24/7 booking line at <strong style={{ color: "#e91e73" }}>+91 8523045235</strong> or text us on WhatsApp to receive real-time call girl mobile numbers and image previews.
+                </p>
+                <div className="flex flex-wrap gap-2 text-xs" style={{ color: "#ff6b9d" }}>
+                  <span>✓ Genuine Photos</span> • <span>✓ 100% Privacy</span> • <span>✓ 45-Min Arrival</span>
+                </div>
+              </div>
+
+              <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
+                <h3 className="text-lg font-bold text-white uppercase mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>
+                  Independent Bhabhi &amp; College Model Escorts in Kanpur
+                </h3>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "#d4aab3" }}>
+                  Whether you are seeking youthful college model companions for a night out or independent house-wife bhabhi call girls for a relaxed, sensual evening, our directory offers the widest selection of companions available for home delivery and hotel visits across Kanpur.
+                </p>
+                <div className="flex flex-wrap gap-2 text-xs" style={{ color: "#6ee7b7" }}>
+                  <span>✓ VIP Models</span> • <span>✓ Independent Bhabhi</span> • <span>✓ 5-Star Hotel Visits</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Popular Search Tags Cloud (Skokra style) */}
+            <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
+              <h3 className="text-sm font-bold text-white uppercase mb-4 tracking-wider" style={{ fontFamily: "Oswald, sans-serif" }}>
+                Popular Kanpur Escort Search Categories &amp; Keywords
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Call girl kanpur",
+                  "Kanpur call girl number",
+                  "Kanpur call girl pic",
+                  "Kanpur call girl no",
+                  "Kanpur call girl contact number",
+                  "Kanpur call girl image",
+                  "Kanpur call girl phone number",
+                  "Call girl cell phone number in kanpur",
+                  "Call girl mobile number in kanpur",
+                  "Call girl no in kanpur",
+                  "Kanpur call girl mobile no",
+                  "Kanpur call girl mobile number",
+                  "Kanpur ki call girl",
+                  "Best sexy call girls in kanpur",
+                  "Bhabhi call girl kanpur",
+                  "Book call girl in kanpur",
+                  "Call girl appointment kanpur",
+                  "Call girl area in kanpur",
+                  "Call girl at kanpur",
+                  "Civil Lines Call Girl Kanpur",
+                  "Swaroop Nagar Escort Service",
+                  "Govind Nagar Call Girl Number",
+                  "Kakadeo Escorts Kanpur",
+                  "Indiranagar Call Girl Kanpur",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-3 py-1.5 rounded font-medium"
+                    style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#c2929a" }}
+                  >
+                    🔍 {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════
             CTA BANNER
         ═══════════════════════════════════════ */}
         <section
@@ -1155,8 +1253,15 @@ export default function Home() {
             {/* Service areas */}
             <div>
               <h4 className="text-xs uppercase tracking-widest mb-3 font-bold" style={{ color: "#d4aab3", fontFamily: "Oswald, sans-serif" }}>Service Areas</h4>
-              <div className="text-xs leading-relaxed" style={{ color: "#d4aab3", maxWidth: "200px" }}>
-                Civil Lines • Swaroop Nagar • Govind Nagar • Kidwai Nagar • Kakadeo • Mall Road • Rawatpur • Indiranagar
+              <div className="flex flex-wrap gap-x-2 gap-y-1 text-xs leading-relaxed" style={{ color: "#d4aab3", maxWidth: "260px" }}>
+                {serviceAreas.map((area, idx) => (
+                  <span key={area.slug}>
+                    <a href={`/areas/${area.slug}`} className="hover:text-pink-400 transition-colors">
+                      {area.name}
+                    </a>
+                    {idx < serviceAreas.length - 1 && " • "}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

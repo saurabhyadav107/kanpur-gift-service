@@ -230,6 +230,29 @@ export default function AreaDetail() {
                 Our call girl mobile numbers and companion appointment dispatch line (+91 8523045235) covers all hotels, guest houses, and private residential areas around {area.name} Kanpur.
               </p>
             </div>
+
+            {/* Skokra style local keyword cloud */}
+            <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
+              <h3 className="text-sm font-bold text-white uppercase mb-3 tracking-wider" style={{ fontFamily: "Oswald, sans-serif" }}>
+                Popular Search Keywords in {area.name} Kanpur
+              </h3>
+              <div className="flex flex-wrap gap-2 text-xs">
+                {[
+                  `Call girl ${area.name.toLowerCase()} kanpur`,
+                  `${area.name.toLowerCase()} call girl number`,
+                  `${area.name.toLowerCase()} call girl pic`,
+                  `${area.name.toLowerCase()} call girl contact number`,
+                  `${area.name.toLowerCase()} escort service`,
+                  `book call girl in ${area.name.toLowerCase()} kanpur`,
+                  `independent call girl ${area.name.toLowerCase()}`,
+                  `bhabhi call girl ${area.name.toLowerCase()}`,
+                ].map((tag) => (
+                  <span key={tag} className="px-2.5 py-1 rounded" style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#c2929a" }}>
+                    🔍 {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Right Sidebar */}
