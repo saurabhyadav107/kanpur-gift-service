@@ -7,15 +7,16 @@ Allow: /
 Disallow: /admin
 Disallow: /private
 Disallow: /api/
-Disallow: /*.json$
 
-# Allow Google to crawl images & CSS
+# Allow Google to crawl images & CSS/JS (required for rendering)
+User-agent: Googlebot
+Allow: /images/
+Allow: /src/
+Allow: *.css
+Allow: *.js
+
 User-agent: Googlebot-Image
 Allow: /images/
 
-# Sitemap & LLMs location
+# Sitemap location
 Sitemap: https://joya.kanpureliteservice.com/sitemap.xml
-
-# Crawl delay (be polite to servers)
-Crawl-delay: 1
-

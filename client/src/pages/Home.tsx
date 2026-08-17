@@ -257,13 +257,33 @@ export default function Home() {
     a.name.toLowerCase().includes(areaSearch.toLowerCase())
   );
 
-  const homeTitle = "Call Girl Kanpur | Kanpur Call Girl Number & Verified Pics | Joya Elite";
-  const homeDesc = "Book call girl in Kanpur. Verified call girl pic, phone number +91 8523045235, mobile details, independent bhabhi companions, & 24/7 home/hotel appointment delivery.";
-  const homeKeywords = "Call girl kanpur, Kanpur call girl number, Kanpur call girl pic, Kanpur call girl no, Kanpur call girl contact number, Kanpur call girl image, Kanpur call girl phone number, Call girl cell phone number in kanpur, Call girl mobile number in kanpur, Call girl no in kanpur, Kanpur call girl mobile no, Kanpur call girl mobile number, Kanpur ki call girl, Best sexy call girls in kanpur, Bhabhi call girl kanpur, Book call girl in kanpur, Call girl appointment kanpur, Call girl area in kanpur, Call girl at kanpur";
+  const homeTitle = "Kanpur Escorts & Escort Service in Kanpur | Kanpur Call Girls";
+  const homeDesc = "Browse verified escorts in Kanpur. Trusted escort service in Kanpur with 100% privacy, genuine profiles, and 24/7 home & hotel delivery across Civil Lines, Swaroop Nagar, Kakadeo & all areas. Call +91 8523045235.";
+  const homeKeywords = "kanpur escorts, escort in kanpur, kanpur escort service, kanpur escort services, kanpur call girls, call girl in kanpur, kanpur call girl service, escort service in kanpur, independent escorts in kanpur, kanpur female escorts, kanpur escort booking, escorts in kanpur, kanpur companion service, kanpur local escorts, kanpur escort directory, civil lines escort kanpur, swaroop nagar escort, kakadeo escorts kanpur, govind nagar call girl";
+
+  const homeSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://joya.kanpureliteservice.com/#webpage",
+      "url": "https://joya.kanpureliteservice.com/",
+      "name": "Kanpur Escorts & Escort Service in Kanpur",
+      "description": "Browse verified escorts in Kanpur. Trusted escort service with 100% privacy, genuine profiles, and 24/7 home & hotel delivery across all Kanpur areas.",
+      "isPartOf": { "@id": "https://joya.kanpureliteservice.com/#organization" },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://joya.kanpureliteservice.com/" }
+      ]
+    }
+  ];
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#0e0407", color: "#f5e6ea" }}>
-      <SEOHead title={homeTitle} description={homeDesc} canonicalUrl="https://joya.kanpureliteservice.com/" keywords={homeKeywords} />
+      <SEOHead title={homeTitle} description={homeDesc} canonicalUrl="https://joya.kanpureliteservice.com/" keywords={homeKeywords} schema={homeSchema} />
 
       {/* ═══════════════════════════════════════
           FLOATING SIDEBAR (kokaqueen style)
