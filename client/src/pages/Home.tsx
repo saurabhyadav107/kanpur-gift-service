@@ -203,24 +203,32 @@ const reviews = [
 
 const faqs = [
   {
-    q: "How do I book a companion or call girl service in Kanpur?",
-    a: "Booking is fast and straightforward. Simply call our direct line at +91 8523045235 or message us on WhatsApp. Tell us your preferred location in Kanpur and choice of profile, and we will confirm instant delivery within 45 minutes – 1 hour.",
+    q: "Is advance payment required to book escorts in Kanpur?",
+    a: "No advance payment is required — ever. We operate on a 100% pay-on-arrival / cash-on-delivery basis. You pay only after the companion arrives at your home or hotel in Kanpur. There is no registration fee, no advance deposit, and no hidden charges. If anyone asks for advance payment in our name, please do not pay — call +91 8523045235 to verify directly.",
   },
   {
-    q: "Are the profiles on the website 100% real and verified?",
-    a: "Yes! All companion profiles displayed on KanpurEliteService.com are 100% genuine, personally verified, and updated regularly to guarantee complete customer satisfaction.",
+    q: "How do I book an escort service in Kanpur?",
+    a: "Booking an escort in Kanpur is simple: Step 1 — Call or WhatsApp +91 8523045235. Step 2 — Tell us your location in Kanpur (area, hotel name, or home address) and preferred companion type. Step 3 — Browse verified profiles we share on WhatsApp, confirm your selection, and the companion arrives within 45 minutes to 1 hour. Payment is made in cash directly to the companion after arrival.",
   },
   {
-    q: "What areas in Kanpur do you cover for home and hotel delivery?",
-    a: "We provide 24/7 express delivery across all prime Kanpur locations including Civil Lines, Swaroop Nagar, Govind Nagar, Kidwai Nagar, Kakadeo, Rawatpur, Indiranagar, Mall Road, Shyam Nagar, Saket Nagar, and Kanpur Cantt.",
+    q: "Can I find escorts near me in Kanpur?",
+    a: "Yes. We have verified companions based across all major Kanpur areas — Civil Lines, Swaroop Nagar, Govind Nagar, Kakadeo, Mall Road, Kanpur Cantt, and more. Whichever part of Kanpur you are in, we dispatch the nearest available companion within 45 minutes. Call +91 8523045235 for instant availability check.",
+  },
+  {
+    q: "Are the escort profiles on this site 100% real and verified?",
+    a: "Yes. All companion profiles are personally verified by our team. The photographs you receive on WhatsApp before booking are genuine and up-to-date — no fake or stock images. What you see is exactly who arrives.",
+  },
+  {
+    q: "What areas in Kanpur do you cover for home and hotel escort delivery?",
+    a: "We provide 24/7 express escort delivery across all prime Kanpur locations including Civil Lines, Swaroop Nagar, Govind Nagar, Kidwai Nagar, Kakadeo, Rawatpur, Indiranagar, Mall Road, Shyam Nagar, Saket Nagar, Kanpur Cantt, and Barra.",
   },
   {
     q: "Is my personal identity and privacy protected?",
-    a: "Strict confidentiality and discretion are our highest priorities. We never share or store any client information. Your privacy is 100% safe and secure with us.",
+    a: "Absolute confidentiality is guaranteed. We never store, record, or share any client information. Companions arrive in plain civilian clothing with no visible branding. Your booking is known only to you and our discreet booking team.",
   },
   {
-    q: "What are the working hours?",
-    a: "Our customer team and companion delivery services operate 24 hours a day, 7 days a week, 365 days a year across Kanpur.",
+    q: "What are the working hours for escort service in Kanpur?",
+    a: "Our escort service and companion delivery operates 24 hours a day, 7 days a week, 365 days a year across Kanpur. Late-night and early-morning bookings are fully supported.",
   },
 ];
 
@@ -257,8 +265,8 @@ export default function Home() {
     a.name.toLowerCase().includes(areaSearch.toLowerCase())
   );
 
-  const homeTitle = "Kanpur Escorts & Escort Service in Kanpur | Kanpur Call Girls";
-  const homeDesc = "Browse verified escorts in Kanpur. Trusted escort service in Kanpur with 100% privacy, genuine profiles, and 24/7 home & hotel delivery across Civil Lines, Swaroop Nagar, Kakadeo & all areas. Call +91 8523045235.";
+  const homeTitle = "Kanpur Escorts & Escort Service in Kanpur | Call +91 8523045235";
+  const homeDesc = "Kanpur escorts & call girls — 100% verified, zero advance payment, pay on arrival. Trusted escort service in Kanpur with genuine profiles, 24/7 home & hotel delivery across Civil Lines, Swaroop Nagar, Kakadeo & all areas. Call +91 8523045235.";
   const homeKeywords = "kanpur escorts, escort in kanpur, kanpur escort service, kanpur escort services, kanpur call girls, call girl in kanpur, kanpur call girl service, escort service in kanpur, independent escorts in kanpur, kanpur female escorts, kanpur escort booking, escorts in kanpur, kanpur companion service, kanpur local escorts, kanpur escort directory, civil lines escort kanpur, swaroop nagar escort, kakadeo escorts kanpur, govind nagar call girl";
 
   const homeSchema = [
@@ -268,7 +276,7 @@ export default function Home() {
       "@id": "https://joya.kanpureliteservice.com/#webpage",
       "url": "https://joya.kanpureliteservice.com/",
       "name": "Kanpur Escorts & Escort Service in Kanpur",
-      "description": "Browse verified escorts in Kanpur. Trusted escort service with 100% privacy, genuine profiles, and 24/7 home & hotel delivery across all Kanpur areas.",
+      "description": "Kanpur escorts and call girls — 100% verified, zero advance payment, pay on arrival. 24/7 home & hotel escort delivery across all Kanpur areas.",
       "isPartOf": { "@id": "https://joya.kanpureliteservice.com/#organization" },
       "inLanguage": "en-IN"
     },
@@ -277,6 +285,47 @@ export default function Home() {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://joya.kanpureliteservice.com/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is advance payment required to book escorts in Kanpur?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No advance payment is required — ever. We operate on a 100% pay-on-arrival / cash-on-delivery basis. You pay only after the companion arrives at your home or hotel in Kanpur. There is no registration fee, no advance deposit, and no hidden charges." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book an escort service in Kanpur?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Step 1 — Call or WhatsApp +91 8523045235. Step 2 — Tell us your location in Kanpur and preferred companion type. Step 3 — Browse verified profiles on WhatsApp, confirm, and the companion arrives within 45 minutes to 1 hour. Payment is cash on arrival." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I find escorts near me in Kanpur?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Verified companions are available across Civil Lines, Swaroop Nagar, Govind Nagar, Kakadeo, Mall Road, Kanpur Cantt, and all major Kanpur areas. Nearest available companion dispatched within 45 minutes." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the escort profiles on this site 100% real and verified?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. All companion profiles are personally verified. Profile photographs shared before booking are genuine and current — no fake or stock images." }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas in Kanpur do you cover for escort delivery?",
+          "acceptedAnswer": { "@type": "Answer", "text": "24/7 escort delivery across Civil Lines, Swaroop Nagar, Govind Nagar, Kidwai Nagar, Kakadeo, Rawatpur, Indiranagar, Mall Road, Shyam Nagar, Saket Nagar, Kanpur Cantt, and Barra." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my privacy protected when booking an escort in Kanpur?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolute confidentiality is guaranteed. We never store, record, or share any client information. Companions arrive in plain civilian clothing with no visible branding." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the working hours for escort service in Kanpur?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Our escort service operates 24 hours a day, 7 days a week, 365 days a year across Kanpur. Late-night and early-morning bookings are fully supported." }
+        }
       ]
     }
   ];
@@ -314,10 +363,10 @@ export default function Home() {
               </div>
               <div>
                 <span className="block text-lg font-bold text-white leading-tight" style={{ fontFamily: "Oswald, sans-serif", letterSpacing: "0.05em" }}>
-                  KANPUR <span className="gradient-text-pink">ELITE</span>
+                  KANPUR <span className="gradient-text-pink">ESCORTS</span>
                 </span>
                 <span className="block text-[9px] uppercase tracking-widest" style={{ color: "#d4aab3" }}>
-                  Premium Companions • KanpurEliteService.com
+                  Verified Companions • Escort Service Kanpur
                 </span>
               </div>
             </a>
@@ -391,13 +440,21 @@ export default function Home() {
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 py-24 w-full">
             <div className="max-w-2xl">
 
-              {/* Badge */}
-              <div
-                className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-sm text-xs font-semibold"
-                style={{ background: "rgba(233,30,115,0.12)", border: "1px solid rgba(233,30,115,0.35)", color: "#ff6b9d", fontFamily: "Poppins" }}
-              >
-                <ShieldCheck className="h-3.5 w-3.5" />
-                100% Verified • Discreet • 24/7 Available in Kanpur
+              {/* Badge strip */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                <div
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-sm text-xs font-semibold"
+                  style={{ background: "rgba(233,30,115,0.12)", border: "1px solid rgba(233,30,115,0.35)", color: "#ff6b9d", fontFamily: "Poppins" }}
+                >
+                  <ShieldCheck className="h-3.5 w-3.5" />
+                  100% Verified Profiles
+                </div>
+                <div
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-sm text-xs font-semibold"
+                  style={{ background: "rgba(110,231,183,0.10)", border: "1px solid rgba(110,231,183,0.3)", color: "#6ee7b7", fontFamily: "Poppins" }}
+                >
+                  ✓ Zero Advance — Pay On Arrival
+                </div>
               </div>
 
               {/* H1 */}
@@ -479,9 +536,9 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { icon: <Lock className="h-5 w-5" />, label: "100% Privacy", sub: "Total Secrecy Assured", color: "#e91e73" },
-                { icon: <Award className="h-5 w-5" />, label: "Verified Profiles", sub: "Genuine & Real Photos", color: "#6ee7b7" },
-                { icon: <Clock className="h-5 w-5" />, label: "24/7 Availability", sub: "Day & Night Delivery", color: "#ff6b9d" },
-                { icon: <MapPin className="h-5 w-5" />, label: "Express Delivery", sub: "Home & Hotel Service", color: "#fcd34d" },
+                { icon: <Award className="h-5 w-5" />, label: "Zero Advance", sub: "Pay Only After Arrival", color: "#6ee7b7" },
+                { icon: <Clock className="h-5 w-5" />, label: "24/7 Available", sub: "Day & Night Delivery", color: "#ff6b9d" },
+                { icon: <MapPin className="h-5 w-5" />, label: "45-Min Delivery", sub: "Home & Hotel Service", color: "#fcd34d" },
               ].map(({ icon, label, sub, color }) => (
                 <div key={label} className="flex items-center gap-3 p-3 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
                   <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded" style={{ background: `${color}18`, color }}>
@@ -944,7 +1001,7 @@ export default function Home() {
                   marginBottom: "0.5rem",
                 }}
               >
-                Why Choose <span className="gradient-text-pink">Kanpur Elite</span>
+                Why Choose <span className="gradient-text-pink">Kanpur Escorts</span>
               </h2>
               <div className="divider-pink" />
             </div>
@@ -1248,10 +1305,10 @@ export default function Home() {
             {/* Brand */}
             <div>
               <div className="text-xl font-bold text-white mb-2" style={{ fontFamily: "Oswald, sans-serif", letterSpacing: "0.08em" }}>
-                KANPUR <span className="gradient-text-pink">ELITE COMPANIONS</span>
+                KANPUR <span className="gradient-text-pink">ESCORTS &amp; CALL GIRLS</span>
               </div>
               <p className="text-xs mb-3" style={{ color: "#d4aab3" }}>
-                KanpurEliteService.com — Premium Escort &amp; Companion Service
+                Kanpur Escort Service — 24/7 Verified Companions &amp; Escorts across all Kanpur Areas
               </p>
               <p className="text-xs" style={{ color: "#d4aab3" }}>
                 Helpline: <a href={`tel:${phoneNumber}`} style={{ color: "#e91e73" }}>+91 8523045235</a>

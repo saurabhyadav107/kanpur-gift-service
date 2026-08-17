@@ -25,8 +25,8 @@ const servicesData: Record<string, ServiceInfo> = {
     name: "VIP Escorts",
     slug: "vip-escorts",
     h1: "VIP Escorts in Kanpur — High-Class Escort Service",
-    title: "VIP Escorts Kanpur | High-Class Escort Service in Kanpur",
-    description: "VIP escorts in Kanpur — verified high-class companions for luxury hotel stays, private dinners, and exclusive appointments. 100% privacy. Call +91 8523045235.",
+    title: "VIP Escorts Kanpur | High-Class Escort Service in Kanpur | Call +91 8523045235",
+    description: "VIP escorts in Kanpur — verified high-class companions for luxury hotel stays, private dinners, and exclusive appointments. Zero advance payment, 100% privacy. Call +91 8523045235.",
     keywords: "vip escorts kanpur, high class escorts kanpur, luxury escort service kanpur, escort in kanpur vip, kanpur vip escort booking",
     content: "Our VIP escorts in Kanpur represent the highest tier of companion service. Elegant, well-educated, and stunning, our VIP companions cater to discerning gentlemen seeking supreme discretion and sophisticated charm.",
     longContent: "Our VIP escort category in Kanpur is curated for clients who expect the very best. Each VIP companion is selected through a rigorous personal vetting process — assessed for presentation, communication, social fluency, and professionalism. Whether you require company for a business dinner at a five-star hotel on Mall Road, an exclusive private evening in Civil Lines, or simply a refined companion for your suite at any premium Kanpur hotel, our VIP escorts are prepared to exceed your expectations. Every booking is handled through a private, encrypted channel, and no records are retained. Your identity, location, and preference remain strictly between you and our booking team.",
@@ -47,6 +47,10 @@ const servicesData: Record<string, ServiceInfo> = {
         a: "Yes. VIP escorts are available for hotel room visits across Kanpur including Civil Lines, Mall Road, Swaroop Nagar, and other hotel zones. Call +91 8523045235 for same-day booking.",
       },
       {
+        q: "Is advance payment required for VIP escorts in Kanpur?",
+        a: "No advance payment is needed. You pay cash on arrival after meeting your companion at your hotel or home in Kanpur.",
+      },
+      {
         q: "How do I book a VIP escort service in Kanpur?",
         a: "Call or WhatsApp +91 8523045235. Mention your preference for a VIP companion, your location in Kanpur, and your preferred time. We confirm within minutes and dispatch within 45 minutes.",
       },
@@ -58,12 +62,12 @@ const servicesData: Record<string, ServiceInfo> = {
     ],
   },
   "college-models": {
-    name: "College Model Escorts",
+    name: "College Girl Escorts",
     slug: "college-models",
-    h1: "College Model Escorts in Kanpur — Young Companion Service",
-    title: "College Model Escorts Kanpur | Young Escort Service in Kanpur",
-    description: "College model escorts in Kanpur — verified young companions for casual dates, party outings, and home visits. 100% genuine profiles. Call +91 8523045235.",
-    keywords: "college model escorts kanpur, young escorts kanpur, college escort service kanpur, escort in kanpur college girl, kanpur young companion service",
+    h1: "College Girl Escorts in Kanpur — Young Escort Service",
+    title: "College Girl Escorts Kanpur | Young Escort Service in Kanpur | Call +91 8523045235",
+    description: "College girl escorts in Kanpur — verified young companions for casual dates, party outings, and home visits. Zero advance payment, genuine profiles. Call +91 8523045235.",
+    keywords: "college girl escorts kanpur, college girl escort service kanpur, escort in kanpur college girl, kanpur college girl escort, college escorts kanpur, young escorts kanpur, kanpur college companion",
     content: "Explore youthful and vibrant college model companions in Kanpur. Perfect for casual dates, party company, and fun evening outings across Swaroop Nagar, Kakadeo, and Civil Lines.",
     longContent: "Our college model escort category in Kanpur features young, energetic companions who bring a natural enthusiasm and freshness to every meeting. These companions are based in Kanpur's major residential and academic neighbourhoods — Kakadeo, Swaroop Nagar, Indiranagar — and are familiar with the city's social scene. All profiles are verified: the photographs you receive via WhatsApp are authentic, and the companion's age and details are accurately represented. Whether you are looking for a fun evening companion for a Kanpur restaurant date or a relaxed home visit, college model escorts are available 24/7 with the same 45-minute delivery guarantee that applies across all our service categories.",
     features: [
@@ -75,15 +79,19 @@ const servicesData: Record<string, ServiceInfo> = {
     ],
     faqs: [
       {
-        q: "Are college model escorts in Kanpur genuine and verified?",
-        a: "Yes. All college model companion profiles are personally verified. The photos you receive via WhatsApp before booking are authentic and accurately represent the companion.",
+        q: "Are college girl escorts in Kanpur genuine and verified?",
+        a: "Yes. All college girl companion profiles are personally verified. The photos you receive via WhatsApp before booking are authentic and accurately represent the companion.",
       },
       {
-        q: "Where in Kanpur are college model escorts available?",
-        a: "College model companions are available across Kanpur including Kakadeo, Swaroop Nagar, Indiranagar, Civil Lines, and all major areas. Call +91 8523045235 for current availability.",
+        q: "Where in Kanpur are college girl escorts available?",
+        a: "College girl companions are available across Kanpur including Kakadeo, Swaroop Nagar, Indiranagar, Civil Lines, and all major areas. Call +91 8523045235 for current availability.",
       },
       {
-        q: "Can I book a college model escort for a home visit in Kanpur?",
+        q: "Is there any advance payment for college girl escorts in Kanpur?",
+        a: "No. Zero advance payment. You pay in cash directly upon arrival at your place.",
+      },
+      {
+        q: "Can I book a college girl escort for a home visit in Kanpur?",
         a: "Yes. Home visits are available throughout Kanpur. Companions arrive within 45 minutes of booking confirmation. Call +91 8523045235.",
       },
     ],
@@ -97,8 +105,8 @@ const servicesData: Record<string, ServiceInfo> = {
     name: "Independent Escorts",
     slug: "independent",
     h1: "Independent Escorts in Kanpur — Private Companion Booking",
-    title: "Independent Escorts Kanpur | Independent Escort Service in Kanpur",
-    description: "Independent escorts in Kanpur — verified private companions for discreet home visits and hotel stays. Direct contact, 100% privacy. Call +91 8523045235.",
+    title: "Independent Escorts Kanpur | Independent Escort Service in Kanpur | Call +91 8523045235",
+    description: "Independent escorts in Kanpur — verified private companions for discreet home visits and hotel stays. Direct contact, zero advance payment, 100% privacy. Call +91 8523045235.",
     keywords: "independent escorts in kanpur, independent escort service kanpur, kanpur independent escorts, independent escort kanpur, private escort kanpur",
     content: "Connect with verified independent companions in Kanpur. Enjoy quality time with mature, caring, and professional companions available for private home and hotel appointments.",
     longContent: "Our independent escort category in Kanpur is ideal for those who prefer a more natural, unhurried companionship experience. Independent companions bring warmth, maturity, and genuine personality to every meeting — traits that distinguish them from the agency model. Each independent companion listed with us has been personally verified for authenticity, safety, and professionalism. They are based across Kanpur's residential neighbourhoods and are accustomed to private, discreet home visits. If privacy and a genuine personal connection are your priorities, our independent escorts in Kanpur are the ideal choice. Bookings are managed through our secure channel, and companion contact details are shared only after booking confirmation.",
@@ -119,6 +127,10 @@ const servicesData: Record<string, ServiceInfo> = {
         a: "Yes. All independent companions listed with us are personally vetted for safety and authenticity. Bookings are managed through our secure, confidential channel.",
       },
       {
+        q: "Do independent escorts require advance payment?",
+        a: "No advance payment is needed. Pay only on arrival after meeting your independent companion.",
+      },
+      {
         q: "Can I get a home visit from an independent escort in Kanpur?",
         a: "Yes. Independent escorts are available for private home visits across Kanpur. Call +91 8523045235 or WhatsApp for availability and immediate booking.",
       },
@@ -133,8 +145,8 @@ const servicesData: Record<string, ServiceInfo> = {
     name: "Luxury Escorts",
     slug: "luxury-escorts",
     h1: "Luxury Escorts in Kanpur — Premium Escort Service",
-    title: "Luxury Escorts Kanpur | Premium Escort Service in Kanpur",
-    description: "Luxury escorts in Kanpur — supermodel-class companions for premium hotel visits, exclusive private events, and VIP client entertainment. Call +91 8523045235.",
+    title: "Luxury Escorts Kanpur | Premium Escort Service in Kanpur | Call +91 8523045235",
+    description: "Luxury escorts in Kanpur — supermodel-class companions for premium hotel visits, exclusive private events, and VIP client entertainment. Zero advance payment. Call +91 8523045235.",
     keywords: "luxury escorts kanpur, premium escort service kanpur, luxury escort kanpur, top escorts kanpur, elite escort service kanpur, escort service in kanpur luxury",
     content: "Indulge in Kanpur's finest luxury escort services. Exceptional beauty, aristocratic charm, and total discretion guaranteed for elite clients and luxury hotel visits across Kanpur.",
     longContent: "Our luxury escort category represents the absolute pinnacle of companion service in Kanpur. These are supermodel-class companions — exceptional in appearance, polished in manner, and experienced in serving the most discerning clientele. Luxury escort bookings are handled with an elevated level of care: comprehensive briefing, preference-matching, and a strict no-disclosure protocol. Whether the occasion is a corporate hospitality event, a private suite at Kanpur's top hotel, or an exclusive social gathering, luxury escorts arrive impeccably presented and conduct themselves with complete professionalism. For clients who will accept nothing but the finest, our luxury escort service in Kanpur is unmatched.",
@@ -153,6 +165,10 @@ const servicesData: Record<string, ServiceInfo> = {
       {
         q: "Can luxury escorts in Kanpur be booked for corporate events?",
         a: "Yes. Our luxury companion service is appropriate for corporate entertainment, private dinners, and social events. Complete discretion is guaranteed. Call +91 8523045235.",
+      },
+      {
+        q: "Is advance payment required for luxury escorts in Kanpur?",
+        a: "No advance deposit or registration fee is required. We maintain a strict cash-on-delivery / pay-on-arrival policy.",
       },
       {
         q: "How do I book a luxury escort in Kanpur?",
@@ -175,8 +191,8 @@ export default function ServiceDetail() {
     name: slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
     slug: slug,
     h1: `Escort Service in Kanpur — ${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}`,
-    title: `Escort Service in Kanpur | ${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}`,
-    description: `Verified escort service in Kanpur. Genuine companion profiles, direct phone number +91 8523045235, and 24/7 discreet home & hotel delivery.`,
+    title: `Escort Service in Kanpur | ${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} | Call +91 8523045235`,
+    description: `Verified escort service in Kanpur. Genuine companion profiles, direct phone number +91 8523045235, zero advance payment, and 24/7 discreet home & hotel delivery.`,
     keywords: `escort service kanpur, escorts in kanpur, kanpur escort`,
     content: `Experience premier escort companion services in Kanpur with 100% verified profiles and instant appointment delivery.`,
     longContent: `Our escort service in Kanpur provides verified companions for home and hotel visits across all major areas. Call +91 8523045235 for immediate booking.`,
@@ -185,6 +201,10 @@ export default function ServiceDetail() {
       {
         q: "How do I book this escort service in Kanpur?",
         a: "Call or WhatsApp +91 8523045235. We confirm and dispatch within 45 minutes across Kanpur.",
+      },
+      {
+        q: "Is advance payment required?",
+        a: "No advance payment is required. You pay cash on arrival.",
       },
     ],
     relatedAreas: [
@@ -229,6 +249,7 @@ export default function ServiceDetail() {
       })),
     },
   ];
+
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#0e0407", color: "#f5e6ea" }}>

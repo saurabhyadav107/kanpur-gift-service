@@ -279,10 +279,14 @@ export default function AreaDetail() {
     ],
   };
 
-  const pageTitle = `Escorts in ${area.name} Kanpur | Escort Service ${area.name} | Call Girls`;
-  const pageDesc = `Verified escorts in ${area.name} Kanpur. Trusted escort service with 100% privacy and 45-minute home & hotel delivery across ${area.name}. Call +91 8523045235.`;
+  const pageTitle = slug === "kakadeo"
+    ? "Call Girls in Kakadeo Kanpur | Escort Service Kakadeo | Call +91 8523045235"
+    : `Escort Service in ${area.name} Kanpur | Escorts ${area.name} | Call +91 8523045235`;
+  const pageDesc = `Verified escorts and call girls in ${area.name} Kanpur — zero advance payment, pay on arrival. Trusted escort service with 100% privacy and 45-minute home & hotel delivery across ${area.name}. Call +91 8523045235.`;
   const canonicalUrl = `https://joya.kanpureliteservice.com/areas/${area.slug}`;
-  const keywords = `escorts in ${area.name.toLowerCase()} kanpur, escort service ${area.name.toLowerCase()} kanpur, ${area.name.toLowerCase()} escorts, ${area.name.toLowerCase()} escort kanpur, call girl ${area.name.toLowerCase()} kanpur, ${area.name.toLowerCase()} call girl kanpur, escort in kanpur ${area.name.toLowerCase()}`;
+  const keywords = slug === "kakadeo"
+    ? "kakadeo call girls, call girls in kakadeo kanpur, kakadeo escorts, escorts in kakadeo kanpur, escort service kakadeo, call girl kakadeo kanpur, kakadeo call girl number"
+    : `escorts in ${area.name.toLowerCase()} kanpur, escort service ${area.name.toLowerCase()} kanpur, ${area.name.toLowerCase()} escorts, ${area.name.toLowerCase()} escort kanpur, call girl ${area.name.toLowerCase()} kanpur, ${area.name.toLowerCase()} call girl kanpur, escort in kanpur ${area.name.toLowerCase()}`;
 
   const areaSchema = [
     {
@@ -314,14 +318,32 @@ export default function AreaDetail() {
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": area.faqs.map((faq) => ({
-        "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.a,
+      "mainEntity": [
+        ...area.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a,
+          },
+        })),
+        {
+          "@type": "Question",
+          "name": `How do I book an escort in ${area.name}, Kanpur?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `Call or WhatsApp +91 8523045235. Share your location within ${area.name}, Kanpur and your preferred companion category. We confirm and dispatch within 45 minutes.`,
+          },
         },
-      })),
+        {
+          "@type": "Question",
+          "name": `Is advance payment required for escort service in ${area.name} Kanpur?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `No advance payment is required. We operate on a 100% cash-on-delivery / pay-on-arrival basis across all Kanpur areas including ${area.name}. You pay only after the companion arrives at your location. No registration fee, no deposit, no hidden charges.`,
+          },
+        },
+      ],
     },
   ];
 
@@ -450,6 +472,12 @@ export default function AreaDetail() {
                   <h3 className="text-sm font-bold text-white mb-1" style={{ fontFamily: "Oswald, sans-serif" }}>How do I book an escort in {area.name}, Kanpur?</h3>
                   <p className="text-sm leading-relaxed" style={{ color: "#d4aab3" }}>
                     Call or WhatsApp <strong style={{ color: "#e91e73" }}>+91 8523045235</strong>. Tell us your location within {area.name} and your preferred companion category. We confirm the booking and dispatch within 45 minutes.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-white mb-1" style={{ fontFamily: "Oswald, sans-serif" }}>Is advance payment required for escort service in {area.name} Kanpur?</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#d4aab3" }}>
+                    No. We operate on a <strong style={{ color: "#e91e73" }}>100% cash-on-delivery / pay-on-arrival</strong> basis across all Kanpur areas including {area.name}. You pay only after the companion arrives at your location. No advance, no registration fee, no hidden charges.
                   </p>
                 </div>
               </div>
