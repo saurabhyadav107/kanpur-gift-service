@@ -19,6 +19,8 @@ RewriteRule ^(.*)$ /index.html [L]
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  # HSTS — tells browsers & Google to ALWAYS use HTTPS (1 year)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 
   <FilesMatch "\.(avif|webp|jpg|jpeg|png|gif|ico|svg|woff2?|css|js)$">
     Header set Cache-Control "max-age=31536000, public, immutable"
