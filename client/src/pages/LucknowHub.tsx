@@ -3,10 +3,13 @@ import { SEOHead } from "@/components/SEOHead";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProfileModal, Profile } from "@/components/ProfileModal";
-import { MapPin, Phone, MessageCircle, Zap, ArrowRight } from "lucide-react";
+import { MapPin, Phone, MessageCircle, ArrowRight, ShieldCheck, Star, Sparkles, Crown, ChevronDown } from "lucide-react";
+import { Link } from "wouter";
 
 const phoneNumber = "+918523045235";
 const phoneNumber2 = "+919621326466";
+const whatsappUrl = "https://wa.me/918523045235?text=Hello%20Joya%20Elite,%20I%20want%20to%20book%20a%20companion%20in%20Lucknow.";
+const whatsappUrl2 = "https://wa.me/919621326466?text=Hello%20Joya%20Elite,%20I%20want%20to%20book%20a%20companion%20in%20Lucknow.";
 
 const lucknowLocalities = [
   { name: "Gomti Nagar", slug: "gomti-nagar", pincode: "226010", status: "VIP Corridor • 45 Min Delivery", popular: true, desc: "Lucknow's premier corporate and luxury hotel hub near Hyatt Regency." },
@@ -21,328 +24,129 @@ const lucknowLocalities = [
 ];
 
 const lucknowProfiles: Profile[] = [
-  { 
-    id: 401, 
-    name: "Priya", 
-    age: 23, 
-    category: "VIP Escort", 
-    image: "/images/lucknow-401.jpg", 
-    alt: "Priya - VIP Call Girl in Gomti Nagar Lucknow", 
-    location: "Gomti Nagar", 
-    rating: 5.0, 
-    reviewsCount: 156, 
-    height: "5'5\"", 
-    languages: ["Hindi", "English"], 
-    bio: "VIP PREMIUM ESCORT AGENCY SERVICE IN GOMTI NAGAR LUCKNOW ❣️ 100% GENUINE SERVICE WITH GOOD & SAFE HYGIENIC HOTEL ROOM ACCOMMODATION NEAR HYATT REGENCY. AVAILABLE 24/7 INCALL & OUTCALL BOTH. • SERVICES: A-Level 5-Star VIP Call Girl ◾ S-GFE (Special Girlfriend Experience) ◾ Hotel Suite Outcall ◾ Romantic Evening Dinner Date ◾ 100% Discretion & Cash On Arrival.", 
-    tags: ["VIP Call Girl", "Gomti Nagar", "Incall/Outcall", "S-GFE"], 
-    city: "Lucknow" 
-  },
-  { 
-    id: 402, 
-    name: "Aanya", 
-    age: 24, 
-    category: "Independent", 
-    image: "/images/lucknow-402.jpg", 
-    alt: "Aanya - Independent Escort in Hazratganj Lucknow", 
-    location: "Hazratganj", 
-    rating: 4.9, 
-    reviewsCount: 132, 
-    height: "5'6\"", 
-    languages: ["Hindi", "English"], 
-    bio: "INDEPENDENT VIP ESCORT SERVICE IN HAZRATGANJ LUCKNOW 🔥 100% PRIVATE DIRECT BOOKING NEAR TAJ HOTEL. AVAILABLE 24/7 INCALL & OUTCALL BOTH. • SERVICES: Independent Call Girl ◾ GFE Companion ◾ Outcall Hotel Delivery ◾ Cozy Romantic Evening ◾ 100% Safe Clean Accommodation & Zero Advance.", 
-    tags: ["Independent Escort", "Hazratganj", "Taj Hotel Outcall", "Incall/Outcall"], 
-    city: "Lucknow" 
-  },
-  { 
-    id: 403, 
-    name: "Nisha", 
-    age: 22, 
-    category: "College Model", 
-    image: "/images/lucknow-403.jpg", 
-    alt: "Nisha - College Model Call Girl in Indira Nagar Lucknow", 
-    location: "Indira Nagar", 
-    rating: 4.9, 
-    reviewsCount: 108, 
-    height: "5'4\"", 
-    languages: ["Hindi", "English"], 
-    bio: "COLLEGE MODEL CALL GIRL AGENCY SERVICE IN INDIRA NAGAR LUCKNOW ❣️ 100% REAL PHOTOS & FAST 45-MIN DOORSTEP DELIVERY. AVAILABLE 24/7 INCALL & OUTCALL. • SERVICES: Young College Girl ◾ S-GFE ◾ Sweet Affection ◾ Party Companion ◾ Clean Safe Environment ◾ Pay On Arrival.", 
-    tags: ["College Model", "Indira Nagar", "45-Min Fast Delivery", "GFE"], 
-    city: "Lucknow" 
-  },
-  { 
-    id: 404, 
-    name: "Kavya", 
-    age: 25, 
-    category: "Luxury Escort", 
-    image: "/images/lucknow-404.jpg", 
-    alt: "Kavya - Luxury Escort in Aliganj Lucknow", 
-    location: "Aliganj", 
-    rating: 5.0, 
-    reviewsCount: 174, 
-    height: "5'7\"", 
-    languages: ["English", "Hindi"], 
-    bio: "LUXURY 5-STAR VIP ESCORT SERVICE IN ALIGANJ & MAHANAGAR LUCKNOW 👑 HIGH PROFILE SUPERMODEL COMPANION. AVAILABLE 24/7 INCALL & OUTCALL. • SERVICES: 5-Star VIP Escort ◾ S-GFE ◾ Executive Suite Dates ◾ Business Dinner Escort ◾ Complete Discretion & Safe Clean Accommodation.", 
-    tags: ["Luxury Escort", "Aliganj", "5-Star Service", "Incall/Outcall"], 
-    city: "Lucknow" 
-  },
-  { 
-    id: 405, 
-    name: "Ritika", 
-    age: 21, 
-    category: "VIP Escort", 
-    image: "/images/lucknow-405.jpg", 
-    alt: "Ritika - VIP Call Girl in Alambagh Lucknow", 
-    location: "Alambagh", 
-    rating: 4.8, 
-    reviewsCount: 95, 
-    height: "5'5\"", 
-    languages: ["Hindi", "English"], 
-    bio: "VIP CALL GIRL SERVICE IN ALAMBAGH LUCKNOW NEAR CHARBAGH 🔥 100% GENUINE & SAFE PLACE COMPANION. AVAILABLE 24/7 INCALL & OUTCALL BOTH. • SERVICES: VIP Call Girl ◾ GFE Experience ◾ Express Transit Delivery ◾ Hotel Outcall ◾ Warm Romance ◾ Pay After Arrival.", 
-    tags: ["VIP Call Girl", "Alambagh", "Charbagh Outcall", "24/7 Available"], 
-    city: "Lucknow" 
-  },
-  { 
-    id: 406, 
-    name: "Zara", 
-    age: 26, 
-    category: "Independent", 
-    image: "/images/lucknow-406.jpg", 
-    alt: "Zara - Independent Escort Near Shaheed Path Lucknow", 
-    location: "Shaheed Path", 
-    rating: 5.0, 
-    reviewsCount: 145, 
-    height: "5'6\"", 
-    languages: ["English", "Hindi"], 
-    bio: "PREMIUM INDEPENDENT ESCORT SERVICE NEAR SHAHEED PATH & SUSHANT GOLF CITY LUCKNOW ❣️ AVAILABLE 24/7 INCALL & OUTCALL FOR PHOENIX PALASSIO HOTELS. • SERVICES: Independent Companion ◾ S-GFE ◾ VIP Night Stay ◾ Romantic Dates ◾ 100% Confidential Safe Clean Environment.", 
-    tags: ["Independent Escort", "Shaheed Path", "Golf City Outcall", "Incall/Outcall"], 
-    city: "Lucknow" 
-  },
-  { 
-    id: 407, 
-    name: "Shanaya", 
-    age: 22, 
-    category: "VIP Escort", 
-    image: "/images/lucknow-user-1.jpg", 
-    alt: "Shanaya - VIP Call Girl in Gomti Nagar Extension Lucknow", 
-    location: "Gomti Nagar Ext", 
-    rating: 5.0, 
-    reviewsCount: 168, 
-    height: "5'6\"", 
-    languages: ["Hindi", "English"], 
-    bio: "STYLISH VIP CALL GIRL AGENCY SERVICE IN GOMTI NAGAR EXTENSION LUCKNOW ❣️ 100% GENUINE & SAFE ACCOMMODATION. AVAILABLE 24/7 INCALL & OUTCALL. • SERVICES: VIP Companion ◾ S-GFE ◾ Hotel Suite Outcall ◾ Sensual Conversation ◾ 100% Discretion & Pay On Arrival.", 
-    tags: ["VIP Call Girl", "Gomti Nagar Ext", "Incall/Outcall", "GFE"], 
-    city: "Lucknow" 
-  },
-  { 
-    id: 408, 
-    name: "Kritika", 
-    age: 23, 
-    category: "College Model", 
-    image: "/images/lucknow-user-2.jpg", 
-    alt: "Kritika - College Model Escort in Hazratganj Lucknow", 
-    location: "Hazratganj", 
-    rating: 4.9, 
-    reviewsCount: 142, 
-    height: "5'5\"", 
-    languages: ["Hindi", "English"], 
-    bio: "PLAYFUL COLLEGE MODEL ESCORT SERVICE IN HAZRATGANJ LUCKNOW 🔥 100% GENUINE SAFE SERVICE. AVAILABLE 24/7 INCALL & OUTCALL BOTH. • SERVICES: College Girl Escort ◾ S-GFE ◾ Cozy Hotel Dates ◾ Sweet Evening Romance ◾ Zero Advance Deposit.", 
-    tags: ["College Model", "Hazratganj", "Sweet Romance", "Incall/Outcall"], 
-    city: "Lucknow" 
-  },
-  { 
-    id: 409, 
-    name: "Tanisha", 
-    age: 24, 
-    category: "Luxury Escort", 
-    image: "/images/lucknow-user-3.jpg", 
-    alt: "Tanisha - Luxury Escort in Shaheed Path Lucknow", 
-    location: "Shaheed Path", 
-    rating: 5.0, 
-    reviewsCount: 185, 
-    height: "5'7\"", 
-    languages: ["English", "Hindi"], 
-    bio: "GLAMOROUS LUXURY 5-STAR ESCORT SERVICE NEAR SHAHEED PATH LUCKNOW 👑 HIGH PROFILE SUPERMODEL. AVAILABLE 24/7 INCALL & OUTCALL. • SERVICES: Supermodel VIP Escort ◾ S-GFE ◾ Executive Suite Outcall ◾ Business Dinner Companion ◾ 100% Privacy & Hygienic Clean Service.", 
-    tags: ["Luxury Escort", "Shaheed Path", "Executive Suite", "5-Star Service"], 
-    city: "Lucknow" 
-  },
-  { 
-    id: 410, 
-    name: "Mehak", 
-    age: 25, 
-    category: "Independent", 
-    image: "/images/lucknow-user-4.jpg", 
-    alt: "Mehak - Independent Escort in Aliganj Lucknow", 
-    location: "Aliganj", 
-    rating: 4.9, 
-    reviewsCount: 136, 
-    height: "5'6\"", 
-    languages: ["Hindi", "English"], 
-    bio: "GRACEFUL INDEPENDENT CALL GIRL SERVICE IN ALIGANJ LUCKNOW ❣️ 100% SAFE CLEAN ACCOMMODATION. AVAILABLE 24/7 INCALL & OUTCALL. • SERVICES: Independent Call Girl ◾ GFE Companion ◾ Private Home Visit ◾ Hotel Outcall ◾ 100% Cash On Arrival.", 
-    tags: ["Independent Escort", "Aliganj", "Home & Hotel Delivery", "Incall/Outcall"], 
-    city: "Lucknow" 
-  },
+  { id: 401, name: "Priya", age: 23, category: "VIP Escort", image: "/images/lucknow-401.jpg", alt: "Priya - VIP Call Girl in Gomti Nagar Lucknow", location: "Gomti Nagar", rating: 5.0, reviewsCount: 156, height: "5'5\"", languages: ["Hindi", "English"], bio: "VIP PREMIUM ESCORT AGENCY SERVICE IN GOMTI NAGAR LUCKNOW ❣️ 100% GENUINE SERVICE WITH GOOD & SAFE HYGIENIC HOTEL ROOM ACCOMMODATION NEAR HYATT REGENCY. AVAILABLE 24/7 INCALL & OUTCALL BOTH. • SERVICES: A-Level 5-Star VIP Call Girl ◾ S-GFE (Special Girlfriend Experience) ◾ Hotel Suite Outcall ◾ Romantic Evening Dinner Date ◾ 100% Discretion & Cash On Arrival.", tags: ["VIP Call Girl", "Gomti Nagar", "Incall/Outcall", "S-GFE"], city: "Lucknow" },
+  { id: 402, name: "Aanya", age: 24, category: "Independent", image: "/images/lucknow-402.jpg", alt: "Aanya - Independent Escort in Hazratganj Lucknow", location: "Hazratganj", rating: 4.9, reviewsCount: 132, height: "5'6\"", languages: ["Hindi", "English"], bio: "INDEPENDENT VIP ESCORT SERVICE IN HAZRATGANJ LUCKNOW 🔥 100% PRIVATE DIRECT BOOKING NEAR TAJ HOTEL. AVAILABLE 24/7 INCALL & OUTCALL BOTH. • SERVICES: Independent Call Girl ◾ GFE Companion ◾ Outcall Hotel Delivery ◾ Cozy Romantic Evening ◾ 100% Safe Clean Accommodation & Zero Advance.", tags: ["Independent Escort", "Hazratganj", "Taj Hotel Outcall", "Incall/Outcall"], city: "Lucknow" },
+  { id: 403, name: "Nisha", age: 22, category: "College Model", image: "/images/lucknow-403.jpg", alt: "Nisha - College Model Call Girl in Indira Nagar Lucknow", location: "Indira Nagar", rating: 4.9, reviewsCount: 108, height: "5'4\"", languages: ["Hindi", "English"], bio: "COLLEGE MODEL CALL GIRL AGENCY SERVICE IN INDIRA NAGAR LUCKNOW ❣️ 100% REAL PHOTOS & FAST 45-MIN DOORSTEP DELIVERY. AVAILABLE 24/7 INCALL & OUTCALL. • SERVICES: Young College Girl ◾ S-GFE ◾ Sweet Affection ◾ Party Companion ◾ Clean Safe Environment ◾ Pay On Arrival.", tags: ["College Model", "Indira Nagar", "45-Min Fast Delivery", "GFE"], city: "Lucknow" },
+  { id: 404, name: "Kavya", age: 25, category: "Luxury Escort", image: "/images/lucknow-404.jpg", alt: "Kavya - Luxury Escort in Aliganj Lucknow", location: "Aliganj", rating: 5.0, reviewsCount: 174, height: "5'7\"", languages: ["English", "Hindi"], bio: "LUXURY 5-STAR VIP ESCORT SERVICE IN ALIGANJ & MAHANAGAR LUCKNOW 👑 HIGH PROFILE SUPERMODEL COMPANION. AVAILABLE 24/7 INCALL & OUTCALL. • SERVICES: 5-Star VIP Escort ◾ S-GFE ◾ Executive Suite Dates ◾ Business Dinner Escort ◾ Complete Discretion & Safe Clean Accommodation.", tags: ["Luxury Escort", "Aliganj", "5-Star Service", "Incall/Outcall"], city: "Lucknow" },
+  { id: 405, name: "Ritika", age: 21, category: "VIP Escort", image: "/images/lucknow-405.jpg", alt: "Ritika - VIP Call Girl in Alambagh Lucknow", location: "Alambagh", rating: 4.8, reviewsCount: 95, height: "5'5\"", languages: ["Hindi", "English"], bio: "VIP CALL GIRL SERVICE IN ALAMBAGH LUCKNOW NEAR CHARBAGH 🔥 100% GENUINE & SAFE PLACE COMPANION. AVAILABLE 24/7 INCALL & OUTCALL BOTH. • SERVICES: VIP Call Girl ◾ GFE Experience ◾ Express Transit Delivery ◾ Hotel Outcall ◾ Warm Romance ◾ Pay After Arrival.", tags: ["VIP Call Girl", "Alambagh", "Transit Escort", "Pay On Arrival"], city: "Lucknow" },
+  { id: 406, name: "Meera", age: 24, category: "Independent", image: "/images/lucknow-406.jpg", alt: "Meera - Independent Escort in Shaheed Path Lucknow", location: "Shaheed Path", rating: 4.9, reviewsCount: 121, height: "5'6\"", languages: ["Hindi", "English"], bio: "INDEPENDENT VIP ESCORT SERVICE NEAR SHAHEED PATH & SUSHANT GOLF CITY LUCKNOW ❣️ 100% PRIVATE ESCORT FOR LUXURY SUITES & VILLAS. AVAILABLE 24/7 INCALL & OUTCALL. • SERVICES: Independent Companion ◾ Romantic S-GFE ◾ High Profile Outcall ◾ 100% Cash On Arrival.", tags: ["Independent Escort", "Shaheed Path", "Sushant Golf City", "Incall/Outcall"], city: "Lucknow" },
+];
+
+const lucknowFaqs = [
+  { q: "Is advance payment required for escort booking in Lucknow?", a: "No. Joya Elite operates on a strict 100% Cash on Arrival policy across all Lucknow localities. You pay nothing until meeting your companion in person." },
+  { q: "Which areas in Lucknow do you cover for hotel and home delivery?", a: "We provide 24/7 express delivery across Gomti Nagar, Hazratganj, Indira Nagar, Aliganj, Alambagh, Shaheed Path, Gomti Nagar Extension, Mahanagar, and Amausi Airport." },
+  { q: "Can I book outcalls to luxury hotels in Gomti Nagar & Hazratganj?", a: "Yes. We regularly serve clients at top luxury hotels including Hyatt Regency Gomti Nagar, Taj Mahal Lucknow (Hazratganj), Renaissance Lucknow, Novotel, and Hilton Garden Inn." },
+  { q: "How fast will my companion arrive in Lucknow?", a: "Companions typically arrive at your hotel suite or residence within 35 to 45 minutes of booking confirmation." }
 ];
 
 export default function LucknowHub() {
   const [selectedProfile, setSelectedProfile] = useState<Profile | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const pageTitle = "Lucknow Escorts & Escort Service in Lucknow | Call +91 8523045235 / +91 9621326466";
-  const pageDesc = "Lucknow escorts & call girls — 100% verified, zero advance payment, pay on arrival. Trusted escort service in Lucknow across Gomti Nagar, Hazratganj, Indira Nagar, Aliganj & all areas. Call +91 8523045235 or +91 9621326466.";
-  const canonicalUrl = "https://joya.kanpureliteservice.com/lucknow";
-  const keywords = "lucknow escorts, escort in lucknow, lucknow escort service, lucknow call girls, call girl in lucknow, gomti nagar escorts, hazratganj call girl, indira nagar escort lucknow, aliganj escort lucknow, alambagh call girl lucknow, shaheed path escort lucknow";
+  const title = "Lucknow Escorts | #1 Escort Service in Lucknow | Verified Call Girls | Joya Elite";
+  const desc = "Premier Lucknow Escorts Hub. Verified call girls, VIP companions & independent models across Gomti Nagar, Hazratganj, Indira Nagar, Aliganj & Shaheed Path. 100% Cash on Arrival, 45-min delivery. Call +91 8523045235.";
+  const keywords = "lucknow escorts, escort in lucknow, lucknow call girls, escort service in lucknow, independent escorts lucknow, gomti nagar escort, hazratganj call girl, aliganj escort, shaheed path escort, indira nagar call girl";
 
-  const lucknowSchema = [
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Joya Elite — Lucknow Escort Service",
-      "url": canonicalUrl,
-      "telephone": ["+91-8523045235", "+91-9621326466"],
-      "areaServed": {
-        "@type": "City",
-        "name": "Lucknow",
-        "addressRegion": "Uttar Pradesh"
-      },
-      "description": pageDesc
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://joya.kanpureliteservice.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Lucknow Escort Service", "item": canonicalUrl }
-      ]
-    }
-  ];
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#0e0407", color: "#f5e6ea" }}>
-      <SEOHead title={pageTitle} description={pageDesc} canonicalUrl={canonicalUrl} keywords={keywords} schema={lucknowSchema} />
+    <div className="min-h-screen flex flex-col bg-[#08070b] text-[#f6f3ee]">
+      <SEOHead title={title} description={desc} canonicalUrl="https://joya.kanpureliteservice.com/lucknow" keywords={keywords} />
       <Header />
 
-      {/* Hero Banner */}
-      <section className="relative py-20 overflow-hidden" style={{ background: "linear-gradient(135deg, #1c070b 0%, #2d0a12 50%, #0e0407 100%)", borderBottom: "1px solid #3d1018" }}>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-4" style={{ background: "rgba(233,30,115,0.15)", border: "1px solid rgba(233,30,115,0.35)", color: "#ff6b9d" }}>
-            <MapPin className="h-4 w-4" style={{ color: "#e91e73" }} />
-            <span>LUCKNOW'S PREMIER VERIFIED ESCORT SERVICE DIRECTORY</span>
+      <section className="relative pt-20 pb-24 overflow-hidden border-b border-[#282033]/60 bg-gradient-to-b from-[#180e22] via-[#0b0811] to-[#08070b]">
+        <div className="mx-auto max-w-7xl px-4 text-center relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 bg-[#181220] border border-[#dfb76c]/40">
+            <Sparkles className="h-3.5 w-3.5 text-[#dfb76c]" />
+            <span className="text-[#dfb76c] uppercase font-bold tracking-wider">LUCKNOW CITY ESCORTS DIRECTORY (/lucknow)</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: "Oswald, sans-serif", letterSpacing: "0.04em" }}>
-            PREMIUM <span className="gradient-text-pink">LUCKNOW ESCORTS</span> &amp; CALL GIRLS
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold uppercase text-[#f6f3ee] mb-6 leading-tight max-w-5xl mx-auto" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+            Lucknow Escorts &amp; <span className="gradient-text-gold">VIP Call Girls Service</span>
           </h1>
-          <p className="text-sm sm:text-base max-w-3xl mx-auto mb-8 leading-relaxed" style={{ color: "#d4aab3" }}>
-            Welcome to Joya Elite Lucknow — your official luxury portal for verified escorts and independent companions across Gomti Nagar, Hazratganj, Indira Nagar, Aliganj, Alambagh, Shaheed Path, and Sushant Golf City. 100% Pay on Arrival — No Advance Deposit Required.
+          <p className="max-w-3xl mx-auto text-sm sm:text-base leading-relaxed text-[#c4bdad] mb-10">
+            Welcome to Lucknow's elite companion directory. Discover top-rated VIP escorts, independent companions, and college models in Gomti Nagar, Hazratganj, Indira Nagar, and Shaheed Path. Guaranteed <strong className="text-[#dfb76c]">100% Cash on Arrival</strong> &amp; express 45-minute hotel suite delivery.
           </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-3 flex-wrap">
-            <a href={`tel:${phoneNumber}`} className="btn-primary text-base px-6 py-3.5">
-              <Phone className="h-5 w-5" /> Call Line 1: +91 8523045235
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href={`tel:${phoneNumber}`} className="btn-luxury-gold text-xs sm:text-sm px-6 py-3.5">
+              <Phone className="h-4 w-4 inline mr-2" /> Helpline 1: +91 8523045235
             </a>
-            <a href={`tel:${phoneNumber2}`} className="btn-primary text-base px-6 py-3.5" style={{ background: "linear-gradient(135deg,#8e24aa,#c0134e)" }}>
-              <Phone className="h-5 w-5" /> Call Line 2: +91 9621326466
+            <a href={`tel:${phoneNumber2}`} className="btn-luxury-burgundy text-xs sm:text-sm px-6 py-3.5">
+              <Phone className="h-4 w-4 inline mr-2" /> Helpline 2: +91 9621326466
             </a>
-            <a href={`https://wa.me/918523045235?text=Hello%20Joya%20Elite,%20I%20want%20to%20book%20a%20Lucknow%20escort.`} target="_blank" rel="noreferrer" className="btn-whatsapp text-base px-6 py-3.5">
-              <MessageCircle className="h-5 w-5" /> WhatsApp Line 1
-            </a>
-            <a href={`https://wa.me/919621326466?text=Hello%20Joya%20Elite,%20I%20want%20to%20book%20a%20Lucknow%20escort.`} target="_blank" rel="noreferrer" className="btn-whatsapp text-base px-6 py-3.5" style={{ background: "#128C7E" }}>
-              <MessageCircle className="h-5 w-5" /> WhatsApp Line 2
+            <a href={whatsappUrl2} target="_blank" rel="noreferrer" className="btn-luxury-emerald text-xs sm:text-sm px-6 py-3.5">
+              <MessageCircle className="h-4 w-4 inline mr-2" /> WhatsApp Lucknow Concierge
             </a>
           </div>
         </div>
       </section>
 
-      {/* Lucknow Locality Navigation Grid */}
-      <section className="py-16" style={{ background: "#140509", borderBottom: "1px solid #3d1018" }}>
+      <section className="py-16 bg-[#0c0911] border-b border-[#282033]/60">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <span className="text-xs font-bold uppercase tracking-widest text-pink-500 mb-2 block">LUCKNOW LOCALITY DIRECTORY</span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-white uppercase" style={{ fontFamily: "Oswald, sans-serif" }}>
-              Explore Escort Services by <span className="gradient-text-pink">Lucknow Area</span>
+          <div className="text-center mb-10">
+            <span className="text-xs font-bold tracking-widest uppercase text-[#dfb76c] mb-2 block">9 Lucknow Locality Hubs</span>
+            <h2 className="text-2xl sm:text-4xl font-bold uppercase text-[#f6f3ee]" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+              Browse By <span className="gradient-text-gold">Lucknow Neighborhood</span>
             </h2>
-            <p className="text-sm max-w-2xl mx-auto mt-3" style={{ color: "#c2929a" }}>
-              Select any Lucknow locality below to view its dedicated landing page with unique area descriptions, landmark guides, and companion booking details.
-            </p>
+            <p className="text-xs sm:text-sm text-[#c4bdad] mt-2">Select a locality below to view dedicated companions, pricing, and hotel outcall coverage:</p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {lucknowLocalities.map((area) => (
-              <a
-                key={area.slug}
-                href={`/lucknow/${area.slug}`}
-                className="area-card p-5 rounded transition-all hover:border-pink-500 flex flex-col justify-between group"
-                style={{ background: "#1a0709", border: "1px solid #3d1018" }}
-              >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {lucknowLocalities.map((loc) => (
+              <Link key={loc.slug} href={`/lucknow/${loc.slug}`} className="card-luxury p-5 flex flex-col justify-between hover:border-[#dfb76c] transition-all group">
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-bold text-white text-base group-hover:text-pink-400 transition-colors uppercase" style={{ fontFamily: "Oswald, sans-serif" }}>
-                      {area.name}
-                    </h3>
-                    {area.popular && (
-                      <span className="text-[9px] px-2 py-0.5 rounded font-bold" style={{ background: "rgba(233,30,115,0.2)", color: "#ff6b9d", border: "1px solid rgba(233,30,115,0.3)" }}>
-                        POPULAR
-                      </span>
-                    )}
+                    <span className="text-[10px] font-bold text-[#dfb76c] uppercase">PIN: {loc.pincode}</span>
+                    {loc.popular && <span className="px-2 py-0.5 rounded text-[9px] font-bold bg-amber-950/70 text-[#dfb76c] border border-amber-600/40">POPULAR</span>}
                   </div>
-                  <p className="text-xs leading-relaxed mb-3" style={{ color: "#c2929a" }}>{area.desc}</p>
+                  <h3 className="text-lg font-bold text-[#f6f3ee] group-hover:text-[#dfb76c] transition-colors mb-1.5" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>{loc.name} Escorts</h3>
+                  <p className="text-xs text-[#c4bdad] line-clamp-2 leading-relaxed mb-3">{loc.desc}</p>
                 </div>
-                <div className="flex items-center justify-between pt-3 border-t text-xs" style={{ borderColor: "#2d0d12" }}>
-                  <span className="text-emerald-400 flex items-center gap-1 text-[11px]"><Zap className="h-3 w-3" /> {area.status}</span>
-                  <ArrowRight className="h-3.5 w-3.5 text-pink-500 group-hover:translate-x-1 transition-transform" />
+                <div className="pt-3 border-t border-[#2d2438] flex items-center justify-between text-xs">
+                  <span className="text-emerald-400 text-[10px] font-semibold">{loc.status}</span>
+                  <span className="text-[#dfb76c] font-bold flex items-center gap-1">Explore <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" /></span>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Lucknow Companions */}
-      <section className="py-16" style={{ background: "#0e0407", borderBottom: "1px solid #3d1018" }}>
+      <section className="py-20 bg-[#08070b]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-xs font-bold uppercase tracking-widest text-pink-500 mb-2 block">ALL LUCKNOW MODELS DIRECTORY</span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-white uppercase" style={{ fontFamily: "Oswald, sans-serif" }}>
-              Verified <span className="gradient-text-pink">Lucknow Escorts</span>
+            <span className="text-xs font-bold tracking-widest uppercase text-[#dfb76c] mb-2 block">Verified Lucknow Profiles</span>
+            <h2 className="text-2xl sm:text-4xl font-bold uppercase text-[#f6f3ee] mb-3" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+              Verified Escorts in <span className="gradient-text-gold">Lucknow</span>
             </h2>
+            <p className="text-xs sm:text-sm text-[#c4bdad]">Click any model profile to preview full details, stats, bio, and instant booking channels:</p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {lucknowProfiles.map((p) => (
-              <div key={p.id} className="rounded overflow-hidden flex flex-col justify-between cursor-pointer group" style={{ background: "#140509", border: "1px solid #3d1018" }} onClick={() => setSelectedProfile(p)}>
+              <div key={p.id} className="card-luxury overflow-hidden flex flex-col justify-between cursor-pointer group" onClick={() => setSelectedProfile(p)}>
                 <div>
                   <div className="relative h-80 overflow-hidden">
-                    <img src={p.image} alt={`${p.name} - ${p.category} in ${p.location} Lucknow`} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #140509 0%, transparent 60%)" }} />
-                    <div className="absolute top-3 left-3"><span className="badge-vip">{p.category}</span></div>
-                    <div className="absolute bottom-3 left-3 text-xs text-white font-semibold flex items-center gap-1">
-                      <MapPin className="h-3 w-3 text-pink-500" /> {p.location}, Lucknow
-                    </div>
+                    <img src={p.image} alt={`${p.name} - ${p.category} in ${p.location} Lucknow`} className="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d0a13] via-transparent to-transparent opacity-90" />
+                    <div className="absolute top-3 left-3"><span className="badge-vip shadow-md">{p.category}</span></div>
+                    <div className="absolute bottom-3 left-3 text-xs text-[#f6f3ee] font-semibold flex items-center gap-1"><MapPin className="h-3.5 w-3.5 text-[#dfb76c]" /> {p.location}, Lucknow</div>
                   </div>
-                  <div className="p-4">
-                    <div className="flex justify-between items-center mb-1">
-                      <h3 className="font-bold text-white text-lg uppercase" style={{ fontFamily: "Oswald, sans-serif" }}>{p.name}, <span className="text-pink-500">{p.age}</span></h3>
-                      <span className="text-xs text-amber-400 font-semibold">★ {p.rating} ({p.reviewsCount})</span>
+                  <div className="p-5">
+                    <div className="flex justify-between items-center mb-1.5">
+                      <h3 className="font-bold text-[#f6f3ee] text-xl uppercase tracking-wide" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>{p.name}, <span className="gradient-text-gold">{p.age}</span></h3>
+                      <span className="text-xs font-bold text-amber-300 flex items-center gap-1 bg-amber-950/50 px-2 py-0.5 rounded border border-amber-500/30"><Star className="h-3 w-3 fill-amber-400 text-amber-400" /> {p.rating} ({p.reviewsCount})</span>
                     </div>
-                    <p className="text-xs mb-4 line-clamp-2" style={{ color: "#c2929a" }}>{p.bio}</p>
+                    <p className="text-xs text-[#c4bdad] line-clamp-2 leading-relaxed mb-4">{p.bio}</p>
                   </div>
                 </div>
-
-                {/* Both Call and WhatsApp Action Buttons */}
-                <div className="p-4 pt-0 space-y-2" onClick={(e) => e.stopPropagation()}>
-                  <div className="grid grid-cols-2 gap-1.5 text-[11px]">
-                    <a href={`tel:${phoneNumber}`} className="btn-primary py-2 px-1 text-center justify-center">
-                      <Phone className="h-3 w-3 inline mr-1" /> Call 1
-                    </a>
-                    <a href={`tel:${phoneNumber2}`} className="btn-primary py-2 px-1 text-center justify-center" style={{ background: "linear-gradient(135deg,#8e24aa,#c0134e)" }}>
-                      <Phone className="h-3 w-3 inline mr-1" /> Call 2
-                    </a>
+                <div className="p-5 pt-0 space-y-2 border-t border-[#2d2438]" onClick={(e) => e.stopPropagation()}>
+                  <div className="grid grid-cols-2 gap-2 text-xs pt-3">
+                    <a href={`tel:${phoneNumber}`} className="btn-luxury-gold py-2 px-1 text-center justify-center"><Phone className="h-3 w-3 inline mr-1" /> Call 1</a>
+                    <a href={`tel:${phoneNumber2}`} className="btn-luxury-burgundy py-2 px-1 text-center justify-center"><Phone className="h-3 w-3 inline mr-1" /> Call 2</a>
                   </div>
-                  <div className="grid grid-cols-2 gap-1.5 text-[11px]">
-                    <a href={`https://wa.me/918523045235?text=Hello%20${p.name},%20I%20want%20to%20book%20a%20companion%20in%20Lucknow.`} target="_blank" rel="noreferrer" className="btn-whatsapp py-2 px-1 text-center justify-center">
-                      <MessageCircle className="h-3 w-3 inline mr-1" /> WhatsApp 1
-                    </a>
-                    <a href={`https://wa.me/919621326466?text=Hello%20${p.name},%20I%20want%20to%20book%20a%20companion%20in%20Lucknow.`} target="_blank" rel="noreferrer" className="btn-whatsapp py-2 px-1 text-center justify-center" style={{ background: "#128C7E" }}>
-                      <MessageCircle className="h-3 w-3 inline mr-1" /> WhatsApp 2
-                    </a>
+                  <div className="grid grid-cols-2 gap-2 text-xs">
+                    <a href={`https://wa.me/918523045235?text=Hello%20${p.name},%20I%20want%20to%20book%20a%20companion%20in%20Lucknow.`} target="_blank" rel="noreferrer" className="btn-luxury-emerald py-2 px-1 text-center justify-center"><MessageCircle className="h-3 w-3 inline mr-1" /> WhatsApp 1</a>
+                    <a href={`https://wa.me/919621326466?text=Hello%20${p.name},%20I%20want%20to%20book%20a%20companion%20in%20Lucknow.`} target="_blank" rel="noreferrer" className="btn-luxury-emerald py-2 px-1 text-center justify-center"><MessageCircle className="h-3 w-3 inline mr-1" /> WhatsApp 2</a>
                   </div>
                 </div>
               </div>
@@ -351,63 +155,54 @@ export default function LucknowHub() {
         </div>
       </section>
 
-      {/* Rich SEO Content Article for Lucknow Escorts */}
-      <section className="py-16" style={{ background: "#0e0407", borderBottom: "1px solid #3d1018" }}>
+      <section className="py-16 bg-[#0c0911] border-y border-[#282033]/60">
         <div className="mx-auto max-w-5xl px-4 space-y-10 text-left">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold uppercase text-white mb-4" style={{ fontFamily: "Oswald, sans-serif" }}>
-              Lucknow Escorts &amp; Call Girls — <span className="gradient-text-pink">#1 Verified Escort Service in Lucknow</span>
+            <h2 className="text-2xl sm:text-3xl font-bold uppercase text-[#f6f3ee] mb-4" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+              Lucknow Escorts &amp; VIP Call Girls — <span className="gradient-text-gold">#1 Companion Agency in Lucknow</span>
             </h2>
-            <p className="text-sm leading-relaxed mb-4" style={{ color: "#d4aab3" }}>
-              Welcome to the official <strong>Lucknow Escorts Hub</strong> on <strong>Joya Elite</strong>. We offer high-class, 100% verified <strong>Lucknow Call Girls</strong>, VIP escorts, independent companions, college models, and luxury outcall models available 24/7 across Lucknow, Uttar Pradesh. Whether you are staying at a 5-star hotel near Hyatt Regency Gomti Nagar, Taj Hotel Hazratganj, or Phoenix Palassio Shaheed Path, our escort service guarantees 45-minute hotel room delivery with 100% Cash on Arrival and zero advance payment required.
+            <p className="text-xs sm:text-sm leading-relaxed text-[#c4bdad] mb-4">
+              Welcome to the official <strong>Lucknow Escorts Hub</strong> on <strong>Joya Elite</strong>. We offer high-profile, 100% verified <strong>Lucknow Call Girls</strong>, VIP models, independent escorts, and college student companions available 24/7 across Lucknow, Uttar Pradesh. Whether you are staying at a 5-star hotel in Gomti Nagar, attending conferences near Shaheed Path, or visiting Hazratganj, our agency guarantees express 45-minute hotel room delivery with 100% Cash on Arrival and zero advance deposit.
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "#d4aab3" }}>
-              Lucknow is the capital of Uttar Pradesh, known for its royal culture, luxury hotels, and corporate centers. Our escort agency in Lucknow caters to gentlemen who expect privacy, elegance, clean hygienic accommodation, and authentic companion profiles.
-            </p>
+            <p className="text-xs sm:text-sm leading-relaxed text-[#c4bdad]">Lucknow is the cultural and administrative heart of Uttar Pradesh. Our luxury escort service caters to high-profile travelers, executive delegates, and discerning gentlemen who require absolute discretion, verified beauty, and zero financial risks.</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-5 rounded" style={{ background: "#180509", border: "1px solid #3d1018" }}>
-              <h3 className="text-base font-bold text-pink-400 uppercase mb-2" style={{ fontFamily: "Oswald, sans-serif" }}>VIP Escorts in Gomti Nagar &amp; Hazratganj</h3>
-              <p className="text-xs leading-relaxed" style={{ color: "#c2929a" }}>
-                Supermodel-class VIP call girls for luxury hotel outcalls in Gomti Nagar, Hazratganj, and Gomti Nagar Extension. Ideal for corporate dinners and VIP suite appointments.
-              </p>
+            <div className="card-luxury p-5">
+              <h3 className="text-sm font-bold text-[#dfb76c] uppercase mb-2" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>VIP Escorts in Gomti Nagar</h3>
+              <p className="text-xs leading-relaxed text-[#c4bdad]">Supermodel-class VIP companions for luxury hotel suite appointments near Hyatt Regency, Renaissance, and Novotel Lucknow.</p>
             </div>
-            <div className="p-5 rounded" style={{ background: "#180509", border: "1px solid #3d1018" }}>
-              <h3 className="text-base font-bold text-pink-400 uppercase mb-2" style={{ fontFamily: "Oswald, sans-serif" }}>College Models in Indira Nagar &amp; Aliganj</h3>
-              <p className="text-xs leading-relaxed" style={{ color: "#c2929a" }}>
-                Youthful, cheerful college model companions near Indira Nagar, Aliganj, and Mahanagar. Perfect for romantic dates, party company, and fun evening outings.
-              </p>
+            <div className="card-luxury p-5">
+              <h3 className="text-sm font-bold text-[#dfb76c] uppercase mb-2" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>Independent Escorts in Hazratganj</h3>
+              <p className="text-xs leading-relaxed text-[#c4bdad]">Mature, elegant independent call girls offering private dates and romantic evenings near Taj Hotel Hazratganj.</p>
             </div>
-            <div className="p-5 rounded" style={{ background: "#180509", border: "1px solid #3d1018" }}>
-              <h3 className="text-base font-bold text-pink-400 uppercase mb-2" style={{ fontFamily: "Oswald, sans-serif" }}>Independent Companions in Shaheed Path &amp; Golf City</h3>
-              <p className="text-xs leading-relaxed" style={{ color: "#c2929a" }}>
-                Mature, elegant independent escorts near Shaheed Path, Sushant Golf City, and Phoenix Palassio hotels for confidential outcall hotel stays.
-              </p>
+            <div className="card-luxury p-5">
+              <h3 className="text-sm font-bold text-[#dfb76c] uppercase mb-2" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>College Models in Indira Nagar &amp; Aliganj</h3>
+              <p className="text-xs leading-relaxed text-[#c4bdad]">Charming, youthful companions for casual dinners, city tours, and private hotel suite dates with zero advance fees.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Lucknow FAQs */}
-      <section className="py-16" style={{ background: "#140509", borderBottom: "1px solid #3d1018" }}>
+      <section className="py-16 bg-[#08070b]">
         <div className="mx-auto max-w-4xl px-4">
           <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white uppercase" style={{ fontFamily: "Oswald, sans-serif" }}>
-              Lucknow Escort Service — <span className="gradient-text-pink">Frequently Asked Questions</span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#f6f3ee] uppercase" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+              Lucknow Escort Service — <span className="gradient-text-gold">Frequently Asked Questions</span>
             </h2>
           </div>
-          <div className="space-y-4 text-xs sm:text-sm">
-            {[
-              { q: "Is advance payment required for booking escorts in Lucknow?", a: "No advance payment is ever required in Lucknow. We operate strictly on a 100% Cash on Arrival / Pay After Meeting policy." },
-              { q: "Which Lucknow localities do you deliver to?", a: "24/7 doorstep and hotel room delivery across Gomti Nagar, Hazratganj, Indira Nagar, Aliganj, Alambagh, Shaheed Path, Sushant Golf City, Mahanagar, and Lucknow Airport area." },
-              { q: "How to contact Joya Elite for Lucknow companion booking?", a: "Call Helpline 1: +91 8523045235, Helpline 2: +91 9621326466, or send an instant message on WhatsApp." },
-            ].map((faq, idx) => (
-              <div key={idx} className="p-5 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-                <h3 className="font-bold text-white text-base mb-2">{faq.q}</h3>
-                <p style={{ color: "#c2929a" }}>{faq.a}</p>
-              </div>
-            ))}
+          <div className="space-y-4">
+            {lucknowFaqs.map((faq, idx) => {
+              const isOpen = openFaq === idx;
+              return (
+                <div key={idx} className="card-luxury p-5 cursor-pointer transition-all" onClick={() => toggleFaq(idx)}>
+                  <div className="flex items-center justify-between gap-4">
+                    <h3 className="font-bold text-[#f6f3ee] text-sm sm:text-base uppercase" style={{ fontFamily: "Oswald, Poppins, sans-serif" }}>{faq.q}</h3>
+                    <ChevronDown className={`h-4 w-4 text-[#dfb76c] shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                  </div>
+                  {isOpen && <p className="text-xs sm:text-sm leading-relaxed text-[#c4bdad] mt-3 pt-3 border-t border-[#2d2438]">{faq.a}</p>}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

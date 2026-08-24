@@ -1,9 +1,9 @@
 import { SEOHead } from "@/components/SEOHead";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Phone, MessageCircle, Star, CheckCircle2, ShieldCheck, Heart, ChevronDown } from "lucide-react";
+import { Phone, MessageCircle, Star, CheckCircle2, ShieldCheck, Heart, ChevronDown, Sparkles } from "lucide-react";
 import { useState } from "react";
-import { useRoute } from "wouter";
+import { useRoute, Link } from "wouter";
 
 const phoneNumber = "+918523045235";
 const phoneNumber2 = "+919621326466";
@@ -176,7 +176,7 @@ const servicesData: Record<string, ServiceInfo> = {
       },
       {
         q: "How do I book a luxury escort in Kanpur?",
-        a: "Call or WhatsApp +91 8523045235 and specify your requirements. Luxury bookings receive dedicated handling and companions are dispatched to your Kanpur location within the agreed timeframe.",
+        a: "Call or WhatsApp +91 8523045235 and specify your requirements. Luxury bookings receive dedicated handling and companions are dispatched to your Kanpur location within 45 minutes.",
       },
     ],
     relatedAreas: [
@@ -208,7 +208,7 @@ export default function ServiceDetail() {
       },
       {
         q: "Is advance payment required?",
-        a: "No advance payment is required. You pay cash on arrival.",
+        a: "No advance payment is required. You pay 100% cash on arrival.",
       },
     ],
     relatedAreas: [
@@ -254,70 +254,71 @@ export default function ServiceDetail() {
     },
   ];
 
-
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#0e0407", color: "#f5e6ea" }}>
+    <div className="min-h-screen flex flex-col bg-[#08070b] text-[#f6f3ee]">
       <SEOHead title={service.title} description={service.description} canonicalUrl={canonicalUrl} keywords={service.keywords} schema={serviceSchema} />
       <Header />
 
       {/* Breadcrumbs */}
-      <nav className="mx-auto max-w-5xl px-4 py-3 text-xs w-full" style={{ color: "#d4aab3" }} aria-label="Breadcrumb">
+      <nav className="mx-auto max-w-6xl px-4 py-4 text-xs w-full text-[#c4bdad]" aria-label="Breadcrumb">
         <ol style={{ listStyle: "none", display: "flex", gap: "0.25rem", padding: 0, margin: 0 }}>
-          <li><a href="/" className="hover:text-pink-400">Home</a></li>
+          <li><Link href="/" className="hover:text-[#dfb76c] transition-colors">Home</Link></li>
           <li aria-hidden="true" style={{ margin: "0 4px" }}>›</li>
-          <li><a href="/#profiles" className="hover:text-pink-400">Escort Services</a></li>
+          <li><Link href="/services/vip-escorts" className="hover:text-[#dfb76c] transition-colors">Companion Categories</Link></li>
           <li aria-hidden="true" style={{ margin: "0 4px" }}>›</li>
-          <li><span className="text-white">{service.name}</span></li>
+          <li><span className="text-[#f6f3ee] font-semibold">{service.name}</span></li>
         </ol>
       </nav>
 
       {/* Hero */}
-      <section className="py-12" style={{ background: "#140509", borderBottom: "1px solid #3d1018" }}>
+      <section className="py-16 bg-gradient-to-b from-[#150f1e] via-[#0b0811] to-[#08070b] border-b border-[#282033]/60">
         <div className="mx-auto max-w-5xl px-4 text-center">
-          <h1 className="mb-4 text-3xl sm:text-5xl font-bold uppercase text-white" style={{ fontFamily: "Oswald, sans-serif" }}>
-            {service.h1}
+          <div className="inline-flex items-center gap-2 mb-4 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#181220] text-[#dfb76c] border border-[#dfb76c]/40 shadow-lg">
+            <Sparkles className="h-3.5 w-3.5" /> Premier Companion Category
+          </div>
+          <h1 className="mb-4 text-3xl sm:text-5xl font-bold uppercase text-[#f6f3ee]" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+            {service.name} in <span className="gradient-text-gold">Kanpur &amp; Lucknow</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base leading-relaxed" style={{ color: "#c2929a" }}>
-            {service.description}
+          <p className="max-w-2xl mx-auto text-xs sm:text-sm leading-relaxed text-[#c4bdad]">
+            {service.content}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-3 mt-6 flex-wrap">
-            <a href={`tel:${phoneNumber}`} className="btn-primary px-6 py-3 text-sm">
-              <Phone className="h-4 w-4" /> Call: +91 8523045235
+          <div className="flex flex-wrap justify-center gap-3.5 mt-8">
+            <a href={`tel:${phoneNumber}`} className="btn-luxury-gold px-6 py-3 text-xs sm:text-sm">
+              <Phone className="h-4 w-4" /> Call 1: +91 8523045235
             </a>
-            <a href={`tel:${phoneNumber2}`} className="btn-primary px-6 py-3 text-sm" style={{ background: "linear-gradient(135deg,#8e24aa,#c0134e)" }}>
-              <Phone className="h-4 w-4" /> Call: +91 9621326466
+            <a href={`tel:${phoneNumber2}`} className="btn-luxury-burgundy px-6 py-3 text-xs sm:text-sm">
+              <Phone className="h-4 w-4" /> Call 2: +91 9621326466
             </a>
-            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-whatsapp px-6 py-3 text-sm">
-              <MessageCircle className="h-4 w-4" /> WhatsApp for Profiles
+            <a href={whatsappUrl2} target="_blank" rel="noreferrer" className="btn-luxury-emerald px-6 py-3 text-xs sm:text-sm">
+              <MessageCircle className="h-4 w-4" /> WhatsApp VIP Booking
             </a>
           </div>
         </div>
       </section>
 
-      <main className="flex-grow py-12">
-        <div className="mx-auto max-w-5xl px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          {/* Main content */}
-          <div className="md:col-span-2 space-y-6">
+      {/* Main content */}
+      <main className="flex-grow py-14 bg-[#08070b]">
+        <div className="mx-auto max-w-6xl px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2 space-y-6">
 
             {/* About */}
-            <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h2 className="text-xl font-bold text-white uppercase mb-4" style={{ fontFamily: "Oswald, sans-serif" }}>
-                {service.name} in Kanpur
+            <div className="card-luxury p-7">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#f6f3ee] uppercase mb-4" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+                {service.name} Services Overview
               </h2>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "#d4aab3" }}>
+              <p className="text-xs sm:text-sm leading-relaxed mb-4 text-[#c4bdad]">
                 {service.content}
               </p>
-              <p className="text-sm leading-relaxed mb-5" style={{ color: "#d4aab3" }}>
+              <p className="text-xs sm:text-sm leading-relaxed mb-6 text-[#c4bdad]">
                 {service.longContent}
               </p>
-              <h3 className="text-base font-bold text-white uppercase mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>
-                What You Get
+              <h3 className="text-sm sm:text-base font-bold text-[#dfb76c] uppercase mb-3" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+                Key Highlights &amp; Standards
               </h3>
-              <ul className="space-y-2 text-sm" style={{ color: "#c2929a" }}>
+              <ul className="space-y-3 text-xs sm:text-sm text-[#c4bdad]">
                 {service.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-pink-500 mt-0.5 flex-shrink-0" />
+                  <li key={f} className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 mt-0.5 shrink-0" />
                     <span>{f}</span>
                   </li>
                 ))}
@@ -325,50 +326,42 @@ export default function ServiceDetail() {
             </div>
 
             {/* How to Book */}
-            <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h2 className="text-lg font-bold text-white uppercase mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>
-                How to Book — {service.name} in Kanpur
+            <div className="card-luxury p-7">
+              <h2 className="text-lg sm:text-xl font-bold text-[#f6f3ee] uppercase mb-4" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+                How to Book — {service.name}
               </h2>
-              <ol className="space-y-3 text-sm" style={{ color: "#d4aab3" }}>
+              <ol className="space-y-3.5 text-xs sm:text-sm text-[#c4bdad]">
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 text-pink-500 font-bold" style={{ fontFamily: "Oswald, sans-serif" }}>01</span>
-                  <span>Call or WhatsApp <strong style={{ color: "#e91e73" }}>+91 8523045235</strong> and tell us you want a {service.name} booking in Kanpur.</span>
+                  <span className="shrink-0 text-[#dfb76c] font-bold text-base" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>01</span>
+                  <span>Call or WhatsApp <a href={`tel:${phoneNumber}`} className="text-[#dfb76c] font-bold hover:underline">+91 8523045235</a> and specify your interest in our {service.name} category.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 text-pink-500 font-bold" style={{ fontFamily: "Oswald, sans-serif" }}>02</span>
-                  <span>Share your location (area, hotel name, or neighbourhood) in Kanpur. Browse available companion profiles sent via WhatsApp.</span>
+                  <span className="shrink-0 text-[#dfb76c] font-bold text-base" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>02</span>
+                  <span>Share your location (area, luxury hotel, or residence) in Kanpur or Lucknow to browse current available companion profiles on WhatsApp.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 text-pink-500 font-bold" style={{ fontFamily: "Oswald, sans-serif" }}>03</span>
-                  <span>Confirm your selection. A companion is dispatched and arrives at your Kanpur location within <strong>45 minutes to 1 hour</strong>.</span>
+                  <span className="shrink-0 text-[#dfb76c] font-bold text-base" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>03</span>
+                  <span>Confirm your choice. Your companion is dispatched and arrives at your suite or residence within <strong className="text-[#dfb76c]">45 minutes</strong>. Pay 100% cash on arrival.</span>
                 </li>
               </ol>
             </div>
 
             {/* FAQ */}
-            <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h2 className="text-lg font-bold text-white uppercase mb-4" style={{ fontFamily: "Oswald, sans-serif" }}>
+            <div className="card-luxury p-7">
+              <h2 className="text-lg sm:text-xl font-bold text-[#f6f3ee] uppercase mb-5" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
                 Frequently Asked Questions
               </h2>
               <div className="space-y-3">
                 {service.faqs.map((faq, idx) => (
-                  <div key={idx} className="faq-item">
-                    <button
-                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                      className="w-full p-4 text-left flex items-center justify-between gap-4"
-                      style={{ color: openFaq === idx ? "#e91e73" : "#f5e6ea" }}
-                      aria-expanded={openFaq === idx}
-                    >
-                      <span className="text-sm font-semibold" style={{ fontFamily: "Oswald, sans-serif" }}>{faq.q}</span>
-                      <ChevronDown
-                        className="h-4 w-4 flex-shrink-0 transition-transform duration-300"
-                        style={{ color: "#e91e73", transform: openFaq === idx ? "rotate(180deg)" : "rotate(0deg)" }}
-                      />
-                    </button>
+                  <div key={idx} className="card-luxury p-4 cursor-pointer" onClick={() => setOpenFaq(openFaq === idx ? null : idx)}>
+                    <div className="flex items-center justify-between gap-4">
+                      <h3 className="text-xs sm:text-sm font-bold text-[#f6f3ee] uppercase" style={{ fontFamily: "Oswald, Poppins, sans-serif" }}>{faq.q}</h3>
+                      <ChevronDown className={`h-4 w-4 text-[#dfb76c] shrink-0 transition-transform ${openFaq === idx ? "rotate-180" : ""}`} />
+                    </div>
                     {openFaq === idx && (
-                      <div className="px-4 pb-4 text-sm leading-relaxed" style={{ color: "#d4aab3", borderTop: "1px solid #3d1018", paddingTop: "0.75rem" }}>
+                      <p className="text-xs sm:text-sm leading-relaxed text-[#c4bdad] mt-3 pt-3 border-t border-[#2d2438]">
                         {faq.a}
-                      </div>
+                      </p>
                     )}
                   </div>
                 ))}
@@ -376,72 +369,76 @@ export default function ServiceDetail() {
             </div>
 
             {/* Available areas */}
-            <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h2 className="text-lg font-bold text-white uppercase mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>
-                {service.name} Available In
+            <div className="card-luxury p-7">
+              <h2 className="text-lg sm:text-xl font-bold text-[#f6f3ee] uppercase mb-3" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+                {service.name} Available Across All Hubs
               </h2>
-              <p className="text-sm mb-4" style={{ color: "#d4aab3" }}>
-                Our {service.name.toLowerCase()} service is available across all major Kanpur areas:
+              <p className="text-xs sm:text-sm mb-4 text-[#c4bdad]">
+                Our {service.name.toLowerCase()} service is available with 45-minute delivery across all major Kanpur and Lucknow areas:
               </p>
               <div className="flex flex-wrap gap-2">
                 {service.relatedAreas.map((area) => (
-                  <a
+                  <Link
                     key={area.slug}
-                    href={`/areas/${area.slug}`}
-                    className="text-xs px-3 py-1.5 rounded hover:text-pink-400 transition-colors"
-                    style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#c2929a" }}
+                    href={`/kanpur/${area.slug}`}
+                    className="text-xs px-3 py-1.5 rounded-lg bg-[#181220] border border-[#2d2438] text-[#c4bdad] hover:text-[#dfb76c] transition-colors"
                   >
                     → Escorts in {area.name}
-                  </a>
+                  </Link>
                 ))}
-                <a
-                  href="/#areas"
-                  className="text-xs px-3 py-1.5 rounded hover:text-pink-400 transition-colors"
-                  style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#e91e73" }}
+                <Link
+                  href="/kanpur"
+                  className="text-xs px-3 py-1.5 rounded-lg bg-[#181220] border border-[#dfb76c]/40 text-[#dfb76c] font-bold hover:underline"
                 >
                   → All Kanpur Areas
-                </a>
+                </Link>
+                <Link
+                  href="/lucknow"
+                  className="text-xs px-3 py-1.5 rounded-lg bg-[#181220] border border-[#dfb76c]/40 text-[#dfb76c] font-bold hover:underline"
+                >
+                  → All Lucknow Areas
+                </Link>
               </div>
             </div>
           </div>
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <div className="p-5 rounded text-center" style={{ background: "#140509", border: "1px solid #e91e73" }}>
-              <Heart className="h-8 w-8 mx-auto mb-2 text-pink-500" fill="currentColor" />
-              <h3 className="text-lg font-bold text-white uppercase mb-1" style={{ fontFamily: "Oswald, sans-serif" }}>
-                Book Now
+            <div className="card-luxury p-6 text-center border-[#dfb76c]/40 shadow-2xl">
+              <div className="text-2xl mb-2 text-[#dfb76c]">👑</div>
+              <h3 className="text-lg font-bold text-[#f6f3ee] uppercase mb-1" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+                Book {service.name}
               </h3>
-              <p className="text-xs mb-4" style={{ color: "#d4aab3" }}>
-                45-minute delivery across Kanpur
+              <p className="text-xs mb-5 text-[#c4bdad]">
+                45-minute delivery in Kanpur &amp; Lucknow
               </p>
-              <a href={`tel:${phoneNumber}`} className="btn-primary w-full py-3 text-xs mb-2">
-                <Phone className="h-3.5 w-3.5" /> Call: 8523045235
+              <a href={`tel:${phoneNumber}`} className="btn-luxury-gold w-full py-3 text-xs mb-2.5 justify-center">
+                <Phone className="h-3.5 w-3.5" /> Call Helpline 1: 8523045235
               </a>
-              <a href={`tel:${phoneNumber2}`} className="btn-primary w-full py-3 text-xs mb-2" style={{ background: "linear-gradient(135deg,#8e24aa,#c0134e)" }}>
-                <Phone className="h-3.5 w-3.5" /> Call: 9621326466
+              <a href={`tel:${phoneNumber2}`} className="btn-luxury-burgundy w-full py-3 text-xs mb-2.5 justify-center">
+                <Phone className="h-3.5 w-3.5" /> Call Helpline 2: 9621326466
               </a>
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-whatsapp w-full py-3 text-xs">
-                <MessageCircle className="h-3.5 w-3.5" /> WhatsApp Booking
+              <a href={whatsappUrl2} target="_blank" rel="noreferrer" className="btn-luxury-emerald w-full py-3 text-xs justify-center">
+                <MessageCircle className="h-3.5 w-3.5" /> WhatsApp VIP Booking
               </a>
             </div>
 
-            <div className="p-5 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h4 className="text-xs uppercase font-bold text-white mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>Our Guarantees</h4>
-              <div className="space-y-2 text-xs" style={{ color: "#d4aab3" }}>
-                <div className="flex items-center gap-2"><ShieldCheck className="h-3.5 w-3.5 text-pink-500" /> 100% Private Booking</div>
-                <div className="flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-green-400" /> Verified Profiles Only</div>
-                <div className="flex items-center gap-2"><Star className="h-3.5 w-3.5 text-yellow-400" /> 4.9★ Rated Service</div>
+            <div className="card-luxury p-6">
+              <h4 className="text-xs uppercase font-bold text-[#dfb76c] mb-3.5" style={{ fontFamily: "Oswald, Poppins, sans-serif" }}>Our Guarantees</h4>
+              <div className="space-y-2.5 text-xs text-[#c4bdad]">
+                <div className="flex items-center gap-2"><ShieldCheck className="h-3.5 w-3.5 text-[#dfb76c]" /> 100% Private Booking</div>
+                <div className="flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" /> Verified Profiles Only</div>
+                <div className="flex items-center gap-2"><Star className="h-3.5 w-3.5 text-amber-400" /> 4.9★ Rated Service</div>
               </div>
             </div>
 
-            <div className="p-5 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h4 className="text-xs uppercase font-bold text-white mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>Other Escort Services</h4>
-              <nav className="flex flex-col gap-1.5 text-xs" style={{ color: "#d4aab3" }} aria-label="Other escort services">
-                <a href="/services/vip-escorts" className="hover:text-pink-400">VIP Escorts Kanpur</a>
-                <a href="/services/college-models" className="hover:text-pink-400">College Model Escorts</a>
-                <a href="/services/independent" className="hover:text-pink-400">Independent Escorts Kanpur</a>
-                <a href="/services/luxury-escorts" className="hover:text-pink-400">Luxury Escorts Kanpur</a>
+            <div className="card-luxury p-6">
+              <h4 className="text-xs uppercase font-bold text-[#dfb76c] mb-3.5" style={{ fontFamily: "Oswald, Poppins, sans-serif" }}>Other Companion Categories</h4>
+              <nav className="flex flex-col gap-2 text-xs text-[#c4bdad]" aria-label="Other escort services">
+                <Link href="/services/vip-escorts" className="hover:text-[#dfb76c] transition-colors">• VIP Escorts</Link>
+                <Link href="/services/college-models" className="hover:text-[#dfb76c] transition-colors">• College Model Escorts</Link>
+                <Link href="/services/independent" className="hover:text-[#dfb76c] transition-colors">• Independent Companions</Link>
+                <Link href="/services/luxury-escorts" className="hover:text-[#dfb76c] transition-colors">• Luxury 5-Star Escorts</Link>
               </nav>
             </div>
           </div>

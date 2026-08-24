@@ -212,38 +212,51 @@ export default function Profiles() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#0e0407", color: "#f5e6ea" }}>
+    <div className="min-h-screen flex flex-col bg-[#08070b] text-[#f6f3ee]">
       <SEOHead
-        title="Escort Profiles & Models Directory | Kanpur & Lucknow Escorts"
+        title="Escort Profiles & Models Directory | Kanpur & Lucknow Escorts | Joya Elite"
         description="Browse all verified escort profiles & models in Kanpur and Lucknow. Filter by VIP, College Model, Independent, Luxury escorts with genuine photos and reviews."
         canonicalUrl="https://joya.kanpureliteservice.com/profiles"
         keywords="escort profiles kanpur, model directory lucknow, call girl photos kanpur, verified escorts lucknow"
       />
       <Header />
 
-      <section className="py-12 text-center border-b" style={{ background: "linear-gradient(135deg, #180509, #2b0811)", borderColor: "#3d1018" }}>
-        <h1 className="text-3xl sm:text-4xl font-bold uppercase text-white mb-2" style={{ fontFamily: "Oswald, sans-serif" }}>
-          All Models &amp; <span className="gradient-text-pink">Companion Directory</span>
-        </h1>
-        <p className="text-xs sm:text-sm text-pink-200">Verified companion profiles across Kanpur &amp; Lucknow</p>
+      <section className="py-16 text-center border-b border-[#282033]/60 bg-gradient-to-b from-[#180e22] via-[#0b0811] to-[#08070b]">
+        <div className="mx-auto max-w-7xl px-4">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#dfb76c] mb-3 block">
+            VERIFIED ROSTER DIRECTORY
+          </span>
+          <h1
+            className="text-3xl sm:text-5xl font-bold uppercase text-[#f6f3ee] mb-4"
+            style={{ fontFamily: "Playfair Display, Georgia, serif" }}
+          >
+            All Models &amp; <span className="gradient-text-gold">Companion Directory</span>
+          </h1>
+          <p className="text-xs sm:text-sm text-[#c4bdad] max-w-2xl mx-auto">
+            100% verified companion profiles across Kanpur &amp; Lucknow with authentic photos, bio specs, and instant outcall booking.
+          </p>
+        </div>
       </section>
 
-      <main className="flex-grow py-12">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded mb-10 text-xs" style={{ background: "#140509", border: "1px solid #3d1018" }}>
-            <div className="flex items-center gap-2 text-white font-bold uppercase" style={{ fontFamily: "Oswald, sans-serif" }}>
-              <Filter className="h-4 w-4 text-pink-500" /> Filter Companions
+      <main className="flex-grow py-12 bg-[#08070b]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          {/* Luxury Filter Controls */}
+          <div className="card-luxury p-5 mb-10 text-xs flex flex-wrap items-center justify-between gap-5 border-[#dfb76c]/30">
+            <div className="flex items-center gap-2 text-[#dfb76c] font-bold uppercase tracking-wider text-sm" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+              <Filter className="h-4 w-4 text-[#dfb76c]" /> Filter Companions
             </div>
             
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-5">
               <div className="flex items-center gap-2">
-                <span style={{ color: "#c2929a" }}>City:</span>
+                <span className="text-[#a89f8f] font-semibold uppercase text-[11px]">City:</span>
                 {["All", "Kanpur", "Lucknow"].map((c) => (
                   <button
                     key={c}
                     onClick={() => setSelectedCity(c)}
-                    className={`px-3 py-1 rounded font-semibold transition-colors ${
-                      selectedCity === c ? "bg-pink-600 text-white" : "bg-zinc-900 text-zinc-400 hover:text-white"
+                    className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                      selectedCity === c
+                        ? "bg-gradient-to-r from-[#dfb76c] to-[#b38f42] text-[#08070b] font-bold shadow-md"
+                        : "bg-[#181220] text-[#c4bdad] hover:text-[#f6f3ee] border border-[#2d2438]"
                     }`}
                   >
                     {c}
@@ -252,13 +265,15 @@ export default function Profiles() {
               </div>
 
               <div className="flex items-center gap-2">
-                <span style={{ color: "#c2929a" }}>Category:</span>
+                <span className="text-[#a89f8f] font-semibold uppercase text-[11px]">Category:</span>
                 {["All", "VIP", "College Model", "Independent", "Luxury Escort"].map((cat) => (
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat)}
-                    className={`px-3 py-1 rounded font-semibold transition-colors ${
-                      selectedCategory === cat ? "bg-pink-600 text-white" : "bg-zinc-900 text-zinc-400 hover:text-white"
+                    className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                      selectedCategory === cat
+                        ? "bg-gradient-to-r from-[#dfb76c] to-[#b38f42] text-[#08070b] font-bold shadow-md"
+                        : "bg-[#181220] text-[#c4bdad] hover:text-[#f6f3ee] border border-[#2d2438]"
                     }`}
                   >
                     {cat}
@@ -268,23 +283,49 @@ export default function Profiles() {
             </div>
           </div>
 
+          {/* Companions Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {filtered.map((p) => (
-              <article key={p.id} className="profile-card relative overflow-hidden cursor-pointer" style={{ background: "#140509", border: "1px solid #3d1018", borderRadius: "4px" }} onClick={() => setSelectedProfile(p)}>
-                <div className="relative overflow-hidden" style={{ height: "280px" }}>
-                  <img src={p.image} alt={p.alt} className="h-full w-full object-cover object-top hover:scale-105 transition-transform duration-500" loading="lazy" />
-                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #140509 0%, transparent 50%)" }} />
-                  <div className="absolute top-3 left-3"><span className="badge-vip">{p.category}</span></div>
-                  <div className="absolute bottom-3 left-3 flex items-center gap-1 text-xs" style={{ color: "#d4aab3" }}>
-                    <MapPin className="h-3 w-3 text-pink-500" /> {p.location}, {p.city}
+              <article
+                key={p.id}
+                className="card-luxury overflow-hidden flex flex-col justify-between cursor-pointer group hover:border-[#dfb76c] transition-all"
+                onClick={() => setSelectedProfile(p)}
+              >
+                <div>
+                  <div className="relative h-72 overflow-hidden">
+                    <img
+                      src={p.image}
+                      alt={p.alt}
+                      className="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d0a13] via-transparent to-transparent opacity-90" />
+                    <div className="absolute top-3 left-3">
+                      <span className="badge-vip shadow-md">{p.category}</span>
+                    </div>
+                    <div className="absolute bottom-3 left-3 flex items-center gap-1 text-xs text-[#f6f3ee] font-semibold">
+                      <MapPin className="h-3.5 w-3.5 text-[#dfb76c]" /> {p.location}, {p.city}
+                    </div>
                   </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-white font-bold text-lg uppercase" style={{ fontFamily: "Oswald, sans-serif" }}>{p.name}, <span className="text-pink-500">{p.age}</span></h3>
-                  <p className="text-xs line-clamp-2 my-2" style={{ color: "#c2929a" }}>{p.bio}</p>
-                  <div className="flex items-center justify-between text-xs pt-2 border-t" style={{ borderColor: "#3d1018", color: "#fcd34d" }}>
-                    <span>★ {p.rating} ({p.reviewsCount})</span>
-                    <span className="text-pink-400 font-semibold">Inspect →</span>
+                  <div className="p-4">
+                    <div className="flex justify-between items-center mb-1">
+                      <h3
+                        className="text-[#f6f3ee] font-bold text-lg uppercase tracking-wide"
+                        style={{ fontFamily: "Playfair Display, Georgia, serif" }}
+                      >
+                        {p.name}, <span className="gradient-text-gold">{p.age}</span>
+                      </h3>
+                      <span className="text-xs text-amber-300 font-bold flex items-center gap-1 bg-amber-950/50 px-2 py-0.5 rounded border border-amber-500/30">
+                        ★ {p.rating}
+                      </span>
+                    </div>
+                    <p className="text-xs text-[#c4bdad] line-clamp-2 leading-relaxed my-2">{p.bio}</p>
+                    <div className="flex items-center justify-between text-xs pt-3 border-t border-[#2d2438]">
+                      <span className="text-[#a89f8f] text-[11px]">{p.reviewsCount} verified reviews</span>
+                      <span className="text-[#dfb76c] font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        Preview Profile →
+                      </span>
+                    </div>
                   </div>
                 </div>
               </article>
@@ -292,10 +333,13 @@ export default function Profiles() {
           </div>
 
           {/* Rich SEO Content Section */}
-          <section className="mt-16 pt-12 border-t text-left" style={{ borderColor: "#3d1018" }}>
-            <div className="max-w-5xl mx-auto space-y-6 text-xs sm:text-sm leading-relaxed" style={{ color: "#d4aab3" }}>
-              <h2 className="text-2xl font-bold uppercase text-white mb-4" style={{ fontFamily: "Oswald, sans-serif" }}>
-                Kanpur Escorts &amp; Lucknow Escorts — <span className="gradient-text-pink">Verified Profiles Directory</span>
+          <section className="mt-20 pt-12 border-t border-[#282033]/60 text-left">
+            <div className="max-w-5xl mx-auto space-y-6 text-xs sm:text-sm leading-relaxed text-[#c4bdad]">
+              <h2
+                className="text-2xl sm:text-3xl font-bold uppercase text-[#f6f3ee] mb-4"
+                style={{ fontFamily: "Playfair Display, Georgia, serif" }}
+              >
+                Kanpur Escorts &amp; Lucknow Escorts — <span className="gradient-text-gold">Verified Profiles Directory</span>
               </h2>
               <p>
                 The <strong>Joya Elite Profiles Directory</strong> showcases verified <strong>Kanpur Escorts</strong> and <strong>Lucknow Escorts</strong> available for same-day outcall hotel stays and private home appointments. Every companion listed in our directory undergoes individual profile verification so that the photographs, age, location, and companion attributes you see on our site match the companion who arrives at your doorstep.
@@ -313,3 +357,4 @@ export default function Profiles() {
     </div>
   );
 }
+

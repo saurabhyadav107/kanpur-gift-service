@@ -1,22 +1,79 @@
-# ════════════════════════════════════════════
-# robots.txt — joya.kanpureliteservice.com
-# ════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════
+# robots.txt — Kanpur & Lucknow VIP Escorts Service
+# Domain: https://joya.kanpureliteservice.com
+# ══════════════════════════════════════════════════════════════════
 
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /private
 Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
 
-# Allow Google to crawl images & CSS/JS (required for rendering)
-User-agent: Googlebot
+# Allow all critical static assets & resources for rendering
 Allow: /images/
-Allow: /src/
+Allow: /assets/
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
 Allow: *.css
 Allow: *.js
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.webp
+Allow: *.avif
+Allow: *.svg
 
+# Googlebot specific directives
+User-agent: Googlebot
+Allow: /
+Allow: /images/
+Allow: /assets/
+
+# Googlebot-Image specific directives
 User-agent: Googlebot-Image
 Allow: /images/
+Allow: /assets/
 
-# Sitemap location
+# Bingbot specific directives
+User-agent: Bingbot
+Allow: /
+Allow: /images/
+Allow: /assets/
+
+# Applebot specific directives
+User-agent: Applebot
+Allow: /
+
+# DuckDuckBot specific directives
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex specific directives
+User-agent: Yandex
+Allow: /
+
+# Social Media Crawlers (OpenGraph / Rich Snippets)
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# AI Crawlers & Scrapers
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+
+# XML Sitemap Location
 Sitemap: https://joya.kanpureliteservice.com/sitemap.xml

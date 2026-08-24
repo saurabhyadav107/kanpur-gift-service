@@ -2,7 +2,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Phone, MessageCircle, MapPin, CheckCircle2, Shield, Star, Clock, Zap } from "lucide-react";
-import { useRoute } from "wouter";
+import { useRoute, Link } from "wouter";
 
 const phoneNumber = "+918523045235";
 const phoneNumber2 = "+919621326466";
@@ -522,135 +522,133 @@ export default function AreaDetail() {
       <Header />
 
       {/* Breadcrumbs */}
-      <nav className="mx-auto max-w-5xl px-4 py-3 text-xs w-full" style={{ color: "#d4aab3" }} aria-label="Breadcrumb">
+      <nav className="mx-auto max-w-6xl px-4 py-4 text-xs w-full text-[#c4bdad]" aria-label="Breadcrumb">
         <ol style={{ listStyle: "none", display: "flex", gap: "0.25rem", padding: 0, margin: 0 }}>
-          <li><a href="/" className="hover:text-pink-400">Home</a></li>
+          <li><Link href="/" className="hover:text-[#dfb76c] transition-colors">Home</Link></li>
           <li aria-hidden="true" style={{ margin: "0 4px" }}>›</li>
-          <li><a href={cityPath} className="hover:text-pink-400">{city} Hub</a></li>
+          <li><Link href={cityPath} className="hover:text-[#dfb76c] transition-colors">{city} Hub</Link></li>
           <li aria-hidden="true" style={{ margin: "0 4px" }}>›</li>
-          <li><span className="text-white">{area.name}</span></li>
+          <li><span className="text-[#f6f3ee] font-semibold">{area.name}</span></li>
         </ol>
       </nav>
 
       {/* Hero */}
-      <section className="py-12" style={{ background: "#140509", borderBottom: "1px solid #3d1018" }}>
+      <section className="py-16 bg-gradient-to-b from-[#150f1e] via-[#0b0811] to-[#08070b] border-b border-[#282033]/60">
         <div className="mx-auto max-w-5xl px-4 text-center">
-          <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded text-xs" style={{ background: "rgba(233,30,115,0.15)", color: "#ff6b9d", border: "1px solid rgba(233,30,115,0.3)" }}>
+          <div className="inline-flex items-center gap-2 mb-4 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#181220] text-[#dfb76c] border border-[#dfb76c]/40 shadow-lg">
             <MapPin className="h-3.5 w-3.5" /> Escorts in {area.name} (PIN: {area.pincode})
           </div>
-          <h1 className="mb-4 text-3xl sm:text-5xl font-bold uppercase text-white" style={{ fontFamily: "Oswald, sans-serif" }}>
-            Escort Service in <span className="gradient-text-pink">{area.name}</span>
+          <h1 className="mb-4 text-3xl sm:text-5xl font-bold uppercase text-[#f6f3ee]" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+            Escort Service in <span className="gradient-text-gold">{area.name} {city}</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base leading-relaxed" style={{ color: "#c2929a" }}>
+          <p className="max-w-2xl mx-auto text-xs sm:text-sm leading-relaxed text-[#c4bdad]">
             {area.description}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-3 mt-6 flex-wrap">
-            <a href={`tel:${phoneNumber}`} className="btn-primary px-6 py-3 text-sm">
-              <Phone className="h-4 w-4" /> Call: +91 8523045235
+          <div className="flex flex-wrap justify-center gap-3.5 mt-8">
+            <a href={`tel:${phoneNumber}`} className="btn-luxury-gold px-6 py-3 text-xs sm:text-sm">
+              <Phone className="h-4 w-4" /> Call 1: +91 8523045235
             </a>
-            <a href={`tel:${phoneNumber2}`} className="btn-primary px-6 py-3 text-sm" style={{ background: "linear-gradient(135deg,#8e24aa,#c0134e)" }}>
-              <Phone className="h-4 w-4" /> Call: +91 9621326466
+            <a href={`tel:${phoneNumber2}`} className="btn-luxury-burgundy px-6 py-3 text-xs sm:text-sm">
+              <Phone className="h-4 w-4" /> Call 2: +91 9621326466
             </a>
-            <a href={whatsappUrl2} target="_blank" rel="noreferrer" className="btn-whatsapp px-6 py-3 text-sm">
-              <MessageCircle className="h-4 w-4" /> WhatsApp for Profiles
+            <a href={whatsappUrl2} target="_blank" rel="noreferrer" className="btn-luxury-emerald px-6 py-3 text-xs sm:text-sm">
+              <MessageCircle className="h-4 w-4" /> WhatsApp VIP Booking
             </a>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <main className="flex-grow py-12">
-        <div className="mx-auto max-w-5xl px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2 space-y-6">
+      <main className="flex-grow py-14 bg-[#08070b]">
+        <div className="mx-auto max-w-6xl px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2 space-y-6">
 
             {/* About this area */}
-            <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h2 className="text-xl font-bold text-white uppercase mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>
-                Escort Service in {area.name} Kanpur
+            <div className="card-luxury p-7">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#f6f3ee] uppercase mb-4" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+                Escort Service in {area.name} {city}
               </h2>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "#d4aab3" }}>
+              <p className="text-xs sm:text-sm leading-relaxed mb-6 text-[#c4bdad]">
                 {area.longDescription}
               </p>
-              <h3 className="text-base font-bold text-white uppercase mb-2" style={{ fontFamily: "Oswald, sans-serif" }}>
-                Why Choose Our Escort Service in {area.name}?
+              <h3 className="text-sm sm:text-base font-bold text-[#dfb76c] uppercase mb-3" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+                Why Choose Our #1 Escort Service in {area.name} {city}?
               </h3>
-              <ul className="space-y-2 text-sm" style={{ color: "#c2929a" }}>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-pink-500 mt-0.5" />
-                  <span><strong>Verified escorts in {area.name} Kanpur:</strong> Every companion profile is authenticated. Genuine photos, accurate age, no fake listings.</span>
+              <ul className="space-y-3 text-xs sm:text-sm text-[#c4bdad]">
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <span><strong className="text-[#f6f3ee]">Verified Companions in {area.name}:</strong> Every profile is authenticated with real photos, genuine age, and clean hygiene.</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-pink-500 mt-0.5" />
-                  <span><strong>Fast 45-minute delivery in {area.name}:</strong> Companions dispatched immediately after confirmation. Home visits and hotel stays covered.</span>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <span><strong className="text-[#f6f3ee]">Fast 45-Minute Outcall Delivery:</strong> Companions dispatched promptly to your luxury hotel suite or private residence in {area.name}.</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-pink-500 mt-0.5" />
-                  <span><strong>100% private escort booking:</strong> No records kept, no data shared, no third-party involvement. Your privacy is our priority.</span>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <span><strong className="text-[#f6f3ee]">100% Cash on Arrival Guarantee:</strong> Zero advance deposit or registration fees. Pay only after meeting in person.</span>
                 </li>
               </ul>
             </div>
 
             {/* Landmarks */}
-            <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h2 className="text-lg font-bold text-white uppercase mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>
-                Key Landmarks & Coverage in {area.name}
+            <div className="card-luxury p-7">
+              <h2 className="text-lg sm:text-xl font-bold text-[#f6f3ee] uppercase mb-4" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+                Key Landmarks &amp; Coverage in {area.name}
               </h2>
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-5">
                 {area.landmarks.map((lm) => (
-                  <span key={lm} className="text-xs px-3 py-1 rounded" style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#ff6b9d" }}>
+                  <span key={lm} className="text-xs px-3 py-1.5 rounded-lg bg-[#181220] border border-[#2d2438] text-[#dfb76c]">
                     📍 {lm}
                   </span>
                 ))}
               </div>
-              <p className="text-sm" style={{ color: "#d4aab3" }}>
-                Our escort service covers all hotels, guesthouses, private residences, and apartments across {area.name} Kanpur (PIN: {area.pincode}). Call <strong style={{ color: "#e91e73" }}>+91 8523045235</strong> for immediate dispatch.
+              <p className="text-xs sm:text-sm leading-relaxed text-[#c4bdad]">
+                Our companion service covers all hotels, guesthouses, private residences, and serviced apartments across {area.name} {city} (PIN: {area.pincode}). Call <a href={`tel:${phoneNumber}`} className="text-[#dfb76c] font-bold hover:underline">+91 8523045235</a> for immediate dispatch.
               </p>
             </div>
 
             {/* FAQ Section */}
-            <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h2 className="text-lg font-bold text-white uppercase mb-4" style={{ fontFamily: "Oswald, sans-serif" }}>
-                Frequently Asked Questions — {area.name} Escort Service
+            <div className="card-luxury p-7">
+              <h2 className="text-lg sm:text-xl font-bold text-[#f6f3ee] uppercase mb-5" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+                Frequently Asked Questions — {area.name} Escorts
               </h2>
               <div className="space-y-4">
                 {area.faqs.map((faq, idx) => (
-                  <div key={idx}>
-                    <h3 className="text-sm font-bold text-white mb-1" style={{ fontFamily: "Oswald, sans-serif" }}>{faq.q}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "#d4aab3" }}>{faq.a}</p>
+                  <div key={idx} className="p-4 rounded-lg bg-[#140f1c] border border-[#2d2438]">
+                    <h3 className="text-xs sm:text-sm font-bold text-[#f6f3ee] mb-1.5 uppercase" style={{ fontFamily: "Oswald, Poppins, sans-serif" }}>{faq.q}</h3>
+                    <p className="text-xs sm:text-sm leading-relaxed text-[#c4bdad]">{faq.a}</p>
                   </div>
                 ))}
-                <div>
-                  <h3 className="text-sm font-bold text-white mb-1" style={{ fontFamily: "Oswald, sans-serif" }}>How do I book an escort in {area.name}, Kanpur?</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#d4aab3" }}>
-                    Call or WhatsApp <strong style={{ color: "#e91e73" }}>+91 8523045235</strong>. Tell us your location within {area.name} and your preferred companion category. We confirm the booking and dispatch within 45 minutes.
+                <div className="p-4 rounded-lg bg-[#140f1c] border border-[#2d2438]">
+                  <h3 className="text-xs sm:text-sm font-bold text-[#f6f3ee] mb-1.5 uppercase" style={{ fontFamily: "Oswald, Poppins, sans-serif" }}>How do I book an escort in {area.name}, {city}?</h3>
+                  <p className="text-xs sm:text-sm leading-relaxed text-[#c4bdad]">
+                    Call or WhatsApp <a href={`tel:${phoneNumber}`} className="text-[#dfb76c] font-bold">+91 8523045235</a>. Share your exact address or hotel in {area.name} and your companion preferences. We confirm and dispatch within 45 minutes.
                   </p>
                 </div>
-                <div>
-                  <h3 className="text-sm font-bold text-white mb-1" style={{ fontFamily: "Oswald, sans-serif" }}>Is advance payment required for escort service in {area.name} Kanpur?</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#d4aab3" }}>
-                    No. We operate on a <strong style={{ color: "#e91e73" }}>100% cash-on-delivery / pay-on-arrival</strong> basis across all Kanpur areas including {area.name}. You pay only after the companion arrives at your location. No advance, no registration fee, no hidden charges.
+                <div className="p-4 rounded-lg bg-[#140f1c] border border-[#2d2438]">
+                  <h3 className="text-xs sm:text-sm font-bold text-[#f6f3ee] mb-1.5 uppercase" style={{ fontFamily: "Oswald, Poppins, sans-serif" }}>Is advance payment required in {area.name}?</h3>
+                  <p className="text-xs sm:text-sm leading-relaxed text-[#c4bdad]">
+                    No. We operate on a <strong className="text-[#dfb76c]">100% Cash on Arrival</strong> basis across all localities including {area.name}. You pay only after meeting your companion in person.
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Search keyword cloud */}
-            <div className="p-6 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h3 className="text-sm font-bold text-white uppercase mb-3 tracking-wider" style={{ fontFamily: "Oswald, sans-serif" }}>
-                Popular Search Terms — {area.name} Kanpur
+            <div className="card-luxury p-7">
+              <h3 className="text-xs font-bold text-[#dfb76c] uppercase mb-3 tracking-wider" style={{ fontFamily: "Oswald, Poppins, sans-serif" }}>
+                Popular Search Terms — {area.name} {city}
               </h3>
               <div className="flex flex-wrap gap-2 text-xs">
                 {[
-                  `Escorts in ${area.name} Kanpur`,
-                  `${area.name} escort service Kanpur`,
-                  `${area.name} escorts`,
-                  `Escort in Kanpur ${area.name}`,
-                  `${area.name} call girl Kanpur`,
+                  `Escorts in ${area.name} ${city}`,
+                  `${area.name} escort service`,
+                  `${area.name} VIP call girls`,
                   `Independent escort ${area.name}`,
-                  `Female escort ${area.name} Kanpur`,
-                  `${area.name} companion service`,
+                  `Hotel outcall ${area.name}`,
+                  `Cash on arrival escort ${area.name}`,
                 ].map((tag) => (
-                  <span key={tag} className="px-2.5 py-1 rounded" style={{ background: "#2d0d12", border: "1px solid #3d1018", color: "#c2929a" }}>
+                  <span key={tag} className="px-2.5 py-1 rounded-full bg-[#181220] border border-[#2d2438] text-[#a89f8f]">
                     🔍 {tag}
                   </span>
                 ))}
@@ -660,57 +658,57 @@ export default function AreaDetail() {
 
           {/* Right Sidebar */}
           <div className="space-y-6">
-            <div className="p-5 rounded text-center" style={{ background: "#140509", border: "1px solid #e91e73" }}>
-              <Zap className="h-8 w-8 mx-auto mb-2 text-pink-500" />
-              <h3 className="text-lg font-bold text-white uppercase mb-1" style={{ fontFamily: "Oswald, sans-serif" }}>
-                45-Min Delivery
+            <div className="card-luxury p-6 text-center border-[#dfb76c]/40 shadow-2xl">
+              <div className="text-2xl mb-2 text-[#dfb76c]">⚡</div>
+              <h3 className="text-lg font-bold text-[#f6f3ee] uppercase mb-1" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+                45-Min Outcall Delivery
               </h3>
-              <p className="text-xs mb-4" style={{ color: "#d4aab3" }}>
-                Active in {area.name}, {city}. Book instantly.
+              <p className="text-xs mb-5 text-[#c4bdad]">
+                Active in {area.name}, {city}. Express booking.
               </p>
-              <a href={`tel:${phoneNumber}`} className="btn-primary w-full py-3 text-xs mb-2">
-                <Phone className="h-3.5 w-3.5" /> Call: 8523045235
+              <a href={`tel:${phoneNumber}`} className="btn-luxury-gold w-full py-3 text-xs mb-2.5 justify-center">
+                <Phone className="h-3.5 w-3.5" /> Call Helpline 1: 8523045235
               </a>
-              <a href={`tel:${phoneNumber2}`} className="btn-primary w-full py-3 text-xs mb-2" style={{ background: "linear-gradient(135deg,#8e24aa,#c0134e)" }}>
-                <Phone className="h-3.5 w-3.5" /> Call: 9621326466
+              <a href={`tel:${phoneNumber2}`} className="btn-luxury-burgundy w-full py-3 text-xs mb-2.5 justify-center">
+                <Phone className="h-3.5 w-3.5" /> Call Helpline 2: 9621326466
               </a>
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-whatsapp w-full py-3 text-xs">
-                <MessageCircle className="h-3.5 w-3.5" /> WhatsApp Booking
+              <a href={whatsappUrl2} target="_blank" rel="noreferrer" className="btn-luxury-emerald w-full py-3 text-xs justify-center">
+                <MessageCircle className="h-3.5 w-3.5" /> WhatsApp VIP Concierge
               </a>
             </div>
 
             {/* Trust signals */}
-            <div className="p-5 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h4 className="text-xs uppercase font-bold text-white mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>Why Trust Us?</h4>
-              <div className="space-y-2 text-xs" style={{ color: "#d4aab3" }}>
-                <div className="flex items-center gap-2"><Shield className="h-3.5 w-3.5 text-pink-500" /> 100% Private Bookings</div>
-                <div className="flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-green-400" /> Verified Escort Profiles</div>
-                <div className="flex items-center gap-2"><Clock className="h-3.5 w-3.5 text-yellow-400" /> Available 24/7</div>
-                <div className="flex items-center gap-2"><Star className="h-3.5 w-3.5 text-yellow-400" /> 4.9★ Rated Service</div>
+            <div className="card-luxury p-6">
+              <h4 className="text-xs uppercase font-bold text-[#dfb76c] mb-3.5" style={{ fontFamily: "Oswald, Poppins, sans-serif" }}>Why Trust Our Verified Escort Service?</h4>
+              <div className="space-y-2.5 text-xs text-[#c4bdad]">
+                <div className="flex items-center gap-2"><Shield className="h-3.5 w-3.5 text-[#dfb76c]" /> 100% Private Bookings</div>
+                <div className="flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" /> Verified Escort Profiles</div>
+                <div className="flex items-center gap-2"><Clock className="h-3.5 w-3.5 text-amber-400" /> Available 24/7</div>
+                <div className="flex items-center gap-2"><Star className="h-3.5 w-3.5 text-amber-400" /> 4.9★ Rated Service</div>
               </div>
             </div>
 
             {/* Other areas */}
-            <div className="p-5 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h4 className="text-xs uppercase font-bold text-white mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>Other Kanpur Escort Areas</h4>
-              <nav className="flex flex-col gap-1.5 text-xs" style={{ color: "#d4aab3" }} aria-label="Other service areas">
+            <div className="card-luxury p-6">
+              <h4 className="text-xs uppercase font-bold text-[#dfb76c] mb-3.5" style={{ fontFamily: "Oswald, Poppins, sans-serif" }}>Nearby Service Areas</h4>
+              <nav className="flex flex-col gap-2 text-xs text-[#c4bdad]" aria-label="Other service areas">
                 {sidebarAreas.map((a) => (
-                  <a key={a.slug} href={`/areas/${a.slug}`} className="hover:text-pink-400">
-                    Escorts in {a.name} Kanpur
-                  </a>
+                  <Link key={a.slug} href={`/${isLucknow ? "lucknow" : "kanpur"}/${a.slug}`} className="hover:text-[#dfb76c] transition-colors">
+                    • Escorts in {a.name}
+                  </Link>
                 ))}
-                <a href="/#areas" className="hover:text-pink-400 mt-1" style={{ color: "#e91e73" }}>→ View All Areas</a>
+                <Link href={cityPath} className="text-[#dfb76c] font-bold hover:underline mt-2">→ View All {city} Hub Areas</Link>
               </nav>
             </div>
 
             {/* Service categories */}
-            <div className="p-5 rounded" style={{ background: "#1a0709", border: "1px solid #3d1018" }}>
-              <h4 className="text-xs uppercase font-bold text-white mb-3" style={{ fontFamily: "Oswald, sans-serif" }}>Escort Categories</h4>
-              <nav className="flex flex-col gap-1.5 text-xs" style={{ color: "#d4aab3" }} aria-label="Service categories">
-                <a href="/services/vip-escorts" className="hover:text-pink-400">VIP Escorts Kanpur</a>
-                <a href="/services/college-models" className="hover:text-pink-400">College Model Escorts</a>
-                <a href="/services/independent" className="hover:text-pink-400">Independent Escorts Kanpur</a>
-                <a href="/services/luxury-escorts" className="hover:text-pink-400">Luxury Escorts Kanpur</a>
+            <div className="card-luxury p-6">
+              <h4 className="text-xs uppercase font-bold text-[#dfb76c] mb-3.5" style={{ fontFamily: "Oswald, Poppins, sans-serif" }}>Companion Categories</h4>
+              <nav className="flex flex-col gap-2 text-xs text-[#c4bdad]" aria-label="Service categories">
+                <Link href="/services/vip-escorts" className="hover:text-[#dfb76c] transition-colors">• VIP Escorts</Link>
+                <Link href="/services/college-models" className="hover:text-[#dfb76c] transition-colors">• College Model Escorts</Link>
+                <Link href="/services/independent" className="hover:text-[#dfb76c] transition-colors">• Independent Companions</Link>
+                <Link href="/services/luxury-escorts" className="hover:text-[#dfb76c] transition-colors">• Luxury 5-Star Escorts</Link>
               </nav>
             </div>
           </div>
@@ -721,3 +719,4 @@ export default function AreaDetail() {
     </div>
   );
 }
+

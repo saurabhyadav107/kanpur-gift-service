@@ -15,6 +15,7 @@ import Profiles from "./pages/Profiles";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import ReviewsPage from "./pages/ReviewsPage";
 import AreaDetail from "./pages/AreaDetail";
 import ServiceDetail from "./pages/ServiceDetail";
 
@@ -27,6 +28,7 @@ function Router() {
       <Route path="/kanpur-escorts" component={KanpurHub} />
       <Route path="/lucknow-escorts" component={LucknowHub} />
       <Route path="/profiles" component={Profiles} />
+      <Route path="/reviews" component={ReviewsPage} />
       <Route path="/kanpur/:slug" component={AreaDetail} />
       <Route path="/lucknow/:slug" component={AreaDetail} />
       <Route path="/areas/:slug" component={AreaDetail} />
