@@ -1,10 +1,13 @@
 import { SEOHead } from "@/components/SEOHead";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { Phone, MessageCircle, MapPin, CheckCircle2, Shield, Star, Clock, Zap } from "lucide-react";
 import { useRoute } from "wouter";
 
 const phoneNumber = "+918523045235";
-const displayPhone = "+91 8523045235";
-const whatsappUrl = "https://wa.me/918523045235?text=Hello,%20I%20want%20to%20book%20an%20escort%20service%20in%20Kanpur.";
+const phoneNumber2 = "+919621326466";
+const whatsappUrl = "https://wa.me/918523045235?text=Hello,%20I%20want%20to%20book%20an%20escort%20service.";
+const whatsappUrl2 = "https://wa.me/919621326466?text=Hello,%20I%20want%20to%20book%20an%20escort%20service.";
 
 interface AreaInfo {
   name: string;
@@ -246,62 +249,226 @@ const areasData: Record<string, AreaInfo> = {
       },
     ],
   },
+  "lucknow-gomti-nagar": {
+    name: "Gomti Nagar Lucknow",
+    slug: "lucknow-gomti-nagar",
+    pincode: "226010",
+    description: "Gomti Nagar is Lucknow's premier planned commercial and VIP residential district, home to Hyatt Regency, Taj Hotel, Riverside Mall, and luxury apartments. Our escort service in Gomti Nagar offers verified companions with fast 45-minute delivery.",
+    longDescription: "Gomti Nagar is the crown jewel of modern Lucknow — an expansive, high-end district boasting broad avenues, IT parks, star hotels near Vibhuti Khand, and opulent private bungalows in Viraj Khand and Vipul Khand. It is the top destination for corporate travellers, executives, and luxury seekers in Uttar Pradesh. Our escort service in Gomti Nagar caters to discerning clients with total confidentiality. Whether you are staying at Hyatt Regency, Taj Mahal Lucknow, or a private residence near Shaheed Path, our verified companions arrive punctually within 45 minutes of booking confirmation. No advance payment required.",
+    landmarks: ["Hyatt Regency Lucknow", "Vibhuti Khand IT Park", "Taj Mahal Hotel Lucknow", "Riverside Mall", "Viraj Khand", "Shaheed Path Junction"],
+    nearbyAreas: ["lucknow-hazratganj", "lucknow-indira-nagar", "lucknow-shaheed-path"],
+    faqs: [
+      {
+        q: "Is escort service available in Gomti Nagar Lucknow hotels?",
+        a: "Yes. We provide discreet 24/7 companion delivery to all major hotels in Gomti Nagar including Hyatt Regency, Taj, Novotel, and boutique guesthouses. Call +91 8523045235 or +91 9621326466.",
+      },
+      {
+        q: "How quickly can a call girl arrive in Gomti Nagar Lucknow?",
+        a: "Dispatch time is 45 minutes to 1 hour anywhere in Gomti Nagar, Vibhuti Khand, or Gomti Nagar Extension.",
+      },
+    ],
+  },
+  "lucknow-hazratganj": {
+    name: "Hazratganj Lucknow",
+    slug: "lucknow-hazratganj",
+    pincode: "226001",
+    description: "Hazratganj is the iconic central heritage, shopping, and business hub of Lucknow. Our independent escort service in Hazratganj delivers verified high-class companions directly to your hotel or residence.",
+    longDescription: "Hazratganj is the vibrant heart of Lucknow — famous for its Victorian-style shopping arcades, government secretariats, Mayfair complex, and heritage luxury hotels. Drawing business travellers, politicians, and tourists, Hazratganj demands absolute discretion and top-tier sophistication. Our escorts in Hazratganj are independent, well-groomed, and highly courteous. We service every hotel, private apartment, and guesthouse across Hazratganj, Vidhan Sabha Marg, and MG Road within 45 minutes of booking.",
+    landmarks: ["Hazratganj Chauraha", "Mayfair Complex", "Vidhan Sabha Marg", "Taj Hotel Hazratganj Corridor", "MG Road"],
+    nearbyAreas: ["lucknow-gomti-nagar", "lucknow-mahanagar", "lucknow-alambagh"],
+    faqs: [
+      {
+        q: "Can I book an escort to a hotel in Hazratganj Lucknow?",
+        a: "Yes. We specialise in hotel companion delivery in Hazratganj. Companions arrive within 45 minutes with complete privacy.",
+      },
+      {
+        q: "Are independent call girls available in Hazratganj Lucknow?",
+        a: "Yes. We have verified independent escorts and college models based near Hazratganj. Contact +91 8523045235 or +91 9621326466.",
+      },
+    ],
+  },
+  "lucknow-indira-nagar": {
+    name: "Indira Nagar Lucknow",
+    slug: "lucknow-indira-nagar",
+    pincode: "226016",
+    description: "Indira Nagar is one of Asia's largest organized residential colonies located in North-East Lucknow. We offer college model and VIP escort services in Indira Nagar with 100% privacy and 45-minute home delivery.",
+    longDescription: "Indira Nagar is a vast residential township in Lucknow, divided into multiple blocks (Block A through Z) with tree-lined streets, quiet residential pockets, and thriving local markets. Our escort service in Indira Nagar is specifically tailored for home visits and quiet residential stays. Companions arrive in discreet civilian attire, ensuring zero unwanted attention. From Munshipulia to Bhootnath Market and Picnic Spot Road, we cover all blocks of Indira Nagar with 24/7 same-day booking.",
+    landmarks: ["Bhootnath Market", "Munshipulia Chauraha", "Picnic Spot Road", "Indira Nagar Block C & D"],
+    nearbyAreas: ["lucknow-gomti-nagar", "lucknow-aliganj", "lucknow-mahanagar"],
+    faqs: [
+      {
+        q: "Is home delivery companion service available in Indira Nagar Lucknow?",
+        a: "Yes. We offer 100% confidential doorstep companion delivery in Indira Nagar, Lucknow within 45 minutes.",
+      },
+      {
+        q: "Do you require advance payment for Indira Nagar Lucknow bookings?",
+        a: "No advance payment is ever required. You pay cash on arrival after meeting the companion.",
+      },
+    ],
+  },
+  "lucknow-aliganj": {
+    name: "Aliganj Lucknow",
+    slug: "lucknow-aliganj",
+    pincode: "226024",
+    description: "Aliganj is a major commercial and residential hub in North Lucknow. Our luxury escort service in Aliganj offers top-tier college models and independent companions for hotel and home dates.",
+    longDescription: "Aliganj is a major hub in North Lucknow featuring prominent educational institutes, coaching centers, corporate offices, and peaceful residential sectors. Our escorts in Aliganj cater to students, professionals, and visiting guests looking for cheerful, attractive companions. We deliver to all sectors of Aliganj, Kapoorthala Market, and IT Crossing within 45 minutes.",
+    landmarks: ["Kapoorthala Crossing", "IT College Road", "Aliganj Sector O", "Purania Chauraha"],
+    nearbyAreas: ["lucknow-indira-nagar", "lucknow-mahanagar", "lucknow-hazratganj"],
+    faqs: [
+      {
+        q: "Are college model call girls available in Aliganj Lucknow?",
+        a: "Yes. We have genuine verified college model companions available for dates in Aliganj, Lucknow.",
+      },
+      {
+        q: "How to book an escort in Aliganj Lucknow?",
+        a: "Call +91 8523045235 or +91 9621326466 or send a WhatsApp message with your Aliganj location.",
+      },
+    ],
+  },
+  "lucknow-alambagh": {
+    name: "Alambagh Lucknow",
+    slug: "lucknow-alambagh",
+    pincode: "226005",
+    description: "Alambagh is a bustling commercial and transport corridor in South Lucknow near Charbagh Railway Station. Our VIP escort service in Alambagh delivers verified companions in 45 minutes.",
+    longDescription: "Alambagh is a crucial gateway to Lucknow, located near Charbagh Railway Station and the ISBT Bus Terminal. Lined with business hotels, bustling markets, and residential colonies, Alambagh is ideal for travellers in transit or guests staying near the railway hub. Our escorts in Alambagh offer express 45-minute hotel room delivery with zero advance payment.",
+    landmarks: ["Alambagh Bus Terminal", "Charbagh Railway Station Area", "Singar Nagar", "Chander Nagar Market"],
+    nearbyAreas: ["lucknow-hazratganj", "lucknow-amausi-airport", "lucknow-shaheed-path"],
+    faqs: [
+      {
+        q: "Do you provide escort service near Charbagh Railway Station and Alambagh?",
+        a: "Yes. Express companion delivery is available near Charbagh Railway Station and Alambagh hotels.",
+      },
+      {
+        q: "What are the contact numbers for Alambagh Lucknow call girls?",
+        a: "Call Helpline 1: +91 8523045235 or Helpline 2: +91 9621326466 for immediate dispatch.",
+      },
+    ],
+  },
+  "lucknow-shaheed-path": {
+    name: "Shaheed Path Lucknow",
+    slug: "lucknow-shaheed-path",
+    pincode: "226002",
+    description: "Shaheed Path & Sushant Golf City is Lucknow's modern luxury residential corridor featuring Phoenix Palassio and golf villas. Our independent escorts on Shaheed Path offer VIP companion service.",
+    longDescription: "Shaheed Path is Lucknow's premier 8-lane expressway corridor, connecting Sushant Golf City, Phoenix Palassio Mall, Ekana International Cricket Stadium, and corporate townships. This area represents the modern face of luxury living in Lucknow. Our escorts on Shaheed Path cater to high-profile residents and hotel guests staying near Phoenix Palassio and Golf City villas with absolute discretion and express dispatch.",
+    landmarks: ["Phoenix Palassio Mall", "Sushant Golf City", "Ekana Cricket Stadium", "HCL IT City", "Lulu Mall Corridor"],
+    nearbyAreas: ["lucknow-gomti-nagar", "lucknow-alambagh", "lucknow-gomti-nagar-extension"],
+    faqs: [
+      {
+        q: "Is companion service available near Phoenix Palassio and Shaheed Path Lucknow?",
+        a: "Yes. We offer luxury escort delivery near Phoenix Palassio, Sushant Golf City, and Shaheed Path.",
+      },
+    ],
+  },
+  "lucknow-mahanagar": {
+    name: "Mahanagar Lucknow",
+    slug: "lucknow-mahanagar",
+    pincode: "226006",
+    description: "Mahanagar is an elite residential locality in Central-North Lucknow. Our verified escort service in Mahanagar provides premium companions for discreet home and hotel visits.",
+    longDescription: "Mahanagar is one of Lucknow's classical high-status residential neighborhoods, known for spacious independent houses, quiet green avenues, and proximity to Hazratganj. Our escort service in Mahanagar matches the refined tastes of local residents and visiting guests. All companions are verified, punctual, and highly discreet.",
+    landmarks: ["Mahanagar Chauraha", "Gole Market", "Badshahnagar Station Area", "Nishatganj Bridge"],
+    nearbyAreas: ["lucknow-hazratganj", "lucknow-aliganj", "lucknow-indira-nagar"],
+    faqs: [
+      {
+        q: "Can I book a discreet home visit escort in Mahanagar Lucknow?",
+        a: "Yes. 100% confidential home delivery is available throughout Mahanagar. Call +91 8523045235.",
+      },
+    ],
+  },
+  "lucknow-gomti-nagar-extension": {
+    name: "Gomti Nagar Extension Lucknow",
+    slug: "lucknow-gomti-nagar-extension",
+    pincode: "226010",
+    description: "Gomti Nagar Extension & Viraj Khand is Lucknow's fastest-growing luxury residential enclave. Verified companion delivery within 45 minutes.",
+    longDescription: "Gomti Nagar Extension and Viraj Khand represent the newest luxury high-rise apartment clusters and township developments in Lucknow. Positioned along the Gomti Riverfront, this area hosts modern professionals and private residents who seek quiet luxury. Our escort service in Gomti Nagar Extension delivers verified companions directly to high-rise security apartments and hotels with complete privacy.",
+    landmarks: ["Viraj Khand", "Janeshwar Mishra Park Area", "Riverfront Towers", "Vipul Khand"],
+    nearbyAreas: ["lucknow-gomti-nagar", "lucknow-shaheed-path"],
+    faqs: [
+      {
+        q: "Do you deliver escorts to high-rise apartments in Gomti Nagar Extension?",
+        a: "Yes. Our companions arrive discreetly at private apartments in Gomti Nagar Extension and Viraj Khand.",
+      },
+    ],
+  },
+  "lucknow-amausi-airport": {
+    name: "Amausi Airport Lucknow",
+    slug: "lucknow-amausi-airport",
+    pincode: "226009",
+    description: "Amausi Airport Area Lucknow companion service for travellers, flight crews, and transit guests staying at airport transit hotels.",
+    longDescription: "Located near Chaudhary Charan Singh International Airport (Amausi), this corridor features multiple business and airport transit hotels. Our escort service near Lucknow Airport provides rapid 45-minute hotel room delivery for air travellers, corporate guests, and flight crews needing quality companionship during short or extended stays.",
+    landmarks: ["Chaudhary Charan Singh Airport", "Amausi Metro Station", "Kanpur Road Highway Hotels", "VIP Transit Zone"],
+    nearbyAreas: ["lucknow-alambagh", "lucknow-shaheed-path"],
+    faqs: [
+      {
+        q: "Can airport transit hotel guests book an escort near Lucknow Airport?",
+        a: "Yes. Fast 45-minute hotel room delivery is available near Amausi Airport Lucknow 24/7.",
+      },
+    ],
+  },
 };
 
 // Sidebar area links (excluding current area)
 const allAreaLinks = [
-  { name: "Civil Lines", slug: "civil-lines" },
-  { name: "Swaroop Nagar", slug: "swaroop-nagar" },
-  { name: "Govind Nagar", slug: "govind-nagar" },
-  { name: "Kakadeo", slug: "kakadeo" },
-  { name: "Mall Road", slug: "mall-road" },
-  { name: "Kidwai Nagar", slug: "kidwai-nagar" },
-  { name: "Rawatpur", slug: "rawatpur" },
-  { name: "Indiranagar", slug: "indiranagar" },
+  { name: "Civil Lines Kanpur", slug: "civil-lines" },
+  { name: "Swaroop Nagar Kanpur", slug: "swaroop-nagar" },
+  { name: "Govind Nagar Kanpur", slug: "govind-nagar" },
+  { name: "Kakadeo Kanpur", slug: "kakadeo" },
+  { name: "Gomti Nagar Lucknow", slug: "lucknow-gomti-nagar" },
+  { name: "Hazratganj Lucknow", slug: "lucknow-hazratganj" },
+  { name: "Indira Nagar Lucknow", slug: "lucknow-indira-nagar" },
+  { name: "Aliganj Lucknow", slug: "lucknow-aliganj" },
+  { name: "Alambagh Lucknow", slug: "lucknow-alambagh" },
+  { name: "Shaheed Path Lucknow", slug: "lucknow-shaheed-path" },
 ];
 
 export default function AreaDetail() {
-  const [, params] = useRoute("/areas/:slug");
-  const slug = params?.slug || "";
-  const area = areasData[slug] || {
-    name: slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
-    slug: slug,
-    pincode: "208001",
-    description: `Verified escort service in ${slug.replace(/-/g, " ")} Kanpur. 100% privacy, genuine profiles, and 24/7 home/hotel companion delivery.`,
-    longDescription: `Our escort service covers ${slug.replace(/-/g, " ")} Kanpur with verified companion profiles, mobile contact numbers, and discreet home or hotel delivery within 45 minutes.`,
-    landmarks: ["Main Market", "Hotel Zone"],
+  const [, kanpurParams] = useRoute("/kanpur/:slug");
+  const [, lucknowParams] = useRoute("/lucknow/:slug");
+  const [, legacyParams] = useRoute("/areas/:slug");
+
+  const rawSlug = kanpurParams?.slug || (lucknowParams ? (lucknowParams.slug.startsWith("lucknow-") ? lucknowParams.slug : `lucknow-${lucknowParams.slug}`) : legacyParams?.slug || "");
+  const slugKey = areasData[rawSlug] ? rawSlug : areasData[rawSlug.replace(/^lucknow-/, "")] ? rawSlug.replace(/^lucknow-/, "") : rawSlug;
+
+  const area = areasData[slugKey] || {
+    name: rawSlug.replace(/^lucknow-/, "").replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+    slug: rawSlug,
+    pincode: rawSlug.includes("lucknow") ? "226001" : "208001",
+    description: `Verified escort service in ${rawSlug.replace(/-/g, " ")}. 100% privacy, genuine profiles, and 24/7 home/hotel companion delivery.`,
+    longDescription: `Our escort service covers ${rawSlug.replace(/-/g, " ")} with verified companion profiles, mobile contact numbers, and discreet home or hotel delivery within 45 minutes.`,
+    landmarks: ["Main Market", "Hotel Corridor"],
     nearbyAreas: ["civil-lines", "swaroop-nagar"],
     faqs: [
       {
-        q: `Is escort service available in ${slug.replace(/-/g, " ")} Kanpur?`,
-        a: `Yes. We provide verified companion delivery in ${slug.replace(/-/g, " ")}, Kanpur. Call +91 8523045235 for booking.`,
+        q: `Is escort service available in ${rawSlug.replace(/-/g, " ")}?`,
+        a: `Yes. We provide verified companion delivery in ${rawSlug.replace(/-/g, " ")}. Call +91 8523045235 or +91 9621326466 for booking.`,
       },
     ],
   };
 
-  const pageTitle = slug === "kakadeo"
-    ? "Call Girls in Kakadeo Kanpur | Escort Service Kakadeo | Call +91 8523045235"
-    : `Escort Service in ${area.name} Kanpur | Escorts ${area.name} | Call +91 8523045235`;
-  const pageDesc = `Verified escorts and call girls in ${area.name} Kanpur — zero advance payment, pay on arrival. Trusted escort service with 100% privacy and 45-minute home & hotel delivery across ${area.name}. Call +91 8523045235.`;
-  const canonicalUrl = `https://joya.kanpureliteservice.com/areas/${area.slug}`;
-  const keywords = slug === "kakadeo"
-    ? "kakadeo call girls, call girls in kakadeo kanpur, kakadeo escorts, escorts in kakadeo kanpur, escort service kakadeo, call girl kakadeo kanpur, kakadeo call girl number"
-    : `escorts in ${area.name.toLowerCase()} kanpur, escort service ${area.name.toLowerCase()} kanpur, ${area.name.toLowerCase()} escorts, ${area.name.toLowerCase()} escort kanpur, call girl ${area.name.toLowerCase()} kanpur, ${area.name.toLowerCase()} call girl kanpur, escort in kanpur ${area.name.toLowerCase()}`;
+  const isLucknow = rawSlug.startsWith("lucknow-") || (lucknowParams !== null) || area.name.toLowerCase().includes("lucknow");
+  const city = isLucknow ? "Lucknow" : "Kanpur";
+  const cityPath = isLucknow ? "/lucknow" : "/kanpur";
+  const cleanSlug = area.slug.replace(/^lucknow-/, "");
+  const canonicalUrl = `https://joya.kanpureliteservice.com/${isLucknow ? "lucknow" : "kanpur"}/${cleanSlug}`;
+
+  const pageTitle = `${area.name} Escorts & Escort Service in ${area.name} ${city} | Call +91 8523045235 / +91 9621326466`;
+  const pageDesc = `${area.name} escorts & call girls in ${city} — 100% verified profiles, zero advance payment, pay on arrival. Premier escort service in ${area.name} with 45-minute home & hotel delivery. Call +91 8523045235 or +91 9621326466.`;
+  const keywords = `${area.name.toLowerCase()} escorts, escort service in ${area.name.toLowerCase()}, ${area.name.toLowerCase()} call girls, ${area.name.toLowerCase()} call girl number, ${city.toLowerCase()} escorts, escort in ${city.toLowerCase()}`;
 
   const areaSchema = [
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": `Escort Service in ${area.name} Kanpur`,
+      "name": `Escort Service in ${area.name}`,
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Kanpur Escorts — Escort Service in Kanpur",
+        "name": `Joya Elite — Escort Service in ${city}`,
         "telephone": "+91-8523045235",
+        "telephone2": "+91-9621326466",
         "url": "https://joya.kanpureliteservice.com/",
       },
       "areaServed": {
         "@type": "Place",
-        "name": `${area.name}, Kanpur, Uttar Pradesh`,
+        "name": `${area.name}, ${city}, Uttar Pradesh`,
       },
       "description": area.description,
       "url": canonicalUrl,
@@ -311,7 +478,7 @@ export default function AreaDetail() {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://joya.kanpureliteservice.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Kanpur Escorts by Area", "item": "https://joya.kanpureliteservice.com/#areas" },
+        { "@type": "ListItem", "position": 2, "name": `${city} Escort Hub`, "item": `https://joya.kanpureliteservice.com${cityPath}` },
         { "@type": "ListItem", "position": 3, "name": `Escorts in ${area.name}`, "item": canonicalUrl },
       ],
     },
@@ -329,54 +496,37 @@ export default function AreaDetail() {
         })),
         {
           "@type": "Question",
-          "name": `How do I book an escort in ${area.name}, Kanpur?`,
+          "name": `How do I book an escort in ${area.name}?`,
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": `Call or WhatsApp +91 8523045235. Share your location within ${area.name}, Kanpur and your preferred companion category. We confirm and dispatch within 45 minutes.`,
+            "text": `Call or WhatsApp +91 8523045235. Share your location within ${area.name} and your preferred companion category. We confirm and dispatch within 45 minutes.`,
           },
         },
         {
           "@type": "Question",
-          "name": `Is advance payment required for escort service in ${area.name} Kanpur?`,
+          "name": `Is advance payment required for escort service in ${area.name}?`,
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": `No advance payment is required. We operate on a 100% cash-on-delivery / pay-on-arrival basis across all Kanpur areas including ${area.name}. You pay only after the companion arrives at your location. No registration fee, no deposit, no hidden charges.`,
+            "text": `No advance payment is required. We operate on a 100% cash-on-delivery / pay-on-arrival basis. You pay only after the companion arrives at your location.`,
           },
         },
       ],
     },
   ];
 
-  const sidebarAreas = allAreaLinks.filter((a) => a.slug !== slug).slice(0, 6);
+  const sidebarAreas = allAreaLinks.filter((a) => a.slug !== area.slug).slice(0, 6);
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#0e0407", color: "#f5e6ea" }}>
       <SEOHead title={pageTitle} description={pageDesc} canonicalUrl={canonicalUrl} keywords={keywords} schema={areaSchema} />
-
-      {/* Header */}
-      <header className="sticky top-0 z-40 glass-nav">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="flex items-center justify-between py-3">
-            <a href="/" className="flex items-center gap-3">
-              <span className="text-lg font-bold text-white" style={{ fontFamily: "Oswald, sans-serif" }}>
-                KANPUR <span className="gradient-text-pink">ESCORTS</span>
-              </span>
-            </a>
-            <div className="flex items-center gap-2">
-              <a href={`tel:${phoneNumber}`} className="btn-primary text-xs px-4 py-2">
-                <Phone className="h-3.5 w-3.5" /> Call 8523045235
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Breadcrumbs */}
       <nav className="mx-auto max-w-5xl px-4 py-3 text-xs w-full" style={{ color: "#d4aab3" }} aria-label="Breadcrumb">
         <ol style={{ listStyle: "none", display: "flex", gap: "0.25rem", padding: 0, margin: 0 }}>
           <li><a href="/" className="hover:text-pink-400">Home</a></li>
           <li aria-hidden="true" style={{ margin: "0 4px" }}>›</li>
-          <li><a href="/#areas" className="hover:text-pink-400">Kanpur Escorts</a></li>
+          <li><a href={cityPath} className="hover:text-pink-400">{city} Hub</a></li>
           <li aria-hidden="true" style={{ margin: "0 4px" }}>›</li>
           <li><span className="text-white">{area.name}</span></li>
         </ol>
@@ -386,19 +536,22 @@ export default function AreaDetail() {
       <section className="py-12" style={{ background: "#140509", borderBottom: "1px solid #3d1018" }}>
         <div className="mx-auto max-w-5xl px-4 text-center">
           <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded text-xs" style={{ background: "rgba(233,30,115,0.15)", color: "#ff6b9d", border: "1px solid rgba(233,30,115,0.3)" }}>
-            <MapPin className="h-3.5 w-3.5" /> Escorts in {area.name}, Kanpur (PIN: {area.pincode})
+            <MapPin className="h-3.5 w-3.5" /> Escorts in {area.name} (PIN: {area.pincode})
           </div>
           <h1 className="mb-4 text-3xl sm:text-5xl font-bold uppercase text-white" style={{ fontFamily: "Oswald, sans-serif" }}>
-            Escorts in <span className="gradient-text-pink">{area.name} Kanpur</span>
+            Escort Service in <span className="gradient-text-pink">{area.name}</span>
           </h1>
           <p className="max-w-2xl mx-auto text-sm sm:text-base leading-relaxed" style={{ color: "#c2929a" }}>
             {area.description}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-3 mt-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 mt-6 flex-wrap">
             <a href={`tel:${phoneNumber}`} className="btn-primary px-6 py-3 text-sm">
               <Phone className="h-4 w-4" /> Call: +91 8523045235
             </a>
-            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-whatsapp px-6 py-3 text-sm">
+            <a href={`tel:${phoneNumber2}`} className="btn-primary px-6 py-3 text-sm" style={{ background: "linear-gradient(135deg,#8e24aa,#c0134e)" }}>
+              <Phone className="h-4 w-4" /> Call: +91 9621326466
+            </a>
+            <a href={whatsappUrl2} target="_blank" rel="noreferrer" className="btn-whatsapp px-6 py-3 text-sm">
               <MessageCircle className="h-4 w-4" /> WhatsApp for Profiles
             </a>
           </div>
@@ -408,8 +561,6 @@ export default function AreaDetail() {
       {/* Main Content */}
       <main className="flex-grow py-12">
         <div className="mx-auto max-w-5xl px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          {/* Left / Central Copy */}
           <div className="md:col-span-2 space-y-6">
 
             {/* About this area */}
@@ -515,10 +666,13 @@ export default function AreaDetail() {
                 45-Min Delivery
               </h3>
               <p className="text-xs mb-4" style={{ color: "#d4aab3" }}>
-                Active in {area.name}, Kanpur. Book instantly.
+                Active in {area.name}, {city}. Book instantly.
               </p>
               <a href={`tel:${phoneNumber}`} className="btn-primary w-full py-3 text-xs mb-2">
                 <Phone className="h-3.5 w-3.5" /> Call: 8523045235
+              </a>
+              <a href={`tel:${phoneNumber2}`} className="btn-primary w-full py-3 text-xs mb-2" style={{ background: "linear-gradient(135deg,#8e24aa,#c0134e)" }}>
+                <Phone className="h-3.5 w-3.5" /> Call: 9621326466
               </a>
               <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-whatsapp w-full py-3 text-xs">
                 <MessageCircle className="h-3.5 w-3.5" /> WhatsApp Booking
@@ -563,10 +717,7 @@ export default function AreaDetail() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="py-6 text-center text-xs" style={{ background: "#0a0306", borderTop: "1px solid #3d1018", color: "#d4aab3" }}>
-        © {new Date().getFullYear()} Kanpur Escorts — Escort Service in {area.name} Kanpur. All rights reserved.
-      </footer>
+      <Footer />
     </div>
   );
 }

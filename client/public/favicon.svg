@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Metallic Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF59D"/>
+      <stop offset="20%" stop-color="#FFD54F"/>
+      <stop offset="50%" stop-color="#FFB300"/>
+      <stop offset="80%" stop-color="#FF8F00"/>
+      <stop offset="100%" stop-color="#FFC107"/>
+    </linearGradient>
+
+    <!-- Magenta Neon Glow Shadow -->
+    <filter id="magentaGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#E91E63" flood-opacity="0.95"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#FF4081" flood-opacity="1"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#magentaGlow)">
+    <!-- Elegant Woman Sitting Silhouette -->
+    <path fill="url(#goldGrad)" d="
+      M 315,65 
+      C 290,65 275,82 272,107 
+      C 270,122 275,135 270,149 
+      C 265,163 255,175 248,187 
+      C 240,200 230,212 220,222 
+      C 200,242 178,257 155,272 
+      C 135,285 115,299 98,317 
+      C 82,334 70,357 62,382 
+      C 58,394 55,407 60,419 
+      C 66,431 80,437 95,435 
+      C 112,432 125,419 138,405 
+      C 155,387 172,367 192,349 
+      C 205,337 220,327 235,321 
+      C 248,315 262,313 276,314 
+      C 298,315 318,322 338,329 
+      C 362,337 388,343 414,339 
+      C 432,336 448,327 456,311 
+      C 464,295 460,275 450,257 
+      C 435,230 415,205 402,177 
+      C 392,155 386,129 376,107 
+      C 365,82 342,65 315,65 Z
+      
+      M 315,81 
+      C 334,81 350,93 358,111 
+      C 367,131 372,154 381,175 
+      C 393,201 412,225 426,249 
+      C 434,264 438,279 432,291 
+      C 426,303 414,309 400,311 
+      C 378,314 355,309 334,302 
+      C 313,295 290,287 268,286 
+      C 250,285 232,288 216,296 
+      C 198,304 182,316 168,328 
+      C 150,344 134,362 118,379 
+      C 108,389 98,399 87,402 
+      C 80,404 75,400 74,394 
+      C 73,388 76,379 80,369 
+      C 87,348 98,329 112,313 
+      C 127,297 145,284 164,272 
+      C 185,258 206,244 225,226 
+      C 236,215 246,203 253,190 
+      C 260,177 264,163 268,149 
+      C 272,133 268,119 270,107 
+      C 272,91 288,81 315,81 Z
+    " />
+
+    <!-- High Heels Silhouette Detail -->
+    <path fill="url(#goldGrad)" d="
+      M 95 435 
+      L 70 472 
+      L 62 467 
+      L 80 429 Z" />
+  </g>
+</svg>

@@ -7,19 +7,34 @@ import AgeGate from "./components/AgeGate";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { useAgeGate } from "./hooks/useAgeGate";
-import Home from "./pages/Home";
 
+import Home from "./pages/Home";
+import KanpurHub from "./pages/KanpurHub";
+import LucknowHub from "./pages/LucknowHub";
+import Profiles from "./pages/Profiles";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import FAQ from "./pages/FAQ";
 import AreaDetail from "./pages/AreaDetail";
 import ServiceDetail from "./pages/ServiceDetail";
 
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/areas/:slug"} component={AreaDetail} />
-      <Route path={"/services/:slug"} component={ServiceDetail} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
+      <Route path="/" component={Home} />
+      <Route path="/kanpur" component={KanpurHub} />
+      <Route path="/lucknow" component={LucknowHub} />
+      <Route path="/kanpur-escorts" component={KanpurHub} />
+      <Route path="/lucknow-escorts" component={LucknowHub} />
+      <Route path="/profiles" component={Profiles} />
+      <Route path="/kanpur/:slug" component={AreaDetail} />
+      <Route path="/lucknow/:slug" component={AreaDetail} />
+      <Route path="/areas/:slug" component={AreaDetail} />
+      <Route path="/services/:slug" component={ServiceDetail} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/faq" component={FAQ} />
+      <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );

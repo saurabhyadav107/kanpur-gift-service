@@ -1,10 +1,14 @@
 import { SEOHead } from "@/components/SEOHead";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { Phone, MessageCircle, Star, CheckCircle2, ShieldCheck, Heart, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { useRoute } from "wouter";
 
 const phoneNumber = "+918523045235";
+const phoneNumber2 = "+919621326466";
 const whatsappUrl = "https://wa.me/918523045235?text=Hello,%20I%20am%20interested%20in%20booking%20an%20escort%20service%20in%20Kanpur.";
+const whatsappUrl2 = "https://wa.me/919621326466?text=Hello,%20I%20am%20interested%20in%20booking%20an%20escort%20service%20in%20Kanpur.";
 
 interface ServiceInfo {
   name: string;
@@ -254,23 +258,7 @@ export default function ServiceDetail() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#0e0407", color: "#f5e6ea" }}>
       <SEOHead title={service.title} description={service.description} canonicalUrl={canonicalUrl} keywords={service.keywords} schema={serviceSchema} />
-
-      <header className="sticky top-0 z-40 glass-nav">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="flex items-center justify-between py-3">
-            <a href="/" className="flex items-center gap-3">
-              <span className="text-lg font-bold text-white" style={{ fontFamily: "Oswald, sans-serif" }}>
-                KANPUR <span className="gradient-text-pink">ESCORTS</span>
-              </span>
-            </a>
-            <div className="flex items-center gap-2">
-              <a href={`tel:${phoneNumber}`} className="btn-primary text-xs px-4 py-2">
-                <Phone className="h-3.5 w-3.5" /> Call 8523045235
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Breadcrumbs */}
       <nav className="mx-auto max-w-5xl px-4 py-3 text-xs w-full" style={{ color: "#d4aab3" }} aria-label="Breadcrumb">
@@ -292,9 +280,12 @@ export default function ServiceDetail() {
           <p className="max-w-2xl mx-auto text-sm sm:text-base leading-relaxed" style={{ color: "#c2929a" }}>
             {service.description}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-3 mt-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 mt-6 flex-wrap">
             <a href={`tel:${phoneNumber}`} className="btn-primary px-6 py-3 text-sm">
               <Phone className="h-4 w-4" /> Call: +91 8523045235
+            </a>
+            <a href={`tel:${phoneNumber2}`} className="btn-primary px-6 py-3 text-sm" style={{ background: "linear-gradient(135deg,#8e24aa,#c0134e)" }}>
+              <Phone className="h-4 w-4" /> Call: +91 9621326466
             </a>
             <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-whatsapp px-6 py-3 text-sm">
               <MessageCircle className="h-4 w-4" /> WhatsApp for Profiles
@@ -427,6 +418,9 @@ export default function ServiceDetail() {
               <a href={`tel:${phoneNumber}`} className="btn-primary w-full py-3 text-xs mb-2">
                 <Phone className="h-3.5 w-3.5" /> Call: 8523045235
               </a>
+              <a href={`tel:${phoneNumber2}`} className="btn-primary w-full py-3 text-xs mb-2" style={{ background: "linear-gradient(135deg,#8e24aa,#c0134e)" }}>
+                <Phone className="h-3.5 w-3.5" /> Call: 9621326466
+              </a>
               <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-whatsapp w-full py-3 text-xs">
                 <MessageCircle className="h-3.5 w-3.5" /> WhatsApp Booking
               </a>
@@ -454,9 +448,7 @@ export default function ServiceDetail() {
         </div>
       </main>
 
-      <footer className="py-6 text-center text-xs" style={{ background: "#0a0306", borderTop: "1px solid #3d1018", color: "#d4aab3" }}>
-        © {new Date().getFullYear()} Kanpur Escorts — {service.name} in Kanpur. All rights reserved.
-      </footer>
+      <Footer />
     </div>
   );
 }
