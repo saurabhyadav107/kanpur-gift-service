@@ -38,10 +38,12 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- ═══════════════════════════════════════════
-         CANONICAL — Static fallback for homepage.
-    ═══════════════════════════════════════════ -->
-    <link rel="canonical" href="https://joya.kanpureliteservice.com/" />
+    <!-- CANONICAL: injected per-page by SEOHead component (useEffect).
+         A static canonical is intentionally absent here — a hardcoded
+         homepage canonical would be served as the canonical signal for
+         ALL routes in this SPA, poisoning Googlebot's selection.
+         Phase 2 (prerendering) will bake the correct per-URL canonical
+         into each route's static HTML at build time. -->
 
     <!-- ═══════════════════════════════════════════
          OPEN GRAPH (Facebook / WhatsApp previews)

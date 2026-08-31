@@ -3,6 +3,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HelpCircle, Phone, MessageCircle, ShieldCheck, DollarSign, Clock, Lock, Sparkles, ChevronDown } from "lucide-react";
+import { Link } from "wouter";
 
 const phoneNumber = "+918523045235";
 const phoneNumber2 = "+919621326466";
@@ -72,6 +73,24 @@ export default function FAQ() {
   const faqSchema = [
     {
       "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://joya.kanpureliteservice.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Frequently Asked Questions",
+          "item": canonicalUrl
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": allFaqs.map(f => ({
         "@type": "Question",
@@ -89,6 +108,15 @@ export default function FAQ() {
     <div className="min-h-screen flex flex-col bg-[#08070b] text-[#f6f3ee]">
       <SEOHead title={pageTitle} description={pageDesc} canonicalUrl={canonicalUrl} keywords="faq joya elite, kanpur escorts faq, lucknow escorts faq, booking questions escort kanpur" schema={faqSchema} />
       <Header />
+
+      {/* Breadcrumbs */}
+      <nav className="mx-auto max-w-6xl px-4 py-3.5 text-xs w-full text-[#c4bdad]" aria-label="Breadcrumb">
+        <ol style={{ listStyle: "none", display: "flex", gap: "0.25rem", padding: 0, margin: 0 }}>
+          <li><Link href="/" className="hover:text-[#dfb76c] transition-colors">Home</Link></li>
+          <li aria-hidden="true" style={{ margin: "0 4px" }}>›</li>
+          <li><span className="text-[#dfb76c] font-semibold">FAQs</span></li>
+        </ol>
+      </nav>
 
       {/* Hero */}
       <section className="py-20 text-center relative overflow-hidden bg-gradient-to-b from-[#180e22] via-[#0b0811] to-[#08070b] border-b border-[#282033]/60">

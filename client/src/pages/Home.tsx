@@ -145,13 +145,37 @@ export default function Home() {
   const homeDesc = "Premier Kanpur Escorts & Lucknow Escorts directory. Verified call girls, VIP companions & independent models in Kanpur & Lucknow with 100% Cash on Arrival, zero advance deposit, and express 45-minute hotel delivery. Call +91 8523045235 / +91 9621326466.";
   const homeKeywords = "kanpur escorts, lucknow escorts, escort in kanpur, escort in lucknow, kanpur call girls, lucknow call girls, escort service kanpur, escort service lucknow, kanpur vip escorts, lucknow vip escorts, independent call girl kanpur, independent call girl lucknow, cash on arrival escort kanpur";
 
+  const homeSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://joya.kanpureliteservice.com/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": homeFaqs.map((f) => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    }
+  ];
+
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-[#08070b] text-[#f6f3ee]">
-      <SEOHead title={homeTitle} description={homeDesc} canonicalUrl="https://joya.kanpureliteservice.com/" keywords={homeKeywords} />
+      <SEOHead title={homeTitle} description={homeDesc} canonicalUrl="https://joya.kanpureliteservice.com/" keywords={homeKeywords} schema={homeSchema} />
       <Header />
 
       {/* ─── HERO SECTION ─── */}

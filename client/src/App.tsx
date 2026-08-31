@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Redirect } from "wouter";
 import AccessDenied from "./components/AccessDenied";
 import AgeGate from "./components/AgeGate";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -25,8 +25,14 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/kanpur" component={KanpurHub} />
       <Route path="/lucknow" component={LucknowHub} />
-      <Route path="/kanpur-escorts" component={KanpurHub} />
-      <Route path="/lucknow-escorts" component={LucknowHub} />
+      {/* Canonical redirects — eliminate duplicate-URL collisions */}
+      <Route path="/kanpur-escorts">
+        <Redirect to="/kanpur" />
+      </Route>
+      <Route path="/lucknow-escorts">
+        <Redirect to="/lucknow" />
+      </Route>
+      <Route path="/areas/:slug" component={({ params }: { params: { slug: string } }) => <Redirect to={`/kanpur/${params.slug}`} />} />
       <Route path="/profiles" component={Profiles} />
       <Route path="/reviews" component={ReviewsPage} />
       <Route path="/kanpur/:slug" component={AreaDetail} />

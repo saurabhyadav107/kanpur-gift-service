@@ -3,6 +3,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Quote, MapPin, Star, Sparkles, ShieldCheck } from "lucide-react";
+import { Link } from "wouter";
 
 const reviews = [
   {
@@ -59,6 +60,24 @@ export default function ReviewsPage() {
   const reviewsSchema = [
     {
       "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://joya.kanpureliteservice.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Client Reviews & Testimonials",
+          "item": "https://joya.kanpureliteservice.com/reviews"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Kanpur & Lucknow VIP Escorts",
       "url": "https://joya.kanpureliteservice.com/",
@@ -96,6 +115,15 @@ export default function ReviewsPage() {
         schema={reviewsSchema}
       />
       <Header />
+
+      {/* Breadcrumbs */}
+      <nav className="mx-auto max-w-6xl px-4 py-3.5 text-xs w-full text-[#c4bdad]" aria-label="Breadcrumb">
+        <ol style={{ listStyle: "none", display: "flex", gap: "0.25rem", padding: 0, margin: 0 }}>
+          <li><Link href="/" className="hover:text-[#dfb76c] transition-colors">Home</Link></li>
+          <li aria-hidden="true" style={{ margin: "0 4px" }}>›</li>
+          <li><span className="text-[#dfb76c] font-semibold">Reviews &amp; Ratings</span></li>
+        </ol>
+      </nav>
 
       <section className="py-20 text-center relative overflow-hidden bg-gradient-to-b from-[#180e22] via-[#0b0811] to-[#08070b] border-b border-[#282033]/60">
         <div className="mx-auto max-w-4xl px-4">

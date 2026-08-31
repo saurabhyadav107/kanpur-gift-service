@@ -2,6 +2,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Phone, MessageCircle, Clock, ShieldCheck, MapPin, CheckCircle2, Sparkles } from "lucide-react";
+import { Link } from "wouter";
 
 const phoneNumber = "+918523045235";
 const phoneNumber2 = "+919621326466";
@@ -16,13 +17,31 @@ export default function Contact() {
   const contactSchema = [
     {
       "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://joya.kanpureliteservice.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact & 24/7 Helpline",
+          "item": canonicalUrl
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "ContactPage",
       "name": pageTitle,
       "description": pageDesc,
       "url": canonicalUrl,
       "mainEntity": {
         "@type": "Organization",
-        "name": "Joya Elite — Kanpur & Lucknow Escorts",
+        "name": "Kanpur & Lucknow VIP Escorts",
         "telephone": ["+91-8523045235", "+91-9621326466"],
         "url": "https://joya.kanpureliteservice.com/"
       }
@@ -33,6 +52,15 @@ export default function Contact() {
     <div className="min-h-screen flex flex-col bg-[#08070b] text-[#f6f3ee]">
       <SEOHead title={pageTitle} description={pageDesc} canonicalUrl={canonicalUrl} keywords="contact kanpur escorts, contact lucknow escorts, kanpur call girl number, lucknow call girl number, phone number escort kanpur lucknow" schema={contactSchema} />
       <Header />
+
+      {/* Breadcrumbs */}
+      <nav className="mx-auto max-w-6xl px-4 py-3.5 text-xs w-full text-[#c4bdad]" aria-label="Breadcrumb">
+        <ol style={{ listStyle: "none", display: "flex", gap: "0.25rem", padding: 0, margin: 0 }}>
+          <li><Link href="/" className="hover:text-[#dfb76c] transition-colors">Home</Link></li>
+          <li aria-hidden="true" style={{ margin: "0 4px" }}>›</li>
+          <li><span className="text-[#dfb76c] font-semibold">Contact Helpline</span></li>
+        </ol>
+      </nav>
 
       {/* Hero */}
       <section className="py-20 text-center relative overflow-hidden bg-gradient-to-b from-[#180e22] via-[#0b0811] to-[#08070b] border-b border-[#282033]/60">

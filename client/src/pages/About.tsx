@@ -16,13 +16,31 @@ export default function About() {
   const aboutSchema = [
     {
       "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://joya.kanpureliteservice.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Kanpur & Lucknow Escorts",
+          "item": canonicalUrl
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "AboutPage",
       "name": pageTitle,
       "description": pageDesc,
       "url": canonicalUrl,
       "mainEntity": {
         "@type": "Organization",
-        "name": "Joya Elite — Kanpur & Lucknow Escorts",
+        "name": "Kanpur & Lucknow VIP Escorts",
         "url": "https://joya.kanpureliteservice.com/",
         "logo": "https://joya.kanpureliteservice.com/images/banner-2.avif",
       },
@@ -33,6 +51,15 @@ export default function About() {
     <div className="min-h-screen flex flex-col bg-[#08070b] text-[#f6f3ee]">
       <SEOHead title={pageTitle} description={pageDesc} canonicalUrl={canonicalUrl} keywords="about joya elite, kanpur escorts agency, lucknow escorts agency, verified escorts up" schema={aboutSchema} />
       <Header />
+
+      {/* Breadcrumbs */}
+      <nav className="mx-auto max-w-6xl px-4 py-3.5 text-xs w-full text-[#c4bdad]" aria-label="Breadcrumb">
+        <ol style={{ listStyle: "none", display: "flex", gap: "0.25rem", padding: 0, margin: 0 }}>
+          <li><Link href="/" className="hover:text-[#dfb76c] transition-colors">Home</Link></li>
+          <li aria-hidden="true" style={{ margin: "0 4px" }}>›</li>
+          <li><span className="text-[#dfb76c] font-semibold">About Agency</span></li>
+        </ol>
+      </nav>
 
       {/* Hero Banner */}
       <section className="py-20 bg-gradient-to-b from-[#180f22] via-[#0d0914] to-[#08070b] border-b border-[#282033]/60 text-center">

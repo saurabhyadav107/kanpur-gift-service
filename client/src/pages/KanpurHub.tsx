@@ -103,14 +103,57 @@ export default function KanpurHub() {
   const desc = "Premier Kanpur Escorts Hub. Verified call girls, VIP companions & independent models across Civil Lines, Swaroop Nagar, Kakadeo, Govind Nagar & Mall Road. 100% Cash on Arrival, 45-min delivery. Call +91 8523045235.";
   const keywords = "kanpur escorts, escort in kanpur, kanpur call girls, escort service in kanpur, independent escorts kanpur, civil lines escort, swaroop nagar call girl, kakadeo escort, mall road escort, govind nagar call girl";
 
+  const kanpurSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://joya.kanpureliteservice.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kanpur Escorts Hub",
+          "item": "https://joya.kanpureliteservice.com/kanpur"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Kanpur VIP Escorts & Call Girls Service",
+      "url": "https://joya.kanpureliteservice.com/kanpur",
+      "telephone": "+91-8523045235",
+      "image": "https://joya.kanpureliteservice.com/images/301.jpg",
+      "areaServed": {
+        "@type": "City",
+        "name": "Kanpur"
+      },
+      "priceRange": "₹₹₹"
+    }
+  ];
+
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-[#08070b] text-[#f6f3ee]">
-      <SEOHead title={title} description={desc} canonicalUrl="https://joya.kanpureliteservice.com/kanpur" keywords={keywords} />
+      <SEOHead title={title} description={desc} canonicalUrl="https://joya.kanpureliteservice.com/kanpur" keywords={keywords} schema={kanpurSchema} />
       <Header />
+
+      {/* Breadcrumbs */}
+      <nav className="mx-auto max-w-7xl px-4 py-3.5 text-xs w-full text-[#c4bdad]" aria-label="Breadcrumb">
+        <ol style={{ listStyle: "none", display: "flex", gap: "0.25rem", padding: 0, margin: 0 }}>
+          <li><Link href="/" className="hover:text-[#dfb76c] transition-colors">Home</Link></li>
+          <li aria-hidden="true" style={{ margin: "0 4px" }}>›</li>
+          <li><span className="text-[#dfb76c] font-semibold">Kanpur Escorts Hub</span></li>
+        </ol>
+      </nav>
 
       {/* ─── KANPUR HERO BANNER ─── */}
       <section className="relative pt-20 pb-24 overflow-hidden border-b border-[#282033]/60 bg-gradient-to-b from-[#150f1e] via-[#0b0811] to-[#08070b]">

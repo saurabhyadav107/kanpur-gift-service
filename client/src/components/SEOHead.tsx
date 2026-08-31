@@ -13,6 +13,9 @@ export function SEOHead({ title, description, canonicalUrl = "https://joya.kanpu
     // Title
     document.title = title;
 
+    // Body data-page attribute (useful for automated canonical verification)
+    document.body.setAttribute("data-page", canonicalUrl);
+
     // Meta description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
@@ -43,22 +46,22 @@ export function SEOHead({ title, description, canonicalUrl = "https://joya.kanpu
     linkCanonical.setAttribute("href", canonicalUrl);
 
     // Open Graph
-    let ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute("content", title);
-    let ogDesc = document.querySelector('meta[property="og:description"]');
+    const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute("content", description);
-    let ogUrl = document.querySelector('meta[property="og:url"]');
+    const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) ogUrl.setAttribute("content", canonicalUrl);
 
     // Twitter
-    let twTitle = document.querySelector('meta[name="twitter:title"]');
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
     if (twTitle) twTitle.setAttribute("content", title);
-    let twDesc = document.querySelector('meta[name="twitter:description"]');
+    const twDesc = document.querySelector('meta[name="twitter:description"]');
     if (twDesc) twDesc.setAttribute("content", description);
 
     // Dynamic Schema
+    const scriptId = "dynamic-seo-schema";
     if (schema) {
-      const scriptId = "dynamic-seo-schema";
       let scriptEl = document.getElementById(scriptId);
       if (!scriptEl) {
         scriptEl = document.createElement("script");
@@ -68,7 +71,17 @@ export function SEOHead({ title, description, canonicalUrl = "https://joya.kanpu
       }
       scriptEl.textContent = JSON.stringify(schema);
     }
+
+    // Cleanup: remove stale canonical and schema on route unmount
+    return () => {
+      document.body.removeAttribute("data-page");
+      const staleSchema = document.getElementById(scriptId);
+      if (staleSchema) staleSchema.remove();
+      const staleCanonical = document.querySelector('link[rel="canonical"]');
+      if (staleCanonical) staleCanonical.remove();
+    };
   }, [title, description, canonicalUrl, keywords, schema]);
 
   return null;
 }
+

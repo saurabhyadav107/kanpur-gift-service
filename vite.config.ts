@@ -203,6 +203,41 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
+// All canonical routes to prerender — generates a unique HTML file per URL
+const PRERENDER_ROUTES = [
+  "/",
+  "/kanpur",
+  "/lucknow",
+  "/about",
+  "/contact",
+  "/reviews",
+  "/faq",
+  "/services/vip-escorts",
+  "/services/college-models",
+  "/services/independent",
+  "/services/luxury-escorts",
+  "/kanpur/civil-lines",
+  "/kanpur/swaroop-nagar",
+  "/kanpur/govind-nagar",
+  "/kanpur/kakadeo",
+  "/kanpur/kidwai-nagar",
+  "/kanpur/mall-road",
+  "/kanpur/rawatpur",
+  "/kanpur/shyam-nagar",
+  "/kanpur/saket-nagar",
+  "/kanpur/kanpur-cantt",
+  "/kanpur/barra",
+  "/lucknow/gomti-nagar",
+  "/lucknow/hazratganj",
+  "/lucknow/indira-nagar",
+  "/lucknow/aliganj",
+  "/lucknow/alambagh",
+  "/lucknow/shaheed-path",
+  "/lucknow/mahanagar",
+  "/lucknow/gomti-nagar-extension",
+  "/lucknow/amausi-airport",
+];
+
 const plugins = [
   react(),
   tailwindcss(),
@@ -213,7 +248,6 @@ const plugins = [
 ];
 
 export default defineConfig({
-  plugins,
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -227,9 +261,10 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
+  plugins,
   server: {
     port: 3000,
-    strictPort: false, // Will find next available port if 3000 is busy
+    strictPort: false,
     host: true,
     allowedHosts: [
       ".manuspre.computer",
